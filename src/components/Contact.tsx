@@ -131,7 +131,7 @@ export default function Contact() {
                     className={`w-full rounded-xl border bg-brand-bg/50 px-4 py-3 font-body text-sm text-brand-text placeholder:text-brand-muted/40 outline-none transition-colors focus:border-brand-sage focus:ring-2 focus:ring-brand-sage/20 ${
                       errors.telefone ? "border-red-400" : "border-brand-sage/15"
                     }`}
-                    placeholder="(16) 99999-9999"
+                    placeholder="(16) 99111-5518"
                   />
                   {errors.telefone && (
                     <p className="mt-1 font-body text-xs text-red-500">{errors.telefone.message}</p>
@@ -175,7 +175,7 @@ export default function Contact() {
             {/* Info Cards */}
             <div className="space-y-4">
               <a
-                href="https://wa.me/5516999999999"
+                href="https://wa.me/5516991115518"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-4 p-4 rounded-xl border border-brand-sage/10 bg-brand-sage/5 hover:bg-brand-sage/10 transition-colors group"
@@ -188,13 +188,13 @@ export default function Contact() {
                     WhatsApp
                   </span>
                   <span className="block font-body text-sm text-brand-muted/60">
-                    (16) 99999-9999
+                    (16) 99111-5518
                   </span>
                 </div>
               </a>
 
               <a
-                href="mailto:elis@example.com"
+                href="mailto:elisreginaoliveira.terapeuta@gmail.com"
                 className="flex items-center gap-4 p-4 rounded-xl border border-brand-sage/10 bg-brand-sage/5 hover:bg-brand-sage/10 transition-colors group"
               >
                 <div className="w-11 h-11 rounded-full bg-brand-sage/15 text-brand-sage flex items-center justify-center shrink-0">
@@ -205,13 +205,13 @@ export default function Contact() {
                     Email
                   </span>
                   <span className="block font-body text-sm text-brand-muted/60">
-                    elis@example.com
+                    elisreginaoliveira.terapeuta@gmail.com
                   </span>
                 </div>
               </a>
 
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/elisreginaoliveira.terapeuta/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-4 p-4 rounded-xl border border-brand-sage/10 bg-brand-sage/5 hover:bg-brand-sage/10 transition-colors group"
@@ -224,7 +224,7 @@ export default function Contact() {
                     Instagram
                   </span>
                   <span className="block font-body text-sm text-brand-muted/60">
-                    @elisreginaborges
+                    @elisreginaoliveira.terapeuta
                   </span>
                 </div>
               </a>
@@ -238,7 +238,7 @@ export default function Contact() {
                     Endereço
                   </span>
                   <span className="block font-body text-sm text-brand-muted/60">
-                    Franca/SP — Atendimento presencial e online
+                    Jardim Lima, Franca/SP
                   </span>
                 </div>
               </div>
@@ -248,7 +248,7 @@ export default function Contact() {
             <div className="rounded-xl overflow-hidden border border-brand-sage/10 shadow-sm">
               <iframe
                 title="Localização"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d37383.769394344085!2d-47.4203802877629!3d-20.538649937412087!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94b0a5b3b5b5b5b5%3A0x5b5b5b5b5b5b5b5b!2sFranca%2C%20SP!5e0!3m2!1spt-BR!2sbr!4v1620000000000!5m2!1spt-BR!2sbr"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3738.5!2d-47.411132!3d-20.536979!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjDCsDMyJzEzLjEiUyA0N8KwMjQnNDAuMSJX!5e0!3m2!1spt-BR!2sbr!4v1719000000000"
                 width="100%"
                 height="280"
                 style={{ border: 0 }}

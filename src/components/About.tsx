@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { User, Award, Clock, Shield } from "lucide-react";
+import { Award, Clock, Shield } from "lucide-react";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 28 },
@@ -23,7 +23,7 @@ export default function About() {
     <section id="sobre" className="section-padding bg-brand-cream">
       <div className="container-peace">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          {/* ─── Photo Placeholder ─── */}
+          {/* ─── Photo ─── */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -31,8 +31,12 @@ export default function About() {
             transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
             className="relative"
           >
-            <div className="aspect-[3/4] max-w-md mx-auto rounded-2xl bg-gradient-to-br from-brand-sage via-brand-sage-dark to-brand-lavender flex items-center justify-center overflow-hidden shadow-lg">
-              <User size={80} strokeWidth={1} className="text-white/40" />
+            <div className="aspect-[3/4] max-w-md mx-auto rounded-2xl overflow-hidden shadow-lg">
+              <img
+                src="/images/elis.jpg"
+                alt="Elis Regina Borges"
+                className="w-full h-full object-cover"
+              />
             </div>
           </motion.div>
 

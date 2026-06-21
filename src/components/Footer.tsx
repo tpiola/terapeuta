@@ -4,15 +4,18 @@ import Link from "next/link";
 const footerLinks = [
   {
     label: "WhatsApp",
-    href: "https://wa.me/5516999999999",
+    value: "(16) 99111-5518",
+    href: "https://wa.me/5516991115518",
   },
   {
     label: "Email",
-    href: "mailto:elis@example.com",
+    value: "elisreginaoliveira.terapeuta@gmail.com",
+    href: "mailto:elisreginaoliveira.terapeuta@gmail.com",
   },
   {
     label: "Instagram",
-    href: "https://instagram.com",
+    value: "@elisreginaoliveira.terapeuta",
+    href: "https://www.instagram.com/elisreginaoliveira.terapeuta/",
   },
 ] as const;
 
@@ -53,17 +56,21 @@ export default function Footer() {
           </div>
 
           {/* Links */}
-          <div className="flex items-center gap-6">
+          <div className="flex flex-col items-center md:items-end gap-3">
             {footerLinks.map((link) => (
-              <Link
-                key={link.label}
-                href={link.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-body text-sm text-white/60 hover:text-white transition-colors"
-              >
-                {link.label}
-              </Link>
+              <div key={link.label} className="flex items-center gap-2">
+                <span className="font-body text-xs text-white/40 min-w-[4.5rem] text-right">
+                  {link.label}
+                </span>
+                <Link
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-body text-sm text-white/60 hover:text-white transition-colors"
+                >
+                  {link.value}
+                </Link>
+              </div>
             ))}
           </div>
         </div>

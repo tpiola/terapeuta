@@ -63,8 +63,28 @@ export default function Navbar() {
           ))}
         </ul>
 
-        {/* Desktop CTA */}
-        <div className="hidden md:block">
+        {/* Desktop CTAs */}
+        <div className="hidden md:flex items-center gap-2">
+          <Link
+            href="https://wa.me/5516991115518"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center w-10 h-10 rounded-full border border-brand-sage/20 text-brand-sage transition-all hover:bg-brand-sage/10 hover:border-brand-sage/40 active:scale-[0.97]"
+            aria-label="WhatsApp"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="w-[18px] h-[18px]"
+            >
+              <path d="M3 21l1.65-3.8a9 9 0 1 1 3.4 2.9L3 21z" />
+              <path d="M9 10a.5.5 0 0 0 1 0V9a.5.5 0 0 0-1 0v1zm0 0a5 5 0 0 0 5 5h1a.5.5 0 0 0 0-1h-1a.5.5 0 0 0 0 1" />
+            </svg>
+          </Link>
           <Link
             href="#contato"
             className="inline-flex items-center gap-2 bg-brand-sage text-white rounded-full px-6 py-2.5 text-sm font-medium shadow-md shadow-brand-sage/20 transition-all hover:bg-brand-sage-dark hover:shadow-lg hover:shadow-brand-sage/30 active:scale-[0.97]"
@@ -125,7 +145,7 @@ export default function Navbar() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: 8 }}
                 transition={{ delay: 0.3, duration: 0.35 }}
-                className="mt-8"
+                className="mt-8 flex flex-col items-center gap-3"
               >
                 <Link
                   href="#contato"
@@ -133,6 +153,15 @@ export default function Navbar() {
                   className="inline-flex items-center gap-2 bg-brand-sage text-white rounded-full px-8 py-3 text-base font-medium shadow-lg shadow-brand-sage/25 transition-all hover:bg-brand-sage-dark active:scale-[0.97]"
                 >
                   Agendar Consulta
+                </Link>
+                <Link
+                  href="https://wa.me/5516991115518"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => setMobileOpen(false)}
+                  className="inline-flex items-center gap-2 border-2 border-brand-sage/25 text-brand-sage rounded-full px-8 py-3 text-base font-medium transition-all hover:border-brand-sage/50 hover:bg-brand-sage/5 active:scale-[0.97]"
+                >
+                  WhatsApp
                 </Link>
               </motion.div>
             </motion.nav>
