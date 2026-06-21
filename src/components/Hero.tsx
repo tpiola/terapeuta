@@ -61,7 +61,7 @@ export default function Hero() {
         >
           {/* Badge */}
           <motion.div variants={fadeUp}>
-            <span className="inline-block font-body text-xs md:text-sm tracking-[0.2em] uppercase text-brand-sage font-medium mb-6 md:mb-8">
+            <span className="section-label mb-6 md:mb-8">
               Terapia Integrativa · Franca/SP
             </span>
           </motion.div>

@@ -197,8 +197,15 @@ const therapies = [
 
 export default function Services() {
   return (
-    <section id="tratamentos" className="section-padding bg-white">
-      <div className="container-peace">
+    <section id="tratamentos" className="section-padding bg-white relative">
+      {/* ─── Animated Background: Orbs + Dot Grid ─── */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute -top-20 -right-20 w-80 h-80 rounded-full bg-brand-sage/5 blur-3xl animate-[drift-1_16s_ease-in-out_infinite]" />
+        <div className="absolute bottom-1/3 -left-20 w-96 h-96 rounded-full bg-brand-lavender/4 blur-3xl animate-[drift-2_18s_ease-in-out_infinite]" />
+        <div className="absolute top-1/2 right-1/4 w-64 h-64 rounded-full bg-brand-gold/3 blur-3xl animate-[drift-3_20s_ease-in-out_infinite]" />
+        <div className="absolute inset-0 bg-dot-grid opacity-30" />
+      </div>
+      <div className="container-peace relative">
         <motion.div
           className="text-center mb-14 md:mb-18"
           variants={stagger}

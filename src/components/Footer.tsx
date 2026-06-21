@@ -21,9 +21,16 @@ const footerLinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-brand-text text-white/70">
+    <footer className="bg-brand-text text-white/70 relative">
+      {/* ─── Animated Background (dark version): Orbs + Dot Grid ─── */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute -top-20 -right-20 w-80 h-80 rounded-full bg-brand-sage/8 blur-3xl animate-[drift-1_16s_ease-in-out_infinite]" />
+        <div className="absolute bottom-1/3 -left-20 w-96 h-96 rounded-full bg-brand-lavender/6 blur-3xl animate-[drift-2_18s_ease-in-out_infinite]" />
+        <div className="absolute top-1/2 right-1/4 w-64 h-64 rounded-full bg-brand-gold/5 blur-3xl animate-[drift-3_20s_ease-in-out_infinite]" />
+        <div className="absolute inset-0 bg-dot-grid opacity-10" style={{ backgroundImage: 'radial-gradient(rgba(255,255,255,0.08) 1px, transparent 1px)', backgroundSize: '24px 24px' }} />
+      </div>
       {/* Wave Divider */}
-      <div className="w-full overflow-hidden leading-[0]" aria-hidden="true">
+      <div className="relative w-full overflow-hidden leading-[0]" aria-hidden="true">
         <svg
           viewBox="0 0 1440 100"
           fill="none"
@@ -38,7 +45,7 @@ export default function Footer() {
         </svg>
       </div>
 
-      <div className="container-peace py-12 md:py-16">
+      <div className="container-peace relative py-12 md:py-16">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
           {/* Brand */}
           <div className="flex flex-col items-center md:items-start gap-3">

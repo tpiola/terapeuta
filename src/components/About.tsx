@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Award, Clock, Shield } from "lucide-react";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 28 },
@@ -12,16 +11,17 @@ const fadeUp = {
   },
 };
 
-const badges = [
-  { icon: Shield, label: "ABRATH" },
-  { icon: Clock, label: "+8 anos" },
-  { icon: Award, label: "PICS" },
-] as const;
-
 export default function About() {
   return (
-    <section id="sobre" className="section-padding bg-brand-cream">
-      <div className="container-peace">
+    <section id="sobre" className="section-padding bg-brand-cream relative">
+      {/* ─── Animated Background: Orbs + Dot Grid ─── */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute -top-20 -right-20 w-80 h-80 rounded-full bg-brand-sage/6 blur-3xl animate-[drift-1_16s_ease-in-out_infinite]" />
+        <div className="absolute bottom-1/3 -left-20 w-96 h-96 rounded-full bg-brand-lavender/5 blur-3xl animate-[drift-2_18s_ease-in-out_infinite]" />
+        <div className="absolute top-1/2 right-1/4 w-64 h-64 rounded-full bg-brand-gold/4 blur-3xl animate-[drift-3_20s_ease-in-out_infinite]" />
+        <div className="absolute inset-0 bg-dot-grid opacity-20" />
+      </div>
+      <div className="container-peace relative">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* ─── Photo ─── */}
           <motion.div
@@ -73,17 +73,11 @@ export default function About() {
               reconhecidas pelo Ministério da Saúde como Práticas Integrativas e Complementares (PICS).
             </motion.p>
 
-            {/* Badges */}
-            <motion.div variants={fadeUp} className="flex flex-wrap gap-3 pt-2">
-              {badges.map(({ icon: Icon, label }) => (
-                <span
-                  key={label}
-                  className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-sage/5 text-brand-sage font-body text-sm font-medium border border-brand-sage/10"
-                >
-                  <Icon size={14} strokeWidth={1.5} />
-                  {label}
-                </span>
-              ))}
+            {/* Badges — section-label style, NO pills */}
+            <motion.div variants={fadeUp} className="flex flex-wrap gap-6 pt-2">
+              <span className="section-label">ABRATH</span>
+              <span className="section-label">+8 anos</span>
+              <span className="section-label">PICS</span>
             </motion.div>
 
             {/* Pull Quote */}

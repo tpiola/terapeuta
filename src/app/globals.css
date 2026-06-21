@@ -37,6 +37,24 @@ body {
   background-color: var(--color-brand-bg);
   color: var(--color-brand-text);
   font-family: var(--font-body);
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* ─── Global media rules ─── */
+img,
+video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (pointer: coarse) and (max-width: 640px) {
+  a,
+  button,
+  [role="button"] {
+    min-height: 44px;
+  }
 }
 
 /* ─── Utilities ─── */
@@ -155,6 +173,85 @@ body {
 
 .animate-drift-3 {
   animation: drift-3 22s ease-in-out infinite;
+}
+
+/* ─── New Keyframes ─── */
+@keyframes petalFloat {
+  0% {
+    opacity: 0;
+    transform: translateY(0) rotate(0deg) scale(0.8);
+  }
+  10% {
+    opacity: 0.6;
+  }
+  90% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(100vh) rotate(360deg) scale(0.3);
+  }
+}
+
+@keyframes gentlePulse {
+  0%,
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(212, 165, 116, 0.3);
+  }
+  50% {
+    transform: scale(1.03);
+    box-shadow: 0 0 0 12px rgba(212, 165, 116, 0);
+  }
+}
+
+@keyframes orbFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ─── Section Label (gold line + text, NEVER pill/badge) ─── */
+.section-label {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.6875rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--color-brand-sage);
+}
+
+.section-label::before {
+  content: '';
+  display: block;
+  width: 1.5rem;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.5;
+}
+
+/* ─── Animated Background (reusable orbs + dot grid for ALL sections) ─── */
+.bg-animated {
+  position: relative;
+}
+
+.bg-animated .orb-sage {
+  animation: orbFadeIn 1.2s ease-out forwards, drift-1 16s ease-in-out infinite;
+}
+
+.bg-animated .orb-lavender {
+  animation: orbFadeIn 1.4s ease-out forwards, drift-2 18s ease-in-out infinite;
+}
+
+.bg-animated .orb-gold {
+  animation: orbFadeIn 1.6s ease-out forwards, drift-3 20s ease-in-out infinite;
 }
 
 /* ─── Wave Divider ─── */

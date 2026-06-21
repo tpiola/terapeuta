@@ -60,7 +60,37 @@ export default function RootLayout({
       lang="pt-BR"
       className={`${playfairDisplay.variable} ${inter.variable} ${cormorantGaramond.variable}`}
     >
-      <body className="bg-brand-bg text-brand-text antialiased">{children}</body>
+      <body className="bg-brand-bg text-brand-text antialiased">
+        {/* JSON-LD Structured Data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "HealthAndBeautyBusiness",
+              "name": "Elis Regina Borges - Terapia Integrativa",
+              "telephone": "+5516991115518",
+              "email": "elisreginaoliveira.terapeuta@gmail.com",
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Franca",
+                "addressRegion": "SP",
+                "addressCountry": "BR",
+              },
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": -20.5369792,
+                "longitude": -47.411132,
+              },
+              "url": "https://terapeuta-next.vercel.app",
+              "sameAs": [
+                "https://www.instagram.com/elisreginaoliveira.terapeuta/",
+              ],
+            }),
+          }}
+        />
+        {children}
+      </body>
     </html>
   );
 }
