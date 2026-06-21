@@ -1,7 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Clock, BadgeCheck, HeartPulse } from "lucide-react";
+import { Clock, BadgeCheck, HeartPulse, ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 const stagger = {
   hidden: {},
@@ -21,6 +22,15 @@ const fadeUp = {
     transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] as const },
   },
 };
+
+const galleryImages = [
+  "/images/gallery-01.jpg",
+  "/images/gallery-02.jpg",
+  "/images/gallery-03.jpg",
+  "/images/gallery-04.jpg",
+  "/images/gallery-05.jpg",
+  "/images/gallery-06.jpg",
+];
 
 const stats = [
   {
@@ -53,6 +63,7 @@ export default function Trust() {
         <div className="absolute top-1/2 right-1/4 w-64 h-64 rounded-full bg-brand-gold/3 blur-3xl animate-[drift-3_20s_ease-in-out_infinite]" />
         <div className="absolute inset-0 bg-dot-grid opacity-25" />
       </div>
+
       {/* Wave Divider at top */}
       <div className="absolute top-0 left-0 w-full overflow-hidden leading-[0] rotate-180" aria-hidden="true">
         <svg
@@ -90,8 +101,9 @@ export default function Trust() {
           </motion.h2>
         </motion.div>
 
+        {/* Stats */}
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8"
+          className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-14"
           variants={stagger}
           initial="hidden"
           whileInView="visible"
@@ -117,6 +129,57 @@ export default function Trust() {
               </p>
             </motion.div>
           ))}
+        </motion.div>
+
+        {/* Gallery Grid */}
+        <motion.div
+          className="mb-12"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+        >
+          <h3 className="font-display text-xl text-center text-brand-text font-medium mb-6">
+            Ambiente de acolhimento
+          </h3>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
+            {galleryImages.map((img, i) => (
+              <motion.div
+                key={img}
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1, duration: 0.4 }}
+                className="aspect-[4/3] rounded-xl overflow-hidden shadow-md"
+              >
+                <img
+                  src={img}
+                  alt={`Espaço de terapia ${i + 1}`}
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
+                />
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* CTA */}
+        <motion.div
+          className="text-center"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.4 }}
+        >
+          <Link
+            href="https://wa.me/5516991115518"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 bg-brand-sage text-white rounded-full px-8 py-3.5 text-base font-medium shadow-lg shadow-brand-sage/20 transition-all hover:bg-brand-sage-dark hover:shadow-xl hover:-translate-y-0.5 active:scale-[0.97]"
+          >
+            Agende sua consulta
+            <ArrowRight size={18} />
+          </Link>
         </motion.div>
       </div>
     </section>

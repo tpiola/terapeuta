@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { MessageCircle, ArrowRight } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -38,6 +39,20 @@ export default function Footer() {
               Instagram
             </Link>
           </div>
+        </div>
+
+        {/* CTA Button */}
+        <div className="mt-8 flex justify-center">
+          <Link
+            href="https://wa.me/5516991115518"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group inline-flex items-center gap-3 bg-brand-sage text-white rounded-full px-9 py-4 text-base font-medium shadow-xl shadow-brand-sage/30 transition-all hover:bg-brand-sage-dark hover:shadow-2xl hover:shadow-brand-sage/35 hover:-translate-y-0.5 active:scale-[0.97]"
+          >
+            <MessageCircle size={18} className="transition-transform group-hover:scale-110" />
+            Fale comigo no WhatsApp
+            <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
+          </Link>
         </div>
 
         <div className="mt-8 pt-6 border-t border-white/8 flex flex-col sm:flex-row items-center justify-between gap-3">
