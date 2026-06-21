@@ -2,27 +2,16 @@
 
 /* ─── Design System ─── */
 @theme {
-  /* Colors — Verde Sálvia */
   --color-brand-sage: #6b8f71;
   --color-brand-sage-dark: #4a7c59;
-
-  /* Colors — Lavanda Suave */
   --color-brand-lavender: #b8a9c9;
   --color-brand-lavender-dark: #9b8fb4;
-
-  /* Colors — Dourado Suave */
   --color-brand-gold: #d4a574;
   --color-brand-gold-dark: #c4956a;
-
-  /* Colors — Backgrounds */
   --color-brand-bg: #faf8f5;
   --color-brand-cream: #f5f0eb;
-
-  /* Colors — Texto */
   --color-brand-text: #2d2d2d;
   --color-brand-muted: #4a3f35;
-
-  /* Fonts */
   --font-display: "Playfair Display", ui-serif, Georgia, serif;
   --font-body: "Inter", ui-sans-serif, system-ui, sans-serif;
   --font-accent: "Cormorant Garamond", ui-serif, Georgia, serif;
@@ -41,32 +30,28 @@ body {
   -webkit-tap-highlight-color: transparent;
 }
 
-/* ─── Global media rules ─── */
-img,
-video {
+img, video {
   max-width: 100%;
   height: auto;
   display: block;
 }
 
 @media (pointer: coarse) and (max-width: 640px) {
-  a,
-  button,
-  [role="button"] {
+  a, button, [role="button"] {
     min-height: 44px;
   }
 }
 
 /* ─── Utilities ─── */
 .section-padding {
-  padding-top: 6rem;
-  padding-bottom: 6rem;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
 }
 
 @media (min-width: 640px) {
   .section-padding {
-    padding-top: 8rem;
-    padding-bottom: 8rem;
+    padding-top: 7rem;
+    padding-bottom: 7rem;
   }
 }
 
@@ -74,149 +59,29 @@ video {
   margin-left: auto;
   margin-right: auto;
   max-width: 80rem;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
 }
 
-/* ─── Keyframes ─── */
+@media (min-width: 640px) {
+  .container-peace {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+/* ─── Simple keyframes (NO heavy parallax/drift) ─── */
 @keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(24px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes float {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-12px);
-  }
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
 }
 
-@keyframes pulse-soft {
-  0%,
-  100% {
-    opacity: 0.5;
-    transform: scale(1);
-  }
-  50% {
-    opacity: 0.8;
-    transform: scale(1.05);
-  }
-}
-
-@keyframes drift-1 {
-  0%,
-  100% {
-    transform: translate(0, 0) scale(1);
-  }
-  33% {
-    transform: translate(40px, -30px) scale(1.08);
-  }
-  66% {
-    transform: translate(-20px, 20px) scale(0.95);
-  }
-}
-
-@keyframes drift-2 {
-  0%,
-  100% {
-    transform: translate(0, 0) scale(1);
-  }
-  33% {
-    transform: translate(-30px, -40px) scale(1.06);
-  }
-  66% {
-    transform: translate(25px, 15px) scale(0.97);
-  }
-}
-
-@keyframes drift-3 {
-  0%,
-  100% {
-    transform: translate(0, 0) scale(1);
-  }
-  33% {
-    transform: translate(20px, 35px) scale(1.04);
-  }
-  66% {
-    transform: translate(-35px, -25px) scale(0.98);
-  }
-}
-
-.animate-fade-up {
-  animation: fadeUp 0.7s ease-out forwards;
-}
-
-.animate-float {
-  animation: float 4s ease-in-out infinite;
-}
-
-.animate-pulse-soft {
-  animation: pulse-soft 6s ease-in-out infinite;
-}
-
-.animate-drift-1 {
-  animation: drift-1 18s ease-in-out infinite;
-}
-
-.animate-drift-2 {
-  animation: drift-2 20s ease-in-out infinite;
-}
-
-.animate-drift-3 {
-  animation: drift-3 22s ease-in-out infinite;
-}
-
-/* ─── New Keyframes ─── */
-@keyframes petalFloat {
-  0% {
-    opacity: 0;
-    transform: translateY(0) rotate(0deg) scale(0.8);
-  }
-  10% {
-    opacity: 0.6;
-  }
-  90% {
-    opacity: 0.4;
-  }
-  100% {
-    opacity: 0;
-    transform: translateY(100vh) rotate(360deg) scale(0.3);
-  }
-}
-
-@keyframes gentlePulse {
-  0%,
-  100% {
-    transform: scale(1);
-    box-shadow: 0 0 0 0 rgba(212, 165, 116, 0.3);
-  }
-  50% {
-    transform: scale(1.03);
-    box-shadow: 0 0 0 12px rgba(212, 165, 116, 0);
-  }
-}
-
-@keyframes orbFadeIn {
-  from {
-    opacity: 0;
-    transform: scale(0.8);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-/* ─── Section Label (gold line + text, NEVER pill/badge) ─── */
+/* ─── Section Label (NOT pill/badge) ─── */
 .section-label {
   display: flex;
   align-items: center;
@@ -237,65 +102,24 @@ video {
   opacity: 0.5;
 }
 
-/* ─── Animated Background (reusable orbs + dot grid for ALL sections) ─── */
-.bg-animated {
-  position: relative;
-}
-
-.bg-animated .orb-sage {
-  animation: orbFadeIn 1.2s ease-out forwards, drift-1 16s ease-in-out infinite;
-}
-
-.bg-animated .orb-lavender {
-  animation: orbFadeIn 1.4s ease-out forwards, drift-2 18s ease-in-out infinite;
-}
-
-.bg-animated .orb-gold {
-  animation: orbFadeIn 1.6s ease-out forwards, drift-3 20s ease-in-out infinite;
-}
-
-/* ─── Wave Divider ─── */
-.wave-divider {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  line-height: 0;
-}
-
-.wave-divider svg {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
 /* ─── Glass Card ─── */
 .glass-card {
   background: rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(107, 143, 113, 0.15);
+  border: 1px solid rgba(107, 143, 113, 0.12);
   border-radius: 1rem;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.03);
 }
 
-/* ─── Dot Grid Pattern ─── */
+/* ─── Static Dot Grid ─── */
 .bg-dot-grid {
-  background-image: radial-gradient(rgba(107, 143, 113, 0.15) 1px, transparent 1px);
+  background-image: radial-gradient(rgba(107, 143, 113, 0.08) 1px, transparent 1px);
   background-size: 24px 24px;
-}
-
-/* ─── Gradient Orbs ─── */
-.gradient-orb {
-  border-radius: 50%;
-  filter: blur(80px);
-  opacity: 0.4;
-  position: absolute;
 }
 
 /* ─── Selection ─── */
 ::selection {
-  background-color: rgba(107, 143, 113, 0.25);
+  background-color: rgba(107, 143, 113, 0.2);
   color: var(--color-brand-text);
 }
