@@ -57,9 +57,7 @@ export default function Hero() {
             className="font-display text-[clamp(2.5rem,7vw,5.5rem)] font-semibold leading-[1.04] tracking-[-0.025em] text-brand-text mb-8 md:mb-10"
           >
             Suas emoções{" "}
-            <span className="text-brand-sage italic">
-              merecem
-            </span>
+            <span className="text-brand-sage italic">merecem</span>
             <br />
             ser acolhidas.
           </motion.h1>
