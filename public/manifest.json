@@ -1,0 +1,24 @@
+{
+  "name": "Elis Regina Borges | Terapia Integrativa",
+  "short_name": "Elis Terapia",
+  "description": "Terapia integrativa com abordagem humanizada em Franca/SP. Atendimento presencial e online.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#faf8f5",
+  "theme_color": "#8b5e3c",
+  "lang": "pt-BR",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/og-image.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/favicon.ico",
+      "sizes": "48x48",
+      "type": "image/x-icon"
+    }
+  ]
+}

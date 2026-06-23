@@ -34,17 +34,42 @@ export const metadata: Metadata = {
     "terapia humanizada",
     "bem-estar emocional",
   ],
+  robots: {
+    index: true,
+    follow: true,
+  },
+  alternates: {
+    canonical: "https://terapeuta-next.vercel.app",
+  },
+  manifest: "/manifest.json",
   openGraph: {
     title: "Elis Regina Borges | Terapia Integrativa em Franca/SP",
     description:
       "Transforme sua relação com o que sente. Terapia integrativa com abordagem humanizada em Franca/SP.",
+    url: "https://terapeuta-next.vercel.app",
     type: "website",
     locale: "pt_BR",
     siteName: "Elis Regina Borges",
+    images: [
+      {
+        url: "https://terapeuta-next.vercel.app/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Elis Regina Borges | Terapia Integrativa",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Elis Regina Borges | Terapia Integrativa em Franca/SP",
+    description:
+      "Transforme sua relação com o que sente. Terapia integrativa com abordagem humanizada em Franca/SP.",
+    images: ["https://terapeuta-next.vercel.app/og-image.jpg"],
   },
 };
 
 export const viewport: Viewport = {
+  themeColor: "#8b5e3c",
   width: "device-width",
   initialScale: 1,
   viewportFit: "cover",
