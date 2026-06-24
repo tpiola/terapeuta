@@ -23,6 +23,7 @@ html {
 }
 
 body {
+  overflow-x: hidden;
   background-color: var(--color-brand-bg);
   color: var(--color-brand-text);
   font-family: var(--font-body);
