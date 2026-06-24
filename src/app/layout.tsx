@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Playfair_Display, Inter, Cormorant_Garamond } from "next/font/google";
 import "./globals.css";
+import { CookieConsent } from "@/components/CookieConsent";
 
 const playfairDisplay = Playfair_Display({
   variable: "--font-display",
@@ -34,13 +35,8 @@ export const metadata: Metadata = {
     "terapia humanizada",
     "bem-estar emocional",
   ],
-  robots: {
-    index: true,
-    follow: true,
-  },
-  alternates: {
-    canonical: "https://terapeuta-next.vercel.app",
-  },
+  robots: { index: true, follow: true },
+  alternates: { canonical: "https://terapeuta-next.vercel.app" },
   manifest: "/manifest.json",
     icons: {
           icon: [
@@ -53,26 +49,17 @@ export const metadata: Metadata = {
     },
   openGraph: {
     title: "Elis Regina Borges | Terapia Integrativa em Franca/SP",
-    description:
-      "Transforme sua relação com o que sente. Terapia integrativa com abordagem humanizada em Franca/SP.",
+    description: "Transforme sua relação com o que sente. Terapia integrativa com abordagem humanizada em Franca/SP.",
     url: "https://terapeuta-next.vercel.app",
     type: "website",
     locale: "pt_BR",
     siteName: "Elis Regina Borges",
-    images: [
-      {
-        url: "https://terapeuta-next.vercel.app/og-image.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Elis Regina Borges | Terapia Integrativa",
-      },
-    ],
+    images: [{ url: "https://terapeuta-next.vercel.app/og-image.jpg", width: 1200, height: 630, alt: "Elis Regina Borges | Terapia Integrativa" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Elis Regina Borges | Terapia Integrativa em Franca/SP",
-    description:
-      "Transforme sua relação com o que sente. Terapia integrativa com abordagem humanizada em Franca/SP.",
+    description: "Transforme sua relação com o que sente. Terapia integrativa com abordagem humanizada em Franca/SP.",
     images: ["https://terapeuta-next.vercel.app/og-image.jpg"],
   },
 };
@@ -84,46 +71,21 @@ export const viewport: Viewport = {
   viewportFit: "cover",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html
-      lang="pt-BR"
-      className={`${playfairDisplay.variable} ${inter.variable} ${cormorantGaramond.variable}`}
-    >
+    <html lang="pt-BR" className={`${playfairDisplay.variable} ${inter.variable} ${cormorantGaramond.variable}`}>
       <body className="bg-brand-bg text-brand-text antialiased">
-        {/* JSON-LD Structured Data */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "HealthAndBeautyBusiness",
-              "name": "Elis Regina Borges - Terapia Integrativa",
-              "telephone": "+5516991115518",
-              "email": "elisreginaoliveira.terapeuta@gmail.com",
-              "address": {
-                "@type": "PostalAddress",
-                "addressLocality": "Franca",
-                "addressRegion": "SP",
-                "addressCountry": "BR",
-              },
-              "geo": {
-                "@type": "GeoCoordinates",
-                "latitude": -20.5369792,
-                "longitude": -47.411132,
-              },
-              "url": "https://terapeuta-next.vercel.app",
-              "sameAs": [
-                "https://www.instagram.com/elisreginaoliveira.terapeuta/",
-              ],
-            }),
-          }}
-        />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org", "@type": "HealthAndBeautyBusiness",
+          "name": "Elis Regina Borges - Terapia Integrativa", "telephone": "+551****5518",
+          "email": "elisreginaoliveira.terapeuta@gmail.com",
+          "address": { "@type": "PostalAddress", "addressLocality": "Franca", "addressRegion": "SP", "addressCountry": "BR" },
+          "geo": { "@type": "GeoCoordinates", "latitude": -20.5369792, "longitude": -47.411132 },
+          "url": "https://terapeuta-next.vercel.app",
+          "sameAs": ["https://www.instagram.com/elisreginaoliveira.terapeuta/"],
+        })}} />
         {children}
+        <CookieConsent />
       </body>
     </html>
   );
