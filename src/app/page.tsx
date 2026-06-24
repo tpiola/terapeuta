@@ -1,3 +1,5 @@
+"use client";
+import { ScrollReveal, TiltCard } from "@/components/motion/ScrollReveal";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Services from "@/components/Services";
@@ -11,11 +13,11 @@ export default function Home() {
     <>
       <Navbar />
       <main>
-        <Hero />
-        <Services />
-        <About />
-        <Trust />
-        <Contact />
+        <ScrollReveal><Hero /></ScrollReveal>
+        <ScrollReveal><Services /></ScrollReveal>
+        <ScrollReveal><About /></ScrollReveal>
+        <ScrollReveal><Trust /></ScrollReveal>
+        <ScrollReveal><Contact /></ScrollReveal>
       </main>
       <Footer />
     </>

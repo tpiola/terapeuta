@@ -181,7 +181,9 @@ export default function Contact() {
           >
             {/* Info Cards */}
             <div className="space-y-4">
-              <a
+              <motion.a
+                whileHover={{ x: 4, boxShadow: "0 4px 16px rgba(107,143,113,0.1)" }}
+                transition={{ duration: 0.2 }}
                 href="https://wa.me/5516991115518"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -198,9 +200,11 @@ export default function Contact() {
                     (16) 99111-5518
                   </span>
                 </div>
-              </a>
+              </motion.a>
 
-              <a
+              <motion.a
+                whileHover={{ x: 4, boxShadow: "0 4px 16px rgba(107,143,113,0.1)" }}
+                transition={{ duration: 0.2 }}
                 href="mailto:elisreginaoliveira.terapeuta@gmail.com"
                 className="flex items-center gap-4 p-4 rounded-xl border border-brand-sage/10 bg-brand-sage/5 hover:bg-brand-sage/10 transition-colors group"
               >
@@ -215,9 +219,11 @@ export default function Contact() {
                     elisreginaoliveira.terapeuta@gmail.com
                   </span>
                 </div>
-              </a>
+              </motion.a>
 
-              <a
+              <motion.a
+                whileHover={{ x: 4, boxShadow: "0 4px 16px rgba(107,143,113,0.1)" }}
+                transition={{ duration: 0.2 }}
                 href="https://www.instagram.com/elisreginaoliveira.terapeuta/"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -234,8 +240,7 @@ export default function Contact() {
                     @elisreginaoliveira.terapeuta
                   </span>
                 </div>
-              </a>
-
+              </motion.a>
               <div className="flex items-center gap-4 p-4 rounded-xl border border-brand-sage/10 bg-brand-sage/5">
                 <div className="w-11 h-11 rounded-full bg-brand-sage/15 text-brand-sage flex items-center justify-center shrink-0">
                   <MapPin size={20} strokeWidth={1.5} />

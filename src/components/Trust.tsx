@@ -1,6 +1,7 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useMotionValue, useTransform, animate, useInView } from "framer-motion";
+import { useEffect, useRef } from "react";
 import { Clock, BadgeCheck, HeartPulse, ArrowRight } from "lucide-react";
 import Link from "next/link";
 
@@ -14,30 +15,65 @@ const fadeUp = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] as const }},
 };
 
+/* ─── Animated Counter ─── */
+function AnimatedCounter({
+  target,
+  suffix = "",
+  isInView,
+}: {
+  target: number;
+  suffix?: string;
+  isInView: boolean;
+}) {
+  const count = useMotionValue(0);
+  const rounded = useTransform(count, (v) => Math.round(v));
+  const display = useTransform(rounded, (v) => `${v}${suffix}`);
+  const hasAnimated = useRef(false);
+
+  useEffect(() => {
+    if (isInView && !hasAnimated.current) {
+      hasAnimated.current = true;
+      const controls = animate(count, target, {
+        duration: 2,
+        ease: [0.22, 1, 0.36, 1],
+      });
+      return controls.stop;
+    }
+  }, [isInView, target, count]);
+
+  return <motion.span>{display}</motion.span>;
+}
+
 const stats = [
   {
-    value: "+8",
+    value: 8,
+    suffix: "+",
     label: "Anos de Prática",
     description: "Atendendo com dedicação desde 2016, acumulando experiência clínica em terapias integrativas.",
     icon: Clock,
   },
   {
-    value: "ABRATH",
-    label: "Registro Profissional",
-    description: "Associação Brasileira dos Terapeutas Holísticos — garantia de formação e ética profissional.",
-    icon: BadgeCheck,
+    value: 1500,
+    suffix: "+",
+    label: "Sessões Realizadas",
+    description: "Mais de mil e quinhentos atendimentos com resultados transformadores.",
+    icon: HeartPulse,
   },
   {
-    value: "PICS",
-    label: "Ministério da Saúde",
-    description: "Práticas Integrativas e Complementares reconhecidas e integradas ao SUS desde 2006.",
-    icon: HeartPulse,
+    value: 5,
+    suffix: "",
+    label: "Abordagens Terapêuticas",
+    description: "Radiestesia, Reiki, Barras de Access, Cone Hindu e MTVSS combinadas para você.",
+    icon: BadgeCheck,
   },
 ] as const;
 
 export default function Trust() {
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const isInView = useInView(sectionRef, { once: true, margin: "-100px" });
+
   return (
-    <section id="depoimentos" className="section-padding bg-white relative">
+    <section id="depoimentos" className="section-padding bg-white relative" ref={sectionRef}>
       <div className="absolute inset-0 bg-dot-grid pointer-events-none" />
 
       <div className="container-peace relative">
@@ -61,12 +97,18 @@ export default function Trust() {
           viewport={{ once: true, margin: "-40px" }}
         >
           {stats.map((stat) => (
-            <motion.div key={stat.label} variants={fadeUp} className="glass-card p-7 md:p-8 flex flex-col items-center text-center">
-              <div className="w-12 h-12 rounded-full bg-brand-sage/8 text-brand-sage flex items-center justify-center mb-4">
+            <motion.div
+              key={stat.label}
+              variants={fadeUp}
+              whileHover={{ y: -6, boxShadow: "0 20px 40px rgba(107,143,113,0.12)" }}
+              transition={{ duration: 0.25 }}
+              className="glass-card p-7 md:p-8 flex flex-col items-center text-center group"
+            >
+              <div className="w-12 h-12 rounded-full bg-brand-sage/8 text-brand-sage flex items-center justify-center mb-4 group-hover:bg-brand-sage group-hover:text-white transition-colors duration-300">
                 <stat.icon size={21} strokeWidth={1.5} />
               </div>
-              <span className="font-display text-4xl md:text-5xl font-bold text-brand-sage mb-2">
-                {stat.value}
+              <span className="font-display text-4xl md:text-5xl font-bold text-brand-sage mb-2 tabular-nums">
+                <AnimatedCounter target={stat.value} suffix={stat.suffix} isInView={isInView} />
               </span>
               <span className="font-body text-xs tracking-[0.15em] uppercase text-brand-muted/45 font-medium mb-3">
                 {stat.label}

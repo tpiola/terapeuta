@@ -1,6 +1,7 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
 import { ArrowRight, MessageCircle } from "lucide-react";
 import Link from "next/link";
 
@@ -15,10 +16,22 @@ const fadeUp = {
 };
 
 export default function Hero() {
+  const sectionRef = useRef<HTMLElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start start", "end start"],
+  });
+  const bgParallaxY = useTransform(scrollYProgress, [0, 1], ["0%", "15%"]);
+  const textParallaxY = useTransform(scrollYProgress, [0, 1], ["0%", "-12%"]);
+  const opacityFade = useTransform(scrollYProgress, [0, 0.5, 1], [1, 0.5, 0.15]);
+
   return (
-    <section id="hero" className="relative min-h-[90vh] flex items-center bg-brand-bg">
-      {/* Dot Grid */}
-      <div className="absolute inset-0 bg-dot-grid pointer-events-none" />
+    <section ref={sectionRef} id="hero" className="relative min-h-[90vh] flex items-center bg-brand-bg overflow-hidden">
+      {/* Dot Grid with parallax */}
+      <motion.div
+        style={{ y: bgParallaxY }}
+        className="absolute inset-0 bg-dot-grid pointer-events-none"
+      />
 
       <div className="container-peace relative z-10 py-20 md:py-28">
         <motion.div
@@ -26,6 +39,7 @@ export default function Hero() {
           variants={stagger}
           initial="hidden"
           animate="visible"
+          style={{ y: textParallaxY, opacity: opacityFade }}
         >
           {/* Badge */}
           <motion.div variants={fadeUp}>

@@ -122,7 +122,9 @@ export default function Services() {
               <motion.div
                 key={therapy.name}
                 variants={fadeUp}
-                className="glass-card p-6 md:p-7 flex flex-col items-center text-center group"
+                whileHover={{ y: -6, scale: 1.02, boxShadow: "0 20px 40px rgba(107,143,113,0.12)" }}
+                transition={{ duration: 0.25 }}
+                className="glass-card p-6 md:p-7 flex flex-col items-center text-center group cursor-pointer"
               >
                 <div className="w-12 h-12 rounded-full bg-brand-sage/8 text-brand-sage flex items-center justify-center mb-4 group-hover:bg-brand-sage group-hover:text-white transition-colors duration-300">
                   {Icon && <Icon />}

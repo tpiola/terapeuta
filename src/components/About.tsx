@@ -1,6 +1,7 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 
@@ -15,24 +16,32 @@ const fadeUp = {
 };
 
 export default function About() {
+  const sectionRef = useRef<HTMLElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start end", "end start"],
+  });
+  const imageParallaxY = useTransform(scrollYProgress, [0, 1], ["-5%", "5%"]);
+
   return (
-    <section id="sobre" className="section-padding bg-brand-bg relative">
+    <section ref={sectionRef} id="sobre" className="section-padding bg-brand-bg relative overflow-hidden">
       <div className="absolute inset-0 bg-dot-grid pointer-events-none" />
 
       <div className="container-peace relative">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-center">
-          {/* Photo */}
+          {/* Photo with parallax */}
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.6 }}
+            style={{ y: imageParallaxY }}
             className="flex justify-center lg:justify-start"
           >
             <img
               src="/images/elis-hero.jpg"
               alt="Elis Regina Borges — Terapeuta Integrativa"
-              className="w-full max-w-[400px] h-auto rounded-2xl shadow-lg object-cover aspect-[3/4]"
+              className="w-full max-w-[400px] h-auto rounded-2xl shadow-lg object-cover aspect-[3/4] transition-transform duration-500 hover:scale-[1.02]"
               loading="lazy"
             />
           </motion.div>
