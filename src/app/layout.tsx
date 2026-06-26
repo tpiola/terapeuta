@@ -42,6 +42,15 @@ export const metadata: Metadata = {
     canonical: "https://terapeuta-next.vercel.app",
   },
   manifest: "/manifest.json",
+    icons: {
+          icon: [
+            { url: "/images/elis-profile.jpg", type: "image/jpeg", sizes: "any" },
+                ],
+          shortcut: "/images/elis-profile.jpg",
+          apple: [
+            { url: "/images/elis-profile.jpg", sizes: "180x180", type: "image/jpeg" },
+                ],
+    },
   openGraph: {
     title: "Elis Regina Borges | Terapia Integrativa em Franca/SP",
     description:
