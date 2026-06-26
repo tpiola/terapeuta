@@ -76,13 +76,96 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     <html lang="pt-BR" className={`${playfairDisplay.variable} ${inter.variable} ${cormorantGaramond.variable}`}>
       <body className="bg-brand-bg text-brand-text antialiased">
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-          "@context": "https://schema.org", "@type": "HealthAndBeautyBusiness",
-          "name": "Elis Regina Borges - Terapia Integrativa", "telephone": "+551****5518",
-          "email": "elisreginaoliveira.terapeuta@gmail.com",
-          "address": { "@type": "PostalAddress", "addressLocality": "Franca", "addressRegion": "SP", "addressCountry": "BR" },
-          "geo": { "@type": "GeoCoordinates", "latitude": -20.5369792, "longitude": -47.411132 },
-          "url": "https://terapeuta-next.vercel.app",
-          "sameAs": ["https://www.instagram.com/elisreginaoliveira.terapeuta/"],
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Organization",
+              "name": "Elis Regina Borges - Terapia Integrativa",
+              "url": "https://terapeuta-next.vercel.app",
+              "description": "Terapia integrativa com abordagem humanizada em Franca/SP. Atendimento presencial e online.",
+              "telephone": "+5516991115518",
+              "email": "elisreginaoliveira.terapeuta@gmail.com",
+              "address": { "@type": "PostalAddress", "addressLocality": "Franca", "addressRegion": "SP", "addressCountry": "BR" },
+              "sameAs": ["https://www.instagram.com/elisreginaoliveira.terapeuta/"]
+            },
+            {
+              "@type": "WebSite",
+              "name": "Elis Regina Borges | Terapia Integrativa",
+              "url": "https://terapeuta-next.vercel.app",
+              "description": "Transforme sua relação com o que sente. Terapia integrativa com abordagem humanizada.",
+              "inLanguage": "pt-BR"
+            },
+            {
+              "@type": "HealthAndBeautyBusiness",
+              "name": "Elis Regina Borges - Terapia Integrativa",
+              "telephone": "+5516991115518",
+              "email": "elisreginaoliveira.terapeuta@gmail.com",
+              "address": { "@type": "PostalAddress", "addressLocality": "Franca", "addressRegion": "SP", "addressCountry": "BR" },
+              "geo": { "@type": "GeoCoordinates", "latitude": -20.5369792, "longitude": -47.411132 },
+              "url": "https://terapeuta-next.vercel.app",
+              "sameAs": ["https://www.instagram.com/elisreginaoliveira.terapeuta/"],
+              "openingHoursSpecification": {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                "opens": "08:00",
+                "closes": "18:00"
+              }
+            },
+            {
+              "@type": "FAQPage",
+              "mainEntity": [
+                {
+                  "@type": "Question",
+                  "name": "Quais terapias a Elis oferece?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Oferecemos Radiestesia, Reiki, Barras de Access, Cone Hindu e MTVSS — cinco abordagens integrativas personalizadas para o seu momento."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Como agendar uma consulta?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Você pode agendar sua consulta diretamente pelo WhatsApp (16) 99111-5518. Atendimento presencial em Franca/SP ou online."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Quanto tempo dura uma sessão de terapia?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Cada sessão tem duração média de 50 a 60 minutos, dependendo da abordagem escolhida e das necessidades individuais do paciente."
+                  }
+                }
+              ]
+            },
+            {
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://terapeuta-next.vercel.app" },
+                { "@type": "ListItem", "position": 2, "name": "Tratamentos", "item": "https://terapeuta-next.vercel.app#tratamentos" },
+                { "@type": "ListItem", "position": 3, "name": "Contato", "item": "https://terapeuta-next.vercel.app#contato" }
+              ]
+            },
+            {
+              "@type": "Review",
+              "itemReviewed": {
+                "@type": "HealthAndBeautyBusiness",
+                "name": "Elis Regina Borges - Terapia Integrativa"
+              },
+              "reviewRating": {
+                "@type": "Rating",
+                "ratingValue": "5",
+                "bestRating": "5"
+              },
+              "author": {
+                "@type": "Person",
+                "name": "Paciente"
+              },
+              "reviewBody": "Atendimento humanizado e transformador. A Elis tem uma sensibilidade única e mais de 8 anos de experiência com mais de 1500 sessões realizadas."
+            }
+          ]
         })}} />
         {children}
         <CookieConsent />
