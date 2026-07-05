@@ -2,6 +2,8 @@ import type { Metadata, Viewport } from "next";
 import { Playfair_Display, Inter, Cormorant_Garamond } from "next/font/google";
 import "./globals.css";
 import { CookieConsent } from "@/components/CookieConsent";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const playfairDisplay = Playfair_Display({
   variable: "--font-display",
@@ -168,6 +170,8 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           ]
         })}} />
         {children}
+        <Analytics />
+        <SpeedInsights />
         <CookieConsent />
       </body>
     </html>
