@@ -1,5 +1,5 @@
 "use client";
-import { ScrollReveal, TiltCard } from "@/components/motion/ScrollReveal";
+import { ScrollReveal } from "@/components/motion/ScrollReveal";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Services from "@/components/Services";
