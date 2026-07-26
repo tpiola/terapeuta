@@ -6,7 +6,7 @@ import { CookieConsent } from "@/components/CookieConsent";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? siteUrl;
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://terapeuta-next.vercel.app";
 const googleSiteVerification = process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION;
 const googleTagManagerId = process.env.NEXT_PUBLIC_GTM_ID;
 
@@ -290,13 +290,13 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         "inLanguage": "pt-BR",
         "potentialAction": {
           "@type": "SearchAction",
-          "target": `${siteUrl}#tratamentos",
+          "target": `${siteUrl}#tratamentos`,
           "query-input": "required name=search_term_string"
         }
       },
       {
         "@type": "FAQPage",
-        "@id": `${siteUrl}/#faq",
+        "@id": `${siteUrl}/#faq`,
         "mainEntity": [
           {
             "@type": "Question",
@@ -342,7 +342,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       },
       {
         "@type": "BreadcrumbList",
-        "@id": `${siteUrl}/#breadcrumb",
+        "@id": `${siteUrl}/#breadcrumb`,
         "itemListElement": [
           { 
             "@type": "ListItem", 
@@ -354,19 +354,19 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
             "@type": "ListItem", 
             "position": 2, 
             "name": "Tratamentos", 
-            "item": `${siteUrl}#tratamentos" 
+            "item": `${siteUrl}#tratamentos` 
           },
           { 
             "@type": "ListItem", 
             "position": 3, 
             "name": "Sobre", 
-            "item": `${siteUrl}#sobre" 
+            "item": `${siteUrl}#sobre` 
           },
           { 
             "@type": "ListItem", 
             "position": 4, 
             "name": "Contato", 
-            "item": `${siteUrl}#contato" 
+            "item": `${siteUrl}#contato` 
           }
         ]
       },
