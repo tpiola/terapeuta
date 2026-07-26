@@ -37,8 +37,18 @@ export default function Contact() {
   });
 
   const onSubmit = async (data: ContactFormData) => {
-    // Em produção, enviar para API/WhatsApp
-    console.log("Form data:", data);
+    const message = [
+      "Olá, gostaria de agendar uma consulta.",
+      "",
+      `Nome: ${data.nome}`,
+      `Email: ${data.email}`,
+      `Telefone: ${data.telefone}`,
+      data.mensagem ? `Mensagem: ${data.mensagem}` : null,
+    ]
+      .filter(Boolean)
+      .join("\\n");
+
+    window.open(`https://wa.me/5516991115518?text=${encodeURIComponent(message)}`, "_blank", "noopener,noreferrer");
     setSubmitted(true);
   };
 
@@ -80,10 +90,10 @@ export default function Contact() {
                   <Send size={28} strokeWidth={1.5} />
                 </div>
                 <h3 className="font-display text-2xl font-semibold text-brand-text mb-2">
-                  Mensagem enviada!
+                  Solicitação preparada!
                 </h3>
                 <p className="font-body text-brand-muted/70">
-                  Retornaremos em breve. Obrigada pelo contato.
+                  O WhatsApp foi aberto com seus dados. Basta confirmar o envio da mensagem.
                 </p>
               </div>
             ) : (
