@@ -1,9 +1,14 @@
 import type { Metadata, Viewport } from "next";
+import Script from "next/script";
 import { Playfair_Display, Inter, Cormorant_Garamond } from "next/font/google";
 import "./globals.css";
 import { CookieConsent } from "@/components/CookieConsent";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? siteUrl;
+const googleSiteVerification = process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION;
+const googleTagManagerId = process.env.NEXT_PUBLIC_GTM_ID;
 
 const playfairDisplay = Playfair_Display({
   variable: "--font-display",
@@ -25,6 +30,7 @@ const cormorantGaramond = Cormorant_Garamond({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: "Elis Regina Borges | Terapeuta em Franca SP - Radiestesia, Reiki, Barras de Access, Cone Hindu e MTVSS",
   description:
     "Terapeuta holística em Franca/SP especializada em Radiestesia, Reiki, Barras de Access, Cone Hindu e MTVSS. Atendimento presencial e online. Agende sua sessão de terapia integrativa pelo WhatsApp ou Google Agenda. Mais de 8 anos de experiência e 1500+ sessões realizadas.",
@@ -69,8 +75,8 @@ export const metadata: Metadata = {
     }
   },
   alternates: { 
-    canonical: "https://terapeuta-next.vercel.app",
-    languages: { "pt-BR": "https://terapeuta-next.vercel.app" }
+    canonical: "/",
+    languages: { "pt-BR": "/" }
   },
   manifest: "/manifest.json",
   icons: {
@@ -85,13 +91,13 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Elis Regina Borges | Terapeuta Integrativa em Franca/SP - Radiestesia, Reiki, Barras de Access",
     description: "Especialista em Radiestesia, Reiki, Barras de Access, Cone Hindu e MTVSS. +8 anos de experiência, +1500 sessões realizadas. Atendimento presencial em Franca/SP e online para todo Brasil.",
-    url: "https://terapeuta-next.vercel.app",
+    url: siteUrl,
     type: "website",
     locale: "pt_BR",
     siteName: "Elis Regina Borges - Terapia Integrativa Franca SP",
     images: [
       { 
-        url: "https://terapeuta-next.vercel.app/og-image.jpg", 
+        url: "/og-image.jpg", 
         width: 1200, 
         height: 630, 
         alt: "Elis Regina Borges | Terapeuta Integrativa em Franca/SP - Especialista em Radiestesia, Reiki, Barras de Access, Cone Hindu e MTVSS",
@@ -103,12 +109,10 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Elis Regina Borges | Terapeuta Integrativa - Franca/SP",
     description: "Radiestesia, Reiki, Barras de Access, Cone Hindu e MTVSS. Agende sua consulta em Franca/SP ou online!",
-    images: ["https://terapeuta-next.vercel.app/og-image.jpg"],
+    images: ["/og-image.jpg"],
     creator: "@elisreginaoliveira.terapeuta",
   },
-  verification: {
-    google: "SEU_CODIGO_DE_VERIFICACAO_GOOGLE", // Substituir após verificar no Google Search Console
-  },
+  verification: googleSiteVerification ? { google: googleSiteVerification } : undefined,
 };
 
 export const viewport: Viewport = {
@@ -125,10 +129,10 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     "@graph": [
       {
         "@type": "LocalBusiness",
-        "@id": "https://terapeuta-next.vercel.app/#business",
+        "@id": `${siteUrl}/#business`,
         "name": "Elis Regina Borges - Terapia Integrativa",
         "alternateName": "Elis Terapeuta",
-        "url": "https://terapeuta-next.vercel.app",
+        "url": siteUrl,
         "description": "Terapeuta especializada em Radiestesia, Reiki, Barras de Access, Cone Hindu e MTVSS. Atendimento humanizado com mais de 8 anos de experiência e mais de 1500 sessões realizadas.",
         "telephone": "+5516991115518",
         "email": "elisreginaoliveira.terapeuta@gmail.com",
@@ -245,10 +249,10 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       },
       {
         "@type": "Person",
-        "@id": "https://terapeuta-next.vercel.app/#person",
+        "@id": `${siteUrl}/#person`,
         "name": "Elis Regina Borges",
         "jobTitle": "Terapeuta Integrativa",
-        "url": "https://terapeuta-next.vercel.app",
+        "url": siteUrl,
         "sameAs": [
           "https://www.instagram.com/elisreginaoliveira.terapeuta/",
           "https://www.facebook.com/elisreginaoliveira.terapeuta"
@@ -279,20 +283,20 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       },
       {
         "@type": "WebSite",
-        "@id": "https://terapeuta-next.vercel.app/#website",
+        "@id": `${siteUrl}/#website`,
         "name": "Elis Regina Borges | Terapia Integrativa",
-        "url": "https://terapeuta-next.vercel.app",
+        "url": siteUrl,
         "description": "Portfólio e agendamento de terapias integrativas em Franca/SP",
         "inLanguage": "pt-BR",
         "potentialAction": {
           "@type": "SearchAction",
-          "target": "https://terapeuta-next.vercel.app#tratamentos",
+          "target": `${siteUrl}#tratamentos",
           "query-input": "required name=search_term_string"
         }
       },
       {
         "@type": "FAQPage",
-        "@id": "https://terapeuta-next.vercel.app/#faq",
+        "@id": `${siteUrl}/#faq",
         "mainEntity": [
           {
             "@type": "Question",
@@ -338,50 +342,37 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       },
       {
         "@type": "BreadcrumbList",
-        "@id": "https://terapeuta-next.vercel.app/#breadcrumb",
+        "@id": `${siteUrl}/#breadcrumb",
         "itemListElement": [
           { 
             "@type": "ListItem", 
             "position": 1, 
             "name": "Home", 
-            "item": "https://terapeuta-next.vercel.app" 
+            "item": siteUrl 
           },
           { 
             "@type": "ListItem", 
             "position": 2, 
             "name": "Tratamentos", 
-            "item": "https://terapeuta-next.vercel.app#tratamentos" 
+            "item": `${siteUrl}#tratamentos" 
           },
           { 
             "@type": "ListItem", 
             "position": 3, 
             "name": "Sobre", 
-            "item": "https://terapeuta-next.vercel.app#sobre" 
+            "item": `${siteUrl}#sobre" 
           },
           { 
             "@type": "ListItem", 
             "position": 4, 
             "name": "Contato", 
-            "item": "https://terapeuta-next.vercel.app#contato" 
+            "item": `${siteUrl}#contato" 
           }
         ]
       },
       {
-        "@type": "AggregateRating",
-        "@id": "https://terapeuta-next.vercel.app/#rating",
-        "itemReviewed": {
-          "@type": "LocalBusiness",
-          "name": "Elis Regina Borges - Terapia Integrativa"
-        },
-        "ratingValue": "5.0",
-        "bestRating": "5",
-        "worstRating": "1",
-        "ratingCount": "1500+",
-        "reviewCount": "50+"
-      },
-      {
         "@type": "Action",
-        "@id": "https://terapeuta-next.vercel.app/#action",
+        "@id": `${siteUrl}/#action`,
         "name": "Agendar Consulta",
         "description": "Agende sua sessão de terapia integrativa",
         "potentialAction": {
@@ -413,25 +404,28 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           type="application/ld+json" 
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaOrgData) }} 
         />
-        {/* Google Tag Manager - Opcional */}
-        <script dangerouslySetInnerHTML={{
-          __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-          })(window,document,'script','dataLayer','GTM-XXXXXX');`
-        }} />
+        {googleTagManagerId && (
+          <Script id="google-tag-manager" strategy="afterInteractive">
+            {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','${googleTagManagerId}');`}
+          </Script>
+        )}
       </head>
       <body className="bg-brand-bg text-brand-text antialiased">
-        {/* Google Tag Manager (noscript) */}
-        <noscript>
-          <iframe 
-            src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXX"
-            height="0" 
-            width="0" 
-            style={{display:'none',visibility:'hidden'}}
-          />
-        </noscript>
+        {googleTagManagerId && (
+          <noscript>
+            <iframe
+              src={`https://www.googletagmanager.com/ns.html?id=${googleTagManagerId}`}
+              height="0"
+              width="0"
+              style={{ display: "none", visibility: "hidden" }}
+              title="Google Tag Manager"
+            />
+          </noscript>
+        )}
         
         {children}
         <Analytics />
