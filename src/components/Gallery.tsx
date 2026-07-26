@@ -1,8 +1,25 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Instagram, Facebook } from "lucide-react";
 import Link from "next/link";
+
+function InstagramIcon({ size = 20, className = "" }: { size?: number; className?: string }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" aria-hidden="true" className={className}>
+      <rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" strokeWidth="2" />
+      <circle cx="12" cy="12" r="4" stroke="currentColor" strokeWidth="2" />
+      <circle cx="17.5" cy="6.5" r="1" fill="currentColor" />
+    </svg>
+  );
+}
+
+function FacebookIcon({ size = 20, className = "" }: { size?: number; className?: string }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" className={className}>
+      <path d="M13.7 21v-8h2.7l.4-3h-3.1V8.1c0-.9.3-1.5 1.6-1.5H17V3.9c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.4-4 4.1V10H8v3h2.6v8h3.1Z" />
+    </svg>
+  );
+}
 
 const stagger = {
   hidden: {},
@@ -88,7 +105,7 @@ export default function Gallery() {
               rel="noopener noreferrer"
               className="group inline-flex items-center gap-3 bg-gradient-to-r from-purple-600 via-pink-500 to-orange-400 text-white rounded-full px-8 py-3.5 text-base font-medium shadow-lg transition-all hover:shadow-xl hover:-translate-y-0.5 active:scale-[0.97]"
             >
-              <Instagram size={20} className="transition-transform group-hover:scale-110" />
+              <InstagramIcon size={20} className="transition-transform group-hover:scale-110" />
               Siga no Instagram
             </Link>
             
@@ -98,7 +115,7 @@ export default function Gallery() {
               rel="noopener noreferrer"
               className="group inline-flex items-center gap-3 bg-blue-600 text-white rounded-full px-8 py-3.5 text-base font-medium shadow-lg transition-all hover:bg-blue-700 hover:shadow-xl hover:-translate-y-0.5 active:scale-[0.97]"
             >
-              <Facebook size={20} className="transition-transform group-hover:scale-110" />
+              <FacebookIcon size={20} className="transition-transform group-hover:scale-110" />
               Curta no Facebook
             </Link>
           </div>
