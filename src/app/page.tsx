@@ -61,7 +61,7 @@ export default function Home() {
           <span className="brand-mark"><Leaf size={18} /></span>
           <span>
             <strong>Elis Regina Borges</strong>
-            <small>Terapia Integrativa</small>
+            <small>Terapia Holística</small>
           </span>
         </a>
         <nav className="desktop-nav" aria-label="Navegação principal">
@@ -88,24 +88,24 @@ export default function Home() {
       <main>
         <section className="hero" id="inicio">
           <div className="hero-copy">
-            <p className="location-line"><MapPin size={15} /> Franca/SP · presencial e online</p>
-            <h1>Um espaço para voltar a si.</h1>
+            <p className="location-line"><Sparkles size={15} /> Terapia holística em Franca/SP</p>
+            <h1>Equilibre sua energia. Retome seu centro.</h1>
             <p className="hero-lead">
-              Terapias integrativas conduzidas com escuta, presença e respeito ao
-              seu momento — para quem busca mais equilíbrio e consciência no cotidiano.
+              Um cuidado que acolhe corpo, mente, emoções e campo energético.
+              Encontre a terapia ideal para viver com mais leveza, presença e harmonia.
             </p>
             <div className="hero-actions">
               <a className="button" href={whatsapp} target="_blank" rel="noreferrer">
                 <WhatsAppIcon /> Conversar com Elis
               </a>
               <a className="text-link" href="#terapias">
-                Conhecer as terapias <ArrowDown size={17} />
+                Descobrir as terapias <ArrowDown size={17} />
               </a>
             </div>
             <ul className="trust-list" aria-label="Informações de atendimento">
-              <li><Check /> Atendimento individual</li>
-              <li><Check /> Abordagem personalizada</li>
-              <li><Check /> Conversa inicial sem compromisso</li>
+              <li><Check /> Cuidado energético individual</li>
+              <li><Check /> Presencial e online</li>
+              <li><Check /> Orientação antes da sessão</li>
             </ul>
           </div>
           <div className="hero-visual">
@@ -117,7 +117,7 @@ export default function Home() {
             </div>
             <div className="portrait-note">
               <Sparkles size={18} />
-              <span><strong>Cuidado integrativo</strong> para corpo, mente e energia</span>
+              <span><strong>Corpo, mente e energia</strong> cuidados como um todo</span>
             </div>
           </div>
           <a className="scroll-cue" href="#terapias" aria-label="Continuar para as terapias">
@@ -127,17 +127,18 @@ export default function Home() {
 
         <section className="therapy-section" id="terapias">
           <div className="section-intro">
-            <p className="overline">Escolha com orientação</p>
-            <h2>O cuidado certo começa pela escuta.</h2>
+            <p className="overline">Terapias holísticas</p>
+            <h2>Caminhos para harmonizar o seu ser.</h2>
             <p>
-              Você não precisa saber qual técnica escolher. A conversa inicial ajuda
-              a compreender sua necessidade e indicar o caminho mais adequado.
+              Cada técnica atua de uma forma, mas todas partem do mesmo princípio:
+              olhar para você por inteiro e respeitar o seu momento.
             </p>
           </div>
           <div className="therapy-list">
             {therapies.map((therapy) => (
               <article className="therapy-row" key={therapy.name}>
                 <span>{therapy.number}</span>
+                <Sparkles className="therapy-symbol" aria-hidden="true" />
                 <h3>{therapy.name}</h3>
                 <p>{therapy.text}</p>
                 <a href={whatsapp} target="_blank" rel="noreferrer" aria-label={`Perguntar sobre ${therapy.name}`}>
@@ -147,7 +148,7 @@ export default function Home() {
             ))}
           </div>
           <div className="section-cta">
-            <p>Não sabe qual terapia combina com o que você está vivendo?</p>
+            <p>Não sabe qual terapia sua energia está pedindo agora?</p>
             <a className="button button-light" href={whatsapp} target="_blank" rel="noreferrer">
               Receber uma orientação <ArrowRight size={17} />
             </a>
@@ -160,20 +161,20 @@ export default function Home() {
             <p>Elis Regina Borges<br /><span>Terapeuta Integrativa</span></p>
           </div>
           <div className="about-copy">
-            <p className="overline">Presença antes da técnica</p>
-            <h2>Seu processo merece cuidado, não pressa.</h2>
+            <p className="overline">A terapeuta</p>
+            <h2>Um encontro entre sensibilidade, energia e propósito.</h2>
             <p className="about-lead">
-              Cada pessoa chega com uma história, um ritmo e uma necessidade diferente.
-              Por isso, o atendimento não parte de fórmulas prontas.
+              Elis acredita que o equilíbrio começa quando corpo, emoções, mente e
+              energia voltam a conversar em harmonia.
             </p>
             <p>
-              Elis conduz cada encontro de forma individual, combinando práticas
-              integrativas com uma escuta acolhedora. O objetivo é criar um espaço
-              seguro para desacelerar, perceber o que pede atenção e cuidar de si com
-              mais consciência.
+              Em cada sessão, ela une práticas holísticas e escuta acolhedora para
+              compreender o que está por trás do cansaço, da sobrecarga e da sensação
+              de desconexão. O atendimento é individual, intuitivo e conduzido com
+              profundo respeito à sua história.
             </p>
             <blockquote>
-              “A terapia começa quando você encontra espaço para se escutar.”
+              “Quando a energia encontra equilíbrio, a vida volta a fluir com mais leveza.”
             </blockquote>
             <a className="text-link text-link-dark" href={whatsapp} target="_blank" rel="noreferrer">
               Falar diretamente com Elis <ArrowRight size={17} />
@@ -183,8 +184,8 @@ export default function Home() {
 
         <section className="process-section" id="como-funciona">
           <div className="process-heading">
-            <p className="overline">Simples e humano</p>
-            <h2>Como funciona o atendimento</h2>
+            <p className="overline">Sua jornada</p>
+            <h2>Como começa o seu cuidado</h2>
           </div>
           <div className="steps">
             {steps.map(([title, text], index) => (
@@ -203,8 +204,8 @@ export default function Home() {
         <section className="decision-section">
           <div>
             <Leaf size={29} />
-            <p>Talvez você não precise ter todas as respostas agora.</p>
-            <h2>Precisa apenas começar uma conversa.</h2>
+            <p>Seu corpo sente. Sua energia comunica.</p>
+            <h2>Talvez seja hora de se ouvir por inteiro.</h2>
           </div>
           <a className="button button-light" href={whatsapp} target="_blank" rel="noreferrer">
             <WhatsAppIcon /> Quero conversar
@@ -217,7 +218,7 @@ export default function Home() {
           <div className="footer-brand">
             <span className="brand-mark brand-mark-light"><Leaf size={20} /></span>
             <h2>Elis Regina Borges</h2>
-            <p>Terapia Integrativa em Franca/SP, com atendimento presencial e online.</p>
+            <p>Terapia holística em Franca/SP para cuidar de corpo, mente, emoções e energia.</p>
             <a className="button button-light" href={whatsapp} target="_blank" rel="noreferrer">
               Agendar pelo WhatsApp <ArrowRight size={17} />
             </a>
