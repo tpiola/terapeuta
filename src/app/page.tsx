@@ -109,11 +109,17 @@ export default function Home() {
             </ul>
           </div>
           <div className="hero-visual">
-            <div className="portrait-frame">
-              <img
-                src="/images/elis-profile.jpg"
-                alt="Elis Regina Borges, terapeuta integrativa"
-              />
+            <div className="energy-art" aria-label="Representação de equilíbrio energético">
+              <span className="energy-ring energy-ring-one" />
+              <span className="energy-ring energy-ring-two" />
+              <span className="energy-ring energy-ring-three" />
+              <div className="lotus-mark">
+                <Leaf />
+                <Leaf />
+                <Leaf />
+              </div>
+              <p>equilíbrio</p>
+              <small>corpo · mente · energia</small>
             </div>
             <div className="portrait-note">
               <Sparkles size={18} />
@@ -157,8 +163,12 @@ export default function Home() {
 
         <section className="about-section" id="sobre">
           <div className="about-photo">
-            <img src="/images/elis-profile.jpg" alt="Retrato de Elis Regina Borges" />
-            <p>Elis Regina Borges<br /><span>Terapeuta Integrativa</span></p>
+            <div className="about-symbol" aria-hidden="true">
+              <span className="moon" />
+              <Sparkles />
+              <Leaf />
+            </div>
+            <p>Elis Regina Borges<br /><span>Terapeuta Holística</span></p>
           </div>
           <div className="about-copy">
             <p className="overline">A terapeuta</p>
