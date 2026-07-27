@@ -13,12 +13,12 @@ const playfair = Playfair_Display({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://terapeuta-ten.vercel.app"),
-  title: "Elis Regina Borges | Terapeuta Integrativa em Franca/SP",
+  title: "Elis Regina Borges | Terapia Holística em Franca/SP",
   description:
     "Radiestesia, Reiki, Barras de Access, Cone Hindu e MTVSS em Franca/SP, com atendimento presencial e online. Converse com Elis pelo WhatsApp.",
   alternates: { canonical: "/" },
   openGraph: {
-    title: "Elis Regina Borges | Terapia Integrativa",
+    title: "Elis Regina Borges | Terapia Holística",
     description:
       "Um cuidado integrativo, humano e individual para o seu momento.",
     url: "/",
@@ -33,13 +33,13 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#f7f2e8",
+  themeColor: "#f4edf7",
 };
 
 const schema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  name: "Elis Regina Borges — Terapia Integrativa",
+  name: "Elis Regina Borges — Terapia Holística",
   url: "https://terapeuta-ten.vercel.app",
   telephone: "+5516991115518",
   email: "elisreginaoliveira.terapeuta@gmail.com",
