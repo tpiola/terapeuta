@@ -25,7 +25,6 @@ export const metadata: Metadata = {
     siteName: "Elis Regina Borges",
     locale: "pt_BR",
     type: "website",
-    images: [{ url: "/images/elis-profile.jpg", width: 1200, height: 630 }],
   },
   robots: { index: true, follow: true },
 };
