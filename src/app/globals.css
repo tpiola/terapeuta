@@ -106,8 +106,28 @@ h1, h2, h3 { font-family: var(--font-display); font-style: normal; font-weight: 
 .trust-list li { align-items: center; color: var(--color-muted); display: flex; font-size: var(--text-xs); gap: .45rem; white-space: nowrap; }
 .trust-list svg { color: var(--color-accent); height: 15px; width: 15px; }
 .hero-visual { justify-self: end; max-width: 520px; position: relative; width: 86%; z-index: 2; }
-.portrait-frame { aspect-ratio: 4 / 5; border: 8px solid color-mix(in oklch, var(--color-white) 76%, transparent); border-radius: 50% 50% 42% 42%; box-shadow: 0 30px 80px color-mix(in oklch, var(--color-accent-dark) 20%, transparent); overflow: hidden; }
-.portrait-frame img { height: 100%; object-fit: cover; width: 100%; }
+.energy-art {
+  align-items: center; aspect-ratio: 1; background: var(--color-accent-soft); border: 1px solid var(--color-rule);
+  border-radius: 50%; box-shadow: 0 30px 90px color-mix(in oklch, var(--color-accent-dark) 20%, transparent);
+  display: flex; flex-direction: column; justify-content: center; overflow: hidden; position: relative;
+}
+.energy-art::before, .energy-art::after {
+  border: 1px solid color-mix(in oklch, var(--color-gold) 60%, transparent); border-radius: 50%;
+  content: ""; position: absolute;
+}
+.energy-art::before { height: 76%; width: 76%; }
+.energy-art::after { height: 52%; width: 52%; }
+.energy-ring { border: 1px solid color-mix(in oklch, var(--color-accent-dark) 25%, transparent); border-radius: 50%; position: absolute; }
+.energy-ring-one { height: 92%; width: 92%; }
+.energy-ring-two { height: 65%; width: 65%; }
+.energy-ring-three { height: 36%; width: 36%; }
+.lotus-mark { height: 105px; position: relative; width: 150px; z-index: 2; }
+.lotus-mark svg { color: var(--color-accent-dark); height: 76px; left: 38px; position: absolute; top: 12px; width: 76px; }
+.lotus-mark svg:first-child { transform: rotate(-42deg) translate(-19px, 10px); transform-origin: bottom center; }
+.lotus-mark svg:nth-child(2) { transform: rotate(42deg) translate(19px, 10px); transform-origin: bottom center; }
+.lotus-mark svg:last-child { color: var(--color-gold); transform: rotate(0deg); }
+.energy-art p { color: var(--color-accent-dark); font-family: var(--font-display); font-size: var(--text-2xl); margin: .6rem 0 0; position: relative; z-index: 2; }
+.energy-art small { color: var(--color-muted); font-size: .65rem; font-weight: 700; letter-spacing: .15em; position: relative; text-transform: uppercase; z-index: 2; }
 .portrait-note {
   align-items: center; background: color-mix(in oklch, var(--color-surface) 88%, transparent); backdrop-filter: blur(15px); border: var(--rule-thin) solid var(--color-rule);
   bottom: -1.5rem; display: flex; gap: .8rem; left: -3rem; max-width: 250px; padding: 1rem 1.15rem; position: absolute;
@@ -162,7 +182,23 @@ h1, h2, h3 { font-family: var(--font-display); font-style: normal; font-weight: 
   position: absolute; top: 5rem; width: 17rem;
 }
 .about-photo { position: relative; }
-.about-photo img { aspect-ratio: 4/5; border-radius: 48% 48% var(--radius-lg) var(--radius-lg); height: auto; object-fit: cover; width: 100%; }
+.about-symbol {
+  align-items: center; aspect-ratio: 4/5; background: var(--color-accent-dark); border-radius: 48% 48% var(--radius-lg) var(--radius-lg);
+  display: flex; justify-content: center; overflow: hidden; position: relative; width: 100%;
+}
+.about-symbol::before {
+  border: 1px solid color-mix(in oklch, var(--color-gold) 50%, transparent); border-radius: 50%; content: "";
+  height: 68%; position: absolute; width: 68%;
+}
+.about-symbol .moon {
+  background: var(--color-gold); border-radius: 50%; height: 34%; position: absolute; width: 34%;
+}
+.about-symbol .moon::after {
+  background: var(--color-accent-dark); border-radius: 50%; content: ""; height: 100%; left: 34%; position: absolute; top: -8%; width: 100%;
+}
+.about-symbol svg { color: var(--color-paper); height: 38px; position: absolute; width: 38px; }
+.about-symbol svg:nth-of-type(1) { right: 20%; top: 22%; }
+.about-symbol svg:nth-of-type(2) { bottom: 20%; left: 20%; transform: rotate(-26deg); }
 .about-photo > p {
   background: var(--color-paper); bottom: 0; font-family: var(--font-display); font-size: var(--text-lg);
   left: 0; margin: 0; padding: 1rem 1.5rem; position: absolute;
