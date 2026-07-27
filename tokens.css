@@ -1,16 +1,16 @@
 :root {
-  --color-paper: oklch(97.5% 0.012 82);
-  --color-paper-deep: oklch(93% 0.022 75);
-  --color-surface: oklch(99.2% 0.006 85);
-  --color-ink: oklch(25% 0.035 47);
-  --color-muted: oklch(47% 0.035 55);
-  --color-accent: oklch(48% 0.09 142);
-  --color-accent-dark: oklch(38% 0.075 142);
-  --color-accent-soft: oklch(89% 0.045 142);
-  --color-gold: oklch(66% 0.095 73);
-  --color-rule: oklch(83% 0.025 80);
-  --color-white: oklch(99.2% 0.006 85);
-  --color-accent-ink: oklch(99.2% 0.006 85);
+  --color-paper: oklch(97.5% 0.018 312);
+  --color-paper-deep: oklch(92.5% 0.045 312);
+  --color-surface: oklch(99% 0.012 318);
+  --color-ink: oklch(27% 0.055 319);
+  --color-muted: oklch(48% 0.045 318);
+  --color-accent: oklch(55% 0.13 315);
+  --color-accent-dark: oklch(39% 0.105 316);
+  --color-accent-soft: oklch(88% 0.065 315);
+  --color-gold: oklch(70% 0.105 76);
+  --color-rule: oklch(83% 0.04 313);
+  --color-white: oklch(99.2% 0.008 315);
+  --color-accent-ink: oklch(99.2% 0.008 315);
   --font-display: var(--font-playfair), Georgia, serif;
   --font-body: var(--font-manrope), Arial, sans-serif;
   --space-xs: 0.5rem;
