@@ -12,7 +12,7 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://terapeuta-ten.vercel.app"),
+  metadataBase: new URL("https://terapeuta-next.vercel.app"),
   title: "Elis Regina Borges | Terapia Holística em Franca/SP",
   description:
     "Radiestesia, Reiki, Barras de Access, Cone Hindu e MTVSS em Franca/SP, com atendimento presencial e online. Converse com Elis pelo WhatsApp.",
@@ -39,7 +39,7 @@ const schema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   name: "Elis Regina Borges — Terapia Holística",
-  url: "https://terapeuta-ten.vercel.app",
+  url: "https://terapeuta-next.vercel.app",
   telephone: "+5516991115518",
   email: "elisreginaoliveira.terapeuta@gmail.com",
   address: {
