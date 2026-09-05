@@ -1,0 +1,26 @@
+name: Deploy Static Website
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Verify HTML & Assets Integrity
+        run: |
+          test -f index.html || (echo "index.html missing" && exit 1)
+          test -d img || (echo "img dir missing" && exit 1)
+          test -f img/logo-simbolo.png || (echo "logo missing" && exit 1)
+          echo "Site integrity check passed with 100% success!"

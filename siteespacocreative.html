@@ -1,0 +1,1825 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <!--
+    ESPAÇO CRIE & ATIVE — ELIS REGINA TERAPEUTA HOLÍSTICA
+    Registro Profissional: CRTH-BR 13579 / ABRATH
+    Atendimento: Presencial em Franca/SP e On-line para todo o Brasil e exterior
+  -->
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Espaço Crie & Ative | Elis Regina - Terapeuta Holística em Franca/SP</title>
+
+  <meta name="description" content="Encontre alívio para ansiedade, estresse e dores com Elis Regina, Terapeuta Holística em Franca/SP (CRTH-BR 13579). Cone Hindu, Cromoterapia, Radiestesia, Apometria e Reiki.">
+  <link rel="canonical" href="https://espacocrieative.com.br/">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="theme-color" content="#423456">
+
+  <!-- Favicon Oficial (Idêntico ao Logotipo Oficial) -->
+  <link rel="icon" type="image/png" sizes="128x128" href="favicon.png?v=2">
+  <link rel="icon" type="image/x-icon" href="favicon.ico?v=2">
+  <link rel="shortcut icon" href="favicon.ico?v=2">
+  <link rel="apple-touch-icon" href="favicon.png?v=2">
+
+  <!-- SEO Local Franca/SP -->
+  <meta name="geo.region" content="BR-SP">
+  <meta name="geo.placename" content="Franca, Parque Moema">
+  <meta name="geo.position" content="-20.5390;-47.4010">
+  <meta name="ICBM" content="-20.5390, -47.4010">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Espaço Crie & Ative - Elis Regina">
+  <meta property="og:title" content="Espaço Crie & Ative | Elis Regina - Terapeuta Holística em Franca/SP">
+  <meta property="og:description" content="Cuidado integrativo para corpo, mente e alma. Sessões presenciais em Franca/SP e on-line pelo WhatsApp.">
+  <meta property="og:image" content="img/elis-regina-conduz.jpg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=JetBrains+Mono:wght@500;600;700&family=Karla:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --font-heading: "Fraunces", Georgia, serif;
+      --font-body: "Karla", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+      --bg-light: #FAF6F0;
+      --bg-white: #FFFFFF;
+      --bg-card: #FFFFFF;
+      --text-dark: #231C28;
+      --text-muted: #5C5364;
+      --text-light: #7E7387;
+
+      --border-color: #E7DFD4;
+      --border-focus: #4E3E66;
+
+      --brand-purple: #4E3E66;
+      --brand-purple-dark: #372A4B;
+      --brand-purple-soft: #F2EEF7;
+
+      --brand-coral: #C26848;
+      --brand-coral-dark: #9F4F33;
+      --brand-coral-soft: #FDF1EC;
+
+      --whatsapp-color: #25D366;
+      --whatsapp-dark: #1EAE53;
+      --whatsapp-text: #0C1A11;
+
+      --radius-sm: 10px;
+      --radius-md: 18px;
+      --radius-lg: 28px;
+      --radius-full: 999px;
+
+      --shadow-subtle: 0 4px 18px rgba(35, 28, 40, 0.05);
+      --shadow-hover: 0 16px 36px rgba(35, 28, 40, 0.1);
+      --shadow-float: 0 10px 30px rgba(12, 26, 17, 0.28);
+
+      --container-max: 1140px;
+      --section-spacing: clamp(54px, 6.5vw, 92px);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      overflow-x: clip;
+    }
+
+    body {
+      margin: 0;
+      font-family: var(--font-body);
+      font-size: 1.0625rem;
+      line-height: 1.7;
+      background-color: var(--bg-light);
+      color: var(--text-dark);
+      overflow-x: clip;
+      -webkit-font-smoothing: antialiased;
+      position: relative;
+    }
+
+    /* ORBES ENERGÉTICOS FLUTUANTES NO PLANO DE FUNDO */
+    .bg-aura-container {
+      position: fixed;
+      inset: 0;
+      overflow: hidden;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .bg-aura {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(80px);
+      opacity: 0.13;
+      will-change: transform;
+      animation: floatAura 22s infinite alternate ease-in-out;
+    }
+
+    .bg-aura--1 {
+      width: 550px;
+      height: 550px;
+      background: radial-gradient(circle, #C26848, transparent 70%);
+      top: -100px;
+      right: -100px;
+      animation-duration: 26s;
+    }
+
+    .bg-aura--2 {
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, #4E3E66, transparent 70%);
+      top: 40%;
+      left: -150px;
+      animation-duration: 32s;
+      animation-delay: -5s;
+    }
+
+    .bg-aura--3 {
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, #2E7D5B, transparent 70%);
+      bottom: 10%;
+      right: -120px;
+      animation-duration: 28s;
+      animation-delay: -10s;
+    }
+
+    @keyframes floatAura {
+      0% { transform: translate3d(0, 0, 0) scale(1); }
+      50% { transform: translate3d(35px, 40px, 0) scale(1.09); }
+      100% { transform: translate3d(-35px, 20px, 0) scale(0.94); }
+    }
+
+    .site-header, main, footer, .lgpd-banner, .btn-back-to-top, .wa-float {
+      position: relative;
+      z-index: 1;
+    }
+
+    section[id], main[id] {
+      scroll-margin-top: 86px;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+
+    a {
+      color: var(--brand-purple);
+      text-decoration: none;
+      transition: all 0.22s ease;
+    }
+
+    a:hover {
+      color: var(--brand-coral);
+    }
+
+    .container {
+      width: min(100% - 40px, var(--container-max));
+      margin-inline: auto;
+    }
+
+    .section {
+      padding-block: var(--section-spacing);
+      position: relative;
+    }
+
+    .section--white {
+      background-color: var(--bg-white);
+      border-block: 1px solid var(--border-color);
+    }
+
+    .badge-subtle {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 14px;
+      border-radius: var(--radius-full);
+      background: var(--brand-coral-soft);
+      color: var(--brand-coral-dark);
+      font-size: 0.82rem;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+
+    h1, h2, h3 {
+      font-family: var(--font-heading);
+      color: var(--text-dark);
+      line-height: 1.15;
+      margin: 0 0 0.45em;
+      font-weight: 600;
+    }
+
+    h1 {
+      font-size: clamp(2.3rem, 1.4rem + 3.4vw, 4rem);
+      letter-spacing: -0.01em;
+      max-width: 15ch;
+    }
+
+    h2 {
+      font-size: clamp(1.85rem, 1.25rem + 1.8vw, 2.65rem);
+      max-width: 24ch;
+    }
+
+    h3 {
+      font-size: 1.35rem;
+    }
+
+    p {
+      margin: 0 0 18px;
+    }
+
+    .lead {
+      font-size: 1.15rem;
+      color: var(--text-muted);
+      line-height: 1.75;
+    }
+
+    /* SISTEMA DE BOTÕES "SCALE UP" (PURO CSS) */
+    .btn {
+      /* Theme tokens — override these to recolour the button */
+      --primary: #F4FF2B;
+      --secondary: #0F191E;
+      --surface: #E2F1F2;
+      --bink: var(--secondary);   /* ink / foreground */
+      --bsurf: var(--surface);    /* surface / background */
+      position: relative;
+      isolation: isolate;
+      font-family: "JetBrains Mono", monospace;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 13px 24px;
+      border: 1px solid var(--bink);
+      border-radius: 8px;
+      background: transparent;
+      color: var(--bink);
+      cursor: pointer;
+      overflow: hidden;
+      white-space: nowrap;
+      transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+    }
+    .btn-label {
+      position: relative;
+      z-index: 2;
+      display: inline-block;
+      transition: inherit;
+    }
+    /* Shared sliding panel used by many fill effects */
+    .btn::before {
+      content: "";
+      position: absolute;
+      z-index: 1;
+      inset: 0;
+      background: var(--bink);
+      transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.4s ease;
+    }
+
+    .fx-11 { overflow: visible; }
+    .fx-11::before { display: none; }
+    .fx-11:hover { transform: scale(1.12); }
+
+    /* Variantes de cores do tema */
+    .btn-primary {
+      --bink: #FFFFFF;
+      --bsurf: var(--brand-purple);
+      background: var(--brand-purple);
+      border-color: var(--brand-purple);
+      box-shadow: 0 6px 18px rgba(78, 62, 102, 0.24);
+    }
+    .btn-primary:hover {
+      background: var(--brand-purple-dark);
+      border-color: var(--brand-purple-dark);
+      box-shadow: 0 10px 28px rgba(78, 62, 102, 0.38);
+    }
+
+    .btn-outline {
+      --bink: var(--brand-purple);
+      --bsurf: rgba(255, 255, 255, 0.85);
+      background: rgba(255, 255, 255, 0.9);
+      border-color: rgba(78, 62, 102, 0.35);
+    }
+    .btn-outline:hover {
+      background: #FFFFFF;
+      border-color: var(--brand-purple);
+    }
+
+    .btn-whatsapp {
+      --bink: var(--whatsapp-text);
+      --bsurf: var(--whatsapp-color);
+      background: var(--whatsapp-color);
+      border-color: var(--whatsapp-color);
+      color: var(--whatsapp-text) !important;
+    }
+    .btn-whatsapp:hover {
+      background: var(--whatsapp-dark);
+      color: #FFFFFF !important;
+      --bink: #FFFFFF;
+    }
+
+    .btn-sm {
+      padding: 9px 18px;
+      font-size: 11px;
+    }
+
+    /* CABEÇALHO COM LOGO OFICIAL, REDES SOCIAIS E NAVEGAÇÃO */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(250, 246, 240, 0.96);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-color);
+      box-shadow: var(--shadow-subtle);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 10px 0;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--text-dark);
+      flex: none;
+    }
+
+    .brand-logo-frame {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: #FFFFFF;
+      border: 1px solid var(--border-color);
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+      flex: none;
+    }
+
+    .brand-logo-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .brand-text {
+      display: grid;
+      line-height: 1.15;
+    }
+
+    .brand-name {
+      font-family: var(--font-heading);
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--text-dark);
+    }
+
+    .brand-tag {
+      font-size: 0.72rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--brand-coral);
+      font-weight: 800;
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .main-nav {
+      display: flex;
+      gap: 22px;
+      align-items: center;
+    }
+
+    .main-nav a {
+      color: var(--text-dark);
+      font-weight: 700;
+      font-size: 0.96rem;
+      padding: 6px 0;
+      position: relative;
+    }
+
+    .main-nav a::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--brand-coral);
+      transition: width 0.22s ease;
+    }
+
+    .main-nav a:hover {
+      color: var(--brand-coral);
+    }
+
+    .main-nav a:hover::after {
+      width: 100%;
+    }
+
+    .social-links {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .social-link {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: #FFFFFF !important;
+      border: 1px solid rgba(78, 62, 102, 0.16);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      flex: none;
+    }
+
+    .social-link svg {
+      width: 19px;
+      height: 19px;
+      fill: #4E3E66 !important;
+      transition: fill 0.2s ease, transform 0.2s ease;
+    }
+
+    .social-link:hover {
+      transform: translateY(-3px) scale(1.08);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.18);
+    }
+
+    .social-link.wa:hover {
+      background: var(--whatsapp-color) !important;
+      border-color: var(--whatsapp-color);
+    }
+    .social-link.wa:hover svg { fill: #FFFFFF !important; }
+
+    .social-link.ig:hover {
+      background: linear-gradient(45deg, #f09433, #dc2743, #bc1888) !important;
+      border-color: transparent;
+    }
+    .social-link.ig:hover svg { fill: #FFFFFF !important; }
+
+    .social-link.fb:hover {
+      background: #1877F2 !important;
+      border-color: #1877F2;
+    }
+    .social-link.fb:hover svg { fill: #FFFFFF !important; }
+
+    /* HERO SECTION (Imagem nítida, acolhedora e estrategicamente contida) */
+    .hero {
+      padding-top: clamp(36px, 4.5vw, 60px);
+      padding-bottom: clamp(40px, 5vw, 68px);
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Efeito de aura suave, acolhedor e profissional ao passar o mouse no Hero */
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: -40px;
+      background: radial-gradient(circle at 65% 45%, rgba(194, 104, 72, 0.10), rgba(78, 62, 102, 0.06) 45%, transparent 70%);
+      opacity: 0.45;
+      pointer-events: none;
+      transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+      z-index: 0;
+    }
+
+    .hero:hover::before {
+      opacity: 1;
+      transform: scale(1.06);
+    }
+
+    .hero-grid {
+      display: grid;
+      gap: clamp(28px, 4vw, 44px);
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-media-wrapper {
+      display: flex;
+      justify-content: center;
+    }
+
+    /* Tamanho estratégico para evitar desfoque e valorizar a foto autêntica */
+    .hero-photo-card {
+      position: relative;
+      max-width: 280px;
+      width: 100%;
+      border-radius: 26px 64px 26px 26px;
+      overflow: hidden;
+      border: 1px solid var(--border-color);
+      box-shadow: var(--shadow-hover);
+      background: #FFFFFF;
+      aspect-ratio: 1 / 1.18;
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease, border-color 0.4s ease;
+    }
+
+    .hero:hover .hero-photo-card,
+    .hero-photo-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 44px rgba(78, 62, 102, 0.16), 0 0 32px rgba(194, 104, 72, 0.14);
+      border-color: rgba(194, 104, 72, 0.4);
+    }
+
+    .hero-photo-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 20%;
+    }
+
+    .footer-social-links {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .social-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      padding: 8px 16px;
+      border-radius: var(--radius-full);
+      color: #FFFFFF !important;
+      font-weight: 700;
+      font-size: 0.92rem;
+      transition: all 0.2s ease;
+      width: fit-content;
+    }
+
+    .social-btn:hover {
+      background: var(--brand-coral);
+      border-color: var(--brand-coral);
+      transform: translateX(4px);
+    }
+
+    .social-btn svg {
+      width: 18px;
+      height: 18px;
+      fill: currentColor;
+      flex: none;
+    }
+
+    .hero-floating-badge {
+      position: absolute;
+      bottom: 14px;
+      left: 12px;
+      right: 12px;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(8px);
+      border-radius: 14px;
+      padding: 8px 12px;
+      border: 1px solid var(--border-color);
+      box-shadow: var(--shadow-subtle);
+      font-size: 0.88rem;
+      font-weight: 800;
+      color: var(--text-dark);
+      text-align: center;
+    }
+
+    .hero-floating-badge small {
+      display: block;
+      color: var(--brand-coral);
+      font-size: 0.74rem;
+      font-weight: 700;
+    }
+
+    /* CARDS DE TERAPIAS (Sem verde, fotos reais limpas, botão apenas "Agendar") */
+    .services-grid {
+      display: grid;
+      gap: 28px;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      margin-top: 36px;
+    }
+
+    .service-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 22px;
+      overflow: hidden;
+      box-shadow: var(--shadow-subtle);
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .service-card-media {
+      aspect-ratio: 16 / 10;
+      background: #EFE7DC;
+      overflow: hidden;
+    }
+
+    .service-card-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.45s ease;
+    }
+
+    .service-card:hover .service-card-media img {
+      transform: scale(1.04);
+    }
+
+    .service-card-body {
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .service-card-title {
+      font-size: 1.35rem;
+      margin: 0 0 10px;
+      color: var(--brand-purple-dark);
+    }
+
+    .service-card-desc {
+      color: var(--text-muted);
+      font-size: 0.98rem;
+      line-height: 1.65;
+      margin-bottom: 22px;
+      flex: 1;
+    }
+
+    .service-card-footer {
+      border-top: 1px solid var(--border-color);
+      padding-top: 16px;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .btn-card-agendar {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-weight: 800;
+      font-size: 0.95rem;
+      color: var(--brand-coral);
+      padding: 8px 20px;
+      border-radius: var(--radius-full);
+      background: var(--brand-coral-soft);
+      border: 1px solid rgba(194, 104, 72, 0.25);
+      transition: all 0.2s ease;
+    }
+
+    .btn-card-agendar:hover {
+      background: var(--brand-coral);
+      color: #FFFFFF !important;
+      border-color: var(--brand-coral);
+      transform: translateX(3px);
+    }
+
+    /* SEÇÃO ATENDIMENTO ON-LINE (Com celular em destaque e leitura perfeita) */
+    .online-grid {
+      display: grid;
+      gap: 36px;
+      align-items: center;
+    }
+
+    .phone-mockup-wrap {
+      max-width: 480px;
+      margin-inline: auto;
+      width: 100%;
+      border-radius: 36px;
+      overflow: hidden;
+      border: 8px solid #231C28;
+      box-shadow: 0 20px 50px rgba(35, 28, 40, 0.16);
+      aspect-ratio: 1 / 1.05;
+      background: #FFFFFF;
+    }
+
+    .phone-mockup-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .online-testimonial-card {
+      background: #FFFFFF;
+      border: 1px solid var(--border-color);
+      border-radius: 18px;
+      padding: 20px;
+      margin-top: 20px;
+      box-shadow: var(--shadow-subtle);
+    }
+
+    .online-testimonial-card blockquote {
+      margin: 0;
+      font-style: italic;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    .online-testimonial-card cite {
+      display: block;
+      margin-top: 10px;
+      font-style: normal;
+      font-weight: 800;
+      font-size: 0.88rem;
+      color: var(--brand-coral);
+    }
+
+    /* SEÇÃO SOBRE ELIS (FOTO REAL E AUTÊNTICA DA EXPERT) */
+    .about-grid {
+      display: grid;
+      gap: clamp(32px, 4vw, 48px);
+      align-items: center;
+    }
+
+    .expert-photo-card {
+      position: relative;
+      border-radius: 32px 88px 32px 32px;
+      overflow: hidden;
+      border: 2px solid var(--border-color);
+      background: #FFFFFF;
+      box-shadow: var(--shadow-hover);
+      aspect-ratio: 4 / 5;
+      max-width: 400px;
+      margin-inline: auto;
+      width: 100%;
+    }
+
+    .expert-photo-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 15%;
+    }
+
+    .expert-card-caption {
+      position: absolute;
+      bottom: 16px;
+      left: 16px;
+      right: 16px;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(8px);
+      padding: 12px 16px;
+      border-radius: 16px;
+      border: 1px solid var(--border-color);
+      box-shadow: var(--shadow-subtle);
+    }
+
+    .expert-card-caption strong {
+      display: block;
+      font-family: var(--font-heading);
+      font-size: 1.2rem;
+      color: var(--brand-purple-dark);
+    }
+
+    .expert-card-caption span {
+      font-size: 0.82rem;
+      color: var(--brand-coral);
+      font-weight: 800;
+      letter-spacing: 0.05em;
+    }
+
+    .credential-callout {
+      background: var(--brand-coral-soft);
+      border-left: 4px solid var(--brand-coral);
+      border-radius: 12px;
+      padding: 14px 18px;
+      margin: 22px 0;
+      font-weight: 700;
+      color: var(--text-dark);
+    }
+
+    /* SEÇÃO DE AGENDAMENTO (Formulário Limpo e Centralizado com botão Enviar) */
+    .form-wrapper {
+      max-width: 680px;
+      margin-inline: auto;
+      background: #FFFFFF;
+      border: 1px solid var(--border-color);
+      border-radius: 24px;
+      padding: clamp(28px, 4vw, 44px);
+      box-shadow: var(--shadow-subtle);
+    }
+
+    .form {
+      display: grid;
+      gap: 16px;
+    }
+
+    .form label {
+      display: block;
+      font-weight: 800;
+      font-size: 0.92rem;
+      margin-bottom: 6px;
+      color: var(--text-dark);
+    }
+
+    .form input,
+    .form select,
+    .form textarea {
+      width: 100%;
+      min-height: 50px;
+      padding: 12px 16px;
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      background: #fff;
+      color: var(--text-dark);
+      font: inherit;
+      font-size: 16px;
+      transition: all 0.2s ease;
+    }
+
+    .form input:focus,
+    .form select:focus,
+    .form textarea:focus {
+      border-color: var(--brand-purple);
+      box-shadow: 0 0 0 3px rgba(78, 62, 102, 0.14);
+      outline: none;
+    }
+
+    .consent {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      font-size: 0.92rem;
+      color: var(--text-muted);
+    }
+
+    .consent input {
+      width: auto;
+      min-height: auto;
+      margin-top: 5px;
+      flex: none;
+    }
+
+    /* RODAPÉ E QR CODE IMPECÁVEL */
+    .footer {
+      background: #231C28;
+      color: #F7F3EE;
+      padding: 46px 0 20px;
+    }
+
+    .footer a {
+      color: #F7F3EE;
+    }
+
+    .footer-header-bar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding-bottom: 24px;
+      margin-bottom: 30px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .footer-nav {
+      display: flex;
+      gap: 24px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .footer-nav a {
+      font-weight: 700;
+      color: rgba(255, 255, 255, 0.85);
+      font-size: 0.95rem;
+    }
+
+    .footer-nav a:hover {
+      color: var(--brand-coral);
+    }
+
+    .footer-grid {
+      display: grid;
+      gap: 36px;
+      align-items: start;
+    }
+
+    .footer h3 {
+      color: #FFFFFF;
+      font-size: 1.15rem;
+      margin-bottom: 14px;
+    }
+
+    /* Card Estratégico do QR Code com Botão Direto de Teste/Clique */
+    .qr-box-pure {
+      background: #FFFFFF;
+      border-radius: 20px;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 12px;
+      max-width: 280px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+    }
+
+    .qr-box-pure img {
+      width: 140px;
+      height: 140px;
+      border-radius: 8px;
+    }
+
+    .qr-box-pure p {
+      margin: 0;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.35;
+    }
+
+    .footer-map-card {
+      position: relative;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      background: #110E14;
+    }
+
+    .footer-map-card iframe {
+      width: 100%;
+      height: 170px;
+      border: 0;
+      display: block;
+      pointer-events: none;
+    }
+
+    .footer-map-card a.map-overlay-link {
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      display: flex;
+      align-items: flex-end;
+      padding: 10px 14px;
+      background: linear-gradient(180deg, transparent 40%, rgba(20, 16, 24, 0.88) 100%);
+      color: #FFFFFF !important;
+      font-weight: 800;
+      font-size: 0.84rem;
+      gap: 6px;
+    }
+
+    .footer-bottom {
+      margin-top: 28px;
+      padding-top: 18px;
+      padding-bottom: 0;
+      margin-bottom: 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      font-size: 0.88rem;
+      color: rgba(247, 243, 238, 0.72);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+    }
+
+    /* BOTÃO VOLTAR AO TOPO */
+    .btn-back-to-top {
+      position: fixed;
+      right: 20px;
+      bottom: calc(88px + env(safe-area-inset-bottom));
+      z-index: 9998;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(8px);
+      border: 1px solid var(--border-color);
+      color: var(--brand-purple);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: 0 4px 16px rgba(35, 28, 40, 0.15);
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(10px);
+      transition: all 0.25s ease;
+    }
+
+    .btn-back-to-top.visible {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .btn-back-to-top:hover {
+      background: var(--brand-purple);
+      color: #FFFFFF !important;
+      transform: translateY(-3px);
+    }
+
+    .btn-back-to-top svg {
+      width: 20px;
+      height: 20px;
+      stroke: currentColor;
+    }
+
+    /* BOTÃO FLUTUANTE WHATSAPP */
+    .wa-float {
+      position: fixed;
+      right: 18px;
+      bottom: calc(18px + env(safe-area-inset-bottom));
+      z-index: 9999;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 56px;
+      height: 56px;
+      background: var(--whatsapp-color);
+      color: var(--whatsapp-text);
+      border-radius: 50%;
+      border: 2px solid #FFFFFF;
+      box-shadow: var(--shadow-float);
+      transition: transform 0.2s ease, background-color 0.2s ease;
+    }
+
+    .wa-float:hover {
+      transform: scale(1.08) translateY(-2px);
+      background: var(--whatsapp-dark);
+      color: #FFFFFF;
+    }
+
+    .wa-float.hidden-in-footer {
+      opacity: 0 !important;
+      visibility: hidden !important;
+      pointer-events: none !important;
+      transform: scale(0.6) translateY(20px) !important;
+    }
+
+    .wa-float svg {
+      width: 28px;
+      height: 28px;
+      fill: currentColor;
+    }
+
+    /* ANIMAÇÃO DE SCROLL CINEMATOGRÁFICA (LUXURY EDITORIAL REVEAL) */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1), transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: opacity, transform;
+    }
+
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .reveal-delay-1, .reveal-stagger-1 { transition-delay: 0.1s; }
+    .reveal-delay-2, .reveal-stagger-2 { transition-delay: 0.2s; }
+    .reveal-delay-3, .reveal-stagger-3 { transition-delay: 0.3s; }
+
+    .reveal-scale {
+      opacity: 0;
+      transform: scale(0.96) translateY(24px);
+      transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1), transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: opacity, transform;
+    }
+
+    .reveal-scale.active {
+      opacity: 1;
+      transform: scale(1) translateY(0);
+    }
+
+    /* POP-UP LGPD (CONFORMIDADE LEI Nº 13.709/2018) */
+    .lgpd-banner {
+      position: fixed;
+      bottom: 24px;
+      left: 20px;
+      right: 20px;
+      max-width: 960px;
+      margin-inline: auto;
+      z-index: 10000;
+      background: rgba(35, 28, 40, 0.96);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      color: #F7F3EE;
+      border-radius: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
+      padding: 18px 24px;
+      transform: translateY(120%);
+      opacity: 0;
+      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+      visibility: hidden;
+    }
+
+    .lgpd-banner.visible {
+      transform: translateY(0);
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .lgpd-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      flex-wrap: wrap;
+      width: 100%;
+    }
+
+    .lgpd-content {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      flex: 1;
+      min-width: 280px;
+    }
+
+    .lgpd-icon {
+      font-size: 1.4rem;
+      line-height: 1;
+      color: var(--brand-coral);
+    }
+
+    .lgpd-content strong {
+      display: block;
+      color: #FFFFFF;
+      font-size: 0.96rem;
+      margin-bottom: 4px;
+      font-family: var(--font-heading);
+    }
+
+    .lgpd-content p {
+      margin: 0;
+      font-size: 0.85rem;
+      color: rgba(247, 243, 238, 0.85);
+      line-height: 1.45;
+    }
+
+    .lgpd-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 680px) {
+      .lgpd-banner {
+        bottom: 12px;
+        left: 12px;
+        right: 12px;
+        padding: 16px;
+      }
+      .lgpd-actions {
+        width: 100%;
+        justify-content: flex-end;
+      }
+    }
+
+    @media (min-width: 900px) {
+      .hero-grid { grid-template-columns: 1.25fr 0.75fr; }
+      .about-grid { grid-template-columns: 0.9fr 1.1fr; }
+      .online-grid { grid-template-columns: 1fr 1fr; }
+      .footer-grid { grid-template-columns: 1.1fr 1fr 1fr; }
+    }
+
+    @media (max-width: 899px) {
+      .header-inner { flex-wrap: wrap; }
+      .header-actions { width: 100%; justify-content: space-between; overflow-x: auto; padding-top: 6px; }
+      .main-nav { gap: 16px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .btn, .btn::before, .btn-label, .fx-11, .reveal, .reveal-scale, .wa-float, .lgpd-banner {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+        animation: none !important;
+      }
+    }
+  </style>
+
+  <!-- Schema.org Structured Data para SEO Local e Google AI Studio -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": ["HealthAndBeautyBusiness", "LocalBusiness"],
+    "name": "Espaço Crie & Ative - Elis Regina Terapeuta Holística",
+    "image": "https://espacocrieative.com.br/img/elis-regina-hero.jpg",
+    "description": "Atendimento terapêutico integrativo em Franca/SP: Cone Hindu, Cromoterapia, Radiestesia, Radiônica, Apometria On-line e Reiki com a Terapeuta Elis Regina (CRTH-BR 13579/ABRATH).",
+    "telephone": "+5516991115518",
+    "url": "https://espacocrieative.com.br/",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "R. Lourival Viêira, 1",
+      "addressLocality": "Franca",
+      "addressRegion": "SP",
+      "postalCode": "14405-190",
+      "addressCountry": "BR"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": -20.5390,
+      "longitude": -47.4010
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      "opens": "08:00",
+      "closes": "19:00"
+    },
+    "sameAs": [
+      "https://www.instagram.com/espaco_crieeative/",
+      "https://www.facebook.com/elisreginaoliveira.terapeuta"
+    ]
+  }
+  </script>
+</head>
+
+<body id="topo">
+  <!-- Plano de fundo com orbes energéticos e sutis em movimento harmonioso -->
+  <div class="bg-aura-container" aria-hidden="true">
+    <div class="bg-aura bg-aura--1"></div>
+    <div class="bg-aura bg-aura--2"></div>
+    <div class="bg-aura bg-aura--3"></div>
+  </div>
+
+  <!-- CABEÇALHO DO SITE COM LOGO OFICIAL, REDES E 4 LINKS -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#topo" aria-label="Espaço Crie & Ative - Início">
+        <div class="brand-logo-frame" aria-hidden="true">
+          <img src="img/logo-simbolo.png" alt="Logo Espaço Crie & Ative" width="44" height="44">
+        </div>
+        <div class="brand-text">
+          <span class="brand-name">Espaço Crie & Ative</span>
+          <span class="brand-tag">Terapeuta Holística</span>
+        </div>
+      </a>
+
+      <div class="header-actions">
+        <nav class="main-nav" aria-label="Navegação principal">
+          <a href="#terapias">Terapias</a>
+          <a href="#online">Atendimento Online</a>
+          <a href="#sobre">Sobre Elis</a>
+        </nav>
+
+        <div class="social-links">
+          <a class="social-link wa" href="https://wa.me/5516991115518" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm0 18.03c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.26 8.26 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24 4.54 0 8.24 3.7 8.24 8.24s-3.7 8.24-8.24 8.24zm4.52-6.16c-.25-.13-1.47-.72-1.69-.8-.23-.08-.39-.12-.56.13-.16.25-.64.8-.78.96-.14.16-.29.18-.54.06-.25-.13-1.05-.39-2-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.51.11-.11.25-.29.37-.43.13-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.13-.56-1.35-.77-1.85-.2-.49-.4-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.06-.1-.23-.16-.48-.29z"/></svg>
+          </a>
+          <a class="social-link ig" href="https://www.instagram.com/espaco_crieeative/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+          <a class="social-link fb" href="https://www.facebook.com/elisreginaoliveira.terapeuta" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+        </div>
+
+        <a class="btn fx-11 btn-primary btn-sm" href="https://wa.me/5516991115518" target="_blank" rel="noopener noreferrer">
+          <span class="btn-label">Agendar Sessão</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <!-- HERO: Acolhimento, Paz e Imagem com Tamanho Estratégico Nítido -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <span class="badge-subtle">Cuidado Integrativo e Presença</span>
+          <h1>Você não precisa carregar todo esse peso sozinho.</h1>
+
+          <p class="lead">
+            Quando o corpo cansa, a ansiedade aperta e a mente não desliga, é hora de pausar. No <strong>Espaço Crie & Ative</strong>, você encontra um refúgio seguro de escuta acolhedora, reequilíbrio energético e alívio profundo através de práticas terapêuticas reconhecidas.
+          </p>
+
+          <div style="display: flex; gap: 14px; flex-wrap: wrap; margin-top: 26px;">
+            <a class="btn fx-11 btn-primary" href="https://wa.me/5516991115518" target="_blank" rel="noopener noreferrer">
+              <span class="btn-label">Conversar no WhatsApp</span>
+            </a>
+            <a class="btn fx-11 btn-outline" href="#terapias">
+              <span class="btn-label">Conhecer Terapias</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-media-wrapper reveal reveal-delay-1">
+          <!-- Foto em tamanho estratégico para máxima nitidez (nunca desfocada) -->
+          <div class="hero-photo-card">
+            <img src="img/elis-regina-hero.jpg" alt="Elis Regina — Terapeuta Holística no Espaço Crie & Ative" width="270" height="338" fetchpriority="high">
+            <div class="hero-floating-badge">
+              Elis Regina
+              <small>Terapeuta Holística (CRTH-BR 13579)</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRÁTICAS TERAPÊUTICAS COM FOTOS REAIS, SEM VERDE E BOTÃO APENAS "AGENDAR" -->
+    <section class="section section--white" id="terapias">
+      <div class="container">
+        <div class="reveal" style="max-width: 720px;">
+          <span class="badge-subtle">Caminhos de Cura</span>
+          <h2>Técnicas pensadas para o seu reequilíbrio</h2>
+          <p class="lead" style="font-size: 1.05rem;">
+            Cada ser humano traz uma dor e uma história única. Veja como cada terapia atua para devolver sua paz e vitalidade:
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <!-- 1. Cone Hindu -->
+          <article class="service-card reveal">
+            <div class="service-card-media">
+              <img src="img/cone-hindu-aplicacao.jpg" alt="Aplicação segura de Cone Hindu" loading="lazy">
+            </div>
+            <div class="service-card-body">
+              <h3 class="service-card-title">Cone Hindu</h3>
+              <p class="service-card-desc">
+                Desobstrução física e energética dos canais auditivos e vias respiratórias. Alívio comprovado para sinusite, rinite, zumbidos, excesso de pensamentos e dores de cabeça tensionais.
+              </p>
+              <div class="service-card-footer">
+                <a class="btn fx-11 btn-outline btn-sm" href="https://wa.me/5516991115518?text=Ol%C3%A1%20Elis%2C%20gostaria%20de%20agendar%20uma%20sess%C3%A3o%20de%20Cone%20Hindu." target="_blank" rel="noopener noreferrer">
+                  <span class="btn-label">Agendar &rarr;</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 2. Cones Artesanais Naturais com Alecrim -->
+          <article class="service-card reveal reveal-delay-1">
+            <div class="service-card-media">
+              <img src="img/cone-hindu-artesanal.jpg" alt="Cones artesanais confeccionados com cera pura e alecrim" loading="lazy">
+            </div>
+            <div class="service-card-body">
+              <h3 class="service-card-title">Cones Artesanais Naturais</h3>
+              <p class="service-card-desc">
+                Feitos manualmente pela terapeuta com cera de abelhas 100% pura, tecido nobre de algodão e ramos frescos de alecrim purificador. Garantia de energia limpa e respeito aos princípios fitoterápicos.
+              </p>
+              <div class="service-card-footer">
+                <a class="btn fx-11 btn-outline btn-sm" href="https://wa.me/5516991115518?text=Ol%C3%A1%20Elis%2C%20quero%20agendar%20sess%C3%A3o%20com%20Cones%20Artesanais." target="_blank" rel="noopener noreferrer">
+                  <span class="btn-label">Agendar &rarr;</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 3. Cromoterapia e Alinhamento -->
+          <article class="service-card reveal reveal-delay-2">
+            <div class="service-card-media">
+              <img src="img/espaco-terapeutico-cromoterapia.jpg" alt="Sala de atendimento do Espaço Crie & Ative com iluminação cromoterápica" loading="lazy">
+            </div>
+            <div class="service-card-body">
+              <h3 class="service-card-title">Cromoterapia & Sala Terapêutica</h3>
+              <p class="service-card-desc">
+                Tratamento através das frequências das cores em ambiente imersivo e relaxante. Harmoniza os chakras, acalma crises de ansiedade aguda e restaura o sono reparador.
+              </p>
+              <div class="service-card-footer">
+                <a class="btn fx-11 btn-outline btn-sm" href="https://wa.me/5516991115518?text=Ol%C3%A1%20Elis%2C%20quero%20agendar%20uma%20sess%C3%A3o%20de%20Cromoterapia." target="_blank" rel="noopener noreferrer">
+                  <span class="btn-label">Agendar &rarr;</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 4. Radiestesia -->
+          <article class="service-card reveal">
+            <div class="service-card-media">
+              <img src="img/radiestesia-pendulo.jpg" alt="Medição de frequência com pêndulo de madeira" loading="lazy">
+            </div>
+            <div class="service-card-body">
+              <h3 class="service-card-title">Radiestesia com Pêndulo</h3>
+              <p class="service-card-desc">
+                Diagnóstico vibracional para identificar onde a sua energia vital está bloqueada ou drenada por preocupações, sobrecargas emocionais ou influências do ambiente.
+              </p>
+              <div class="service-card-footer">
+                <a class="btn fx-11 btn-outline btn-sm" href="https://wa.me/5516991115518?text=Ol%C3%A1%20Elis%2C%20quero%20agendar%20uma%20avalia%C3%A7%C3%A3o%20com%20Radiestesia." target="_blank" rel="noopener noreferrer">
+                  <span class="btn-label">Agendar &rarr;</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 5. Radiônica e Geometria Sagrada -->
+          <article class="service-card reveal reveal-delay-1">
+            <div class="service-card-media">
+              <img src="img/radiestesia-radionica-graficos.jpg" alt="Gráficos radiônicos de geometria sagrada" loading="lazy">
+            </div>
+            <div class="service-card-body">
+              <h3 class="service-card-title">Radiônica & Geometria Sagrada</h3>
+              <p class="service-card-desc">
+                Emissão de ondas de forma através de placas radiônicas (SCAP, decágono, turbilhão) para desbloquear caminhos estagnados na saúde, nas relações e na vida pessoal.
+              </p>
+              <div class="service-card-footer">
+                <a class="btn fx-11 btn-outline btn-sm" href="https://wa.me/5516991115518?text=Ol%C3%A1%20Elis%2C%20quero%20agendar%20sess%C3%A3o%20de%20Radi%C3%B4nica." target="_blank" rel="noopener noreferrer">
+                  <span class="btn-label">Agendar &rarr;</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 6. Estudos Anatômicos de Meridianos -->
+          <article class="service-card reveal reveal-delay-2">
+            <div class="service-card-media">
+              <img src="img/estudos-meridianos-pontos.jpg" alt="Mapa de meridianos e pontos bioenergéticos" loading="lazy">
+            </div>
+            <div class="service-card-body">
+              <h3 class="service-card-title">Estudos dos Meridianos & Reflexos</h3>
+              <p class="service-card-desc">
+                Fundamentação sólida na Medicina Tradicional e canais bioenergéticos. Aplicação em Reflexologia Podal e desativação de pontos de tensão acumulada nos tecidos.
+              </p>
+              <div class="service-card-footer">
+                <a class="btn fx-11 btn-outline btn-sm" href="https://wa.me/5516991115518?text=Ol%C3%A1%20Elis%2C%20quero%20agendar%20sess%C3%A3o%20de%20Reflexologia." target="_blank" rel="noopener noreferrer">
+                  <span class="btn-label">Agendar &rarr;</span>
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO ATENDIMENTO ON-LINE (Celular destacado e comprovação real de conexão) -->
+    <section class="section" id="online">
+      <div class="container">
+        <div class="online-grid reveal">
+          <div>
+            <span class="badge-subtle">Sem Barreiras Geográficas</span>
+            <h2>O amor e o propósito curam à distância</h2>
+            <p class="lead">
+              A Apometria e as Terapias Integrativas trabalham no campo bioenergético e quântico. Por chamada de vídeo, você recebe todo o acolhimento, proteção e direcionamento sem precisar sair do seu lar.
+            </p>
+
+            <div style="margin-top: 24px;">
+              <a class="btn fx-11 btn-primary" href="https://wa.me/5516991115518?text=Ol%C3%A1%20Elis%2C%20moro%20longe%20e%20gostaria%20de%20agendar%20um%20atendimento%20on-line." target="_blank" rel="noopener noreferrer">
+                <span class="btn-label">Agendar Atendimento On-line</span>
+              </a>
+            </div>
+          </div>
+
+          <div>
+            <!-- Celular em destaque e alta nitidez -->
+            <div class="phone-mockup-wrap">
+              <img src="img/apometria-celular.jpg" alt="Atendimento On-line de Apometria comprovado por chamada e mensagens" loading="lazy">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO SOBRE ELIS REGINA (FOTO REAL E AUTÊNTICA DA EXPERT) -->
+    <section class="section section--white" id="sobre">
+      <div class="container about-grid">
+        <div class="reveal">
+          <!-- Foto REAL e AUTÊNTICA de Elis Regina em alta definição -->
+          <div class="expert-photo-card">
+            <img src="img/elis-regina-conduz.jpg" alt="Elis Regina — Foto Oficial da Terapeuta Holística" loading="lazy">
+            <div class="expert-card-caption">
+              <strong>Elis Regina</strong>
+              <span>Terapeuta Holística & Integrativa</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="reveal reveal-delay-1">
+          <span class="badge-subtle">Quem Conduz</span>
+          <h2>Presença, afeto e ética terapêutica</h2>
+          <p class="lead" style="color: var(--brand-purple-dark); font-weight: 700;">
+            "Cuidar de uma pessoa é entrar no solo sagrado da sua história com o mais profundo respeito."
+          </p>
+
+          <p>
+            À frente do <strong>Espaço Crie & Ative</strong>, Elis Regina atua unindo o conhecimento da Medicina Oriental, Apometria, Cone Hindu e Radiestesia para ajudar pessoas a reencontrarem seu eixo de paz, saúde e clareza mental.
+          </p>
+
+          <div class="credential-callout">
+            <span>Registro Profissional Reconhecido:</span><br>
+            <strong>CRTH-BR 13579 / ABRATH (Associação Brasileira dos Terapeutas Holísticos)</strong>
+          </div>
+
+          <div style="display: flex; gap: 14px; flex-wrap: wrap; margin-top: 22px;">
+            <a class="btn fx-11 btn-primary" href="https://wa.me/5516991115518?text=Ol%C3%A1%20Elis%2C%20gostaria%20de%20conversar%20sobre%20as%20sess%C3%B5es." target="_blank" rel="noopener noreferrer">
+              <span class="btn-label">Falar Direto com a Elis</span>
+            </a>
+            <a class="btn fx-11 btn-outline" href="#contato">
+              <span class="btn-label">Enviar Mensagem</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO DE CONTATO / AGENDAMENTO (Formulário Direto com Botão 'Enviar') -->
+    <section class="section" id="contato">
+      <div class="container">
+        <div class="reveal" style="text-align: center; max-width: 620px; margin-inline: auto; margin-bottom: 28px;">
+          <span class="badge-subtle">Dê o Primeiro Passo</span>
+          <h2>Reserve o seu momento de cuidado</h2>
+          <p class="lead" style="font-size: 1.05rem;">
+            Preencha os campos abaixo. Entraremos em contato com todo o carinho pelo WhatsApp.
+          </p>
+        </div>
+
+        <div class="form-wrapper reveal">
+          <form id="leadForm" class="form">
+            <div>
+              <label for="nome">Seu Nome Completo</label>
+              <input type="text" id="nome" name="nome" placeholder="Como podemos te chamar?" required autocomplete="name">
+            </div>
+
+            <div>
+              <label for="whatsapp">WhatsApp com DDD</label>
+              <input type="tel" id="whatsapp" name="whatsapp" placeholder="(16) 99999-9999" required autocomplete="tel">
+            </div>
+
+            <div>
+              <label for="interesse">Como podemos te ajudar hoje?</label>
+              <select id="interesse" name="interesse" required>
+                <option value="Quero orientação da terapeuta" selected>Quero orientação da Elis (Não sei qual terapia escolher)</option>
+                <option value="Cone Hindu">Cone Hindu (Desobstrução e Alívio de Ouvido/Vias)</option>
+                <option value="Cromoterapia">Cromoterapia & Alinhamento de Chakras</option>
+                <option value="Radiestesia e Radiônica">Radiestesia e Radiônica</option>
+                <option value="Apometria On-line">Apometria On-line (À Distância)</option>
+                <option value="Reiki Integrativo">Reiki Integrativo</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="observacoes">Conte brevemente o que você busca harmonizar (Opcional)</label>
+              <textarea id="observacoes" name="observacoes" rows="3" placeholder="Ex: ansiedade, insônia crônica, dores de cabeça frequentes..."></textarea>
+            </div>
+
+            <label class="consent" for="consentimento">
+              <input type="checkbox" id="consentimento" name="consentimento" required checked>
+              <span>Concordo em receber o contato da Elis Regina via WhatsApp.</span>
+            </label>
+
+            <!-- Botão com texto estritamente 'Enviar' e efeito Scale Up -->
+            <button type="submit" class="btn fx-11 btn-primary" style="width: 100%; min-height: 52px; font-size: 1.05rem;">
+              <span class="btn-label">Enviar</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- RODAPÉ COM CABEÇALHO REPLICADO, QR CODE 100% FUNCIONAL E MAPA -->
+  <footer class="footer">
+    <div class="container">
+      <!-- Cabeçalho do Site Replicado no Rodapé -->
+      <div class="footer-header-bar">
+        <a class="brand" href="#topo" aria-label="Voltar ao topo">
+          <div class="brand-logo-frame" style="background: rgba(255,255,255,0.12); border-color: rgba(255,255,255,0.2);">
+            <img src="img/logo-simbolo.png" alt="Logo Espaço Crie & Ative" width="44" height="44">
+          </div>
+          <div class="brand-text">
+            <span class="brand-name" style="color: #FFFFFF;">Espaço Crie & Ative</span>
+            <span class="brand-tag">Terapeuta Holística</span>
+          </div>
+        </a>
+
+        <nav class="footer-nav" aria-label="Navegação do rodapé">
+          <a href="#terapias">Terapias</a>
+          <a href="#online">Atendimento Online</a>
+          <a href="#sobre">Sobre Elis</a>
+        </nav>
+
+        <a class="btn fx-11 btn-primary btn-sm" href="https://wa.me/5516991115518" target="_blank" rel="noopener noreferrer">
+          <span class="btn-label">Agendar Sessão</span>
+        </a>
+      </div>
+
+      <div class="footer-grid">
+        <!-- Coluna 1: QR Code Testado, Nítido e com Clique Direto -->
+        <div>
+          <div class="qr-box-pure">
+            <img src="img/qrcode-whatsapp.png" alt="QR Code WhatsApp Elis Regina" width="140" height="140">
+            <p>Aponte a câmera do seu celular para abrir a conversa no WhatsApp.</p>
+            <a class="btn fx-11 btn-whatsapp btn-sm" style="width: 100%;" href="https://wa.me/5516991115518" target="_blank" rel="noopener noreferrer">
+              <span class="btn-label">Ou clique aqui para falar</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Coluna 2: Redes Sociais Oficiais -->
+        <div>
+          <h3>Redes Sociais</h3>
+          <div class="social-links" style="margin-top: 14px;">
+            <a class="social-link wa" href="https://wa.me/5516991115518" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+              <svg viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm0 18.03c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.26 8.26 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24 4.54 0 8.24 3.7 8.24 8.24s-3.7 8.24-8.24 8.24zm4.52-6.16c-.25-.13-1.47-.72-1.69-.8-.23-.08-.39-.12-.56.13-.16.25-.64.8-.78.96-.14.16-.29.18-.54.06-.25-.13-1.05-.39-2-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.51.11-.11.25-.29.37-.43.13-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.13-.56-1.35-.77-1.85-.2-.49-.4-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.06-.1-.23-.16-.48-.29z"/></svg>
+            </a>
+            <a class="social-link ig" href="https://www.instagram.com/espaco_crieeative/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <a class="social-link fb" href="https://www.facebook.com/elisreginaoliveira.terapeuta" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+              <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Coluna 3: Mapa Menor Integrado sem texto de endereço -->
+        <div>
+          <h3>Localização em Franca</h3>
+          <div class="footer-map-card">
+            <iframe
+              src="https://www.google.com/maps?q=Espa%C3%A7o%20Creative%20R.%20Lourival%20Vi%C3%AAira%2C%201%20-%20Parque%20Moema%2C%20Franca%20-%20SP%2C%2014405-190&output=embed"
+              title="Mapa do Espaço Crie & Ative no Google Maps"
+              loading="lazy"
+            ></iframe>
+            <a
+              class="map-overlay-link"
+              href="https://www.google.com/maps?q=Espa%C3%A7o%20Creative%20R.%20Lourival%20Vi%C3%AAira%2C%201%20-%20Parque%20Moema%2C%20Franca%20-%20SP%2C%2014405-190"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span>Abrir rota no Google Maps &rarr;</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© <span id="year"></span> Espaço Crie & Ative — Elis Regina, Terapeuta Holística.</span>
+        <span>Feito por <a href="http://reidasvendas.com.br" target="_blank" rel="noopener noreferrer" style="color: #FFFFFF; text-decoration: underline; font-weight: 600;">reidasvendas.com.br</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- BOTÃO ESTRATÉGICO PARA VOLTAR AO CABEÇALHO -->
+  <a href="#topo" class="btn-back-to-top" id="btnBackToTop" aria-label="Voltar ao início da página">
+    <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M18 15l-6-6-6 6"/>
+    </svg>
+  </a>
+
+  <!-- BOTÃO FLUTUANTE WHATSAPP -->
+  <a
+    class="wa-float"
+    href="https://wa.me/5516991115518"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Falar no WhatsApp com Elis Regina"
+  >
+    <svg viewBox="0 0 24 24">
+      <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm0 18.03c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.26 8.26 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24 4.54 0 8.24 3.7 8.24 8.24s-3.7 8.24-8.24 8.24zm4.52-6.16c-.25-.13-1.47-.72-1.69-.8-.23-.08-.39-.12-.56.13-.16.25-.64.8-.78.96-.14.16-.29.18-.54.06-.25-.13-1.05-.39-2-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.51.11-.11.25-.29.37-.43.13-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.13-.56-1.35-.77-1.85-.2-.49-.4-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.06-.1-.23-.16-.48-.29z"/>
+    </svg>
+  </a>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Botão Voltar ao Topo suave
+    var btnBackToTop = document.getElementById("btnBackToTop");
+    window.addEventListener("scroll", function () {
+      if (window.scrollY > 350) {
+        btnBackToTop.classList.add("visible");
+      } else {
+        btnBackToTop.classList.remove("visible");
+      }
+    });
+
+    // Animação de Scroll Suave (Intersection Observer)
+    (function () {
+      var reveals = document.querySelectorAll(".reveal");
+      if ("IntersectionObserver" in window) {
+        var obs = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) {
+            if (e.isIntersecting) {
+              e.target.classList.add("active");
+              obs.unobserve(e.target);
+            }
+          });
+        }, { threshold: 0.1, rootMargin: "0px 0px -30px 0px" });
+        reveals.forEach(function (el) { obs.observe(el); });
+      } else {
+        reveals.forEach(function (el) { el.classList.add("active"); });
+      }
+    })();
+
+    // Ocultar botão flutuante do WhatsApp ao chegar no rodapé
+    var waFloat = document.querySelector(".wa-float");
+    var footerEl = document.querySelector("footer.footer");
+    if (waFloat && footerEl && "IntersectionObserver" in window) {
+      var footerObs = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            waFloat.classList.add("hidden-in-footer");
+          } else {
+            waFloat.classList.remove("hidden-in-footer");
+          }
+        });
+      }, { threshold: 0.05 });
+      footerObs.observe(footerEl);
+    }
+
+    // Formulário integrado ao WhatsApp com fallback garantido
+    var leadForm = document.getElementById("leadForm");
+    if (leadForm) {
+      leadForm.addEventListener("submit", function (e) {
+        e.preventDefault();
+        var nome = document.getElementById("nome").value.trim();
+        var whatsapp = document.getElementById("whatsapp").value.trim();
+        var interesse = document.getElementById("interesse").value;
+        var observacoes = document.getElementById("observacoes").value.trim();
+
+        if (!nome || !whatsapp) return;
+
+        var msg = "Olá Elis! Vim pelo site do Espaço Crie & Ative.\n\n" +
+                  "👤 *Nome:* " + nome + "\n" +
+                  "📱 *WhatsApp:* " + whatsapp + "\n" +
+                  "🌿 *Interesse:* " + interesse;
+
+        if (observacoes) {
+          msg += "\n💬 *Como estou me sentindo:* " + observacoes;
+        }
+
+        var waUrl = "https://wa.me/5516991115518?text=" + encodeURIComponent(msg);
+        
+        // Abre em nova aba ou redireciona diretamente no celular
+        var win = window.open(waUrl, "_blank");
+        if (!win || win.closed || typeof win.closed === "undefined") {
+          window.location.href = waUrl;
+        }
+        leadForm.reset();
+      });
+    }
+
+    // Gerenciador de Consentimento LGPD (Lei nº 13.709/2018)
+    (function () {
+      var consent = localStorage.getItem("lgpd_consent_espaco_crie_ative");
+      var banner = document.getElementById("lgpdBanner");
+      var btnAccept = document.getElementById("lgpdAccept");
+      var btnSettings = document.getElementById("lgpdSettings");
+
+      if (!consent && banner) {
+        setTimeout(function () {
+          banner.classList.add("visible");
+        }, 1200);
+      }
+
+      if (btnAccept && banner) {
+        btnAccept.addEventListener("click", function () {
+          localStorage.setItem("lgpd_consent_espaco_crie_ative", "accepted_" + new Date().toISOString());
+          banner.classList.remove("visible");
+        });
+      }
+
+      if (btnSettings && banner) {
+        btnSettings.addEventListener("click", function () {
+          localStorage.setItem("lgpd_consent_espaco_crie_ative", "customized_" + new Date().toISOString());
+          banner.classList.remove("visible");
+        });
+      }
+    })();
+  </script>
+
+  <!-- BANNER LGPD / COOKIE CONSENT (CONFORMIDADE LEI Nº 13.709/2018) -->
+  <aside id="lgpdBanner" class="lgpd-banner" role="dialog" aria-live="polite" aria-label="Aviso de Privacidade e Cookies">
+    <div class="container lgpd-inner">
+      <div class="lgpd-content">
+        <div class="lgpd-icon" aria-hidden="true">🔒</div>
+        <div>
+          <strong>Privacidade e Proteção de Dados (LGPD)</strong>
+          <p>
+            Utilizamos cookies essenciais para garantir uma navegação segura, personalizada e acolhedora, em total conformidade com a <strong>Lei Geral de Proteção de Dados (LGPD - Lei nº 13.709/2018)</strong>. Ao continuar navegando, você concorda com nossas diretrizes.
+          </p>
+        </div>
+      </div>
+      <div class="lgpd-actions">
+        <button type="button" class="btn fx-11 btn-primary btn-sm" id="lgpdAccept">
+          <span class="btn-label">Aceitar Todos</span>
+        </button>
+        <button type="button" class="btn fx-11 btn-outline btn-sm" id="lgpdSettings">
+          <span class="btn-label">Preferências</span>
+        </button>
+      </div>
+    </div>
+  </aside>
+</body>
+</html>

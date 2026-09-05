@@ -1,8 +1,0 @@
-{
-  "date": "2026-07-27",
-  "framework": "Next.js 16 App Router",
-  "fontStack": "Playfair Display + Manrope",
-  "palette": "warm paper + botanical green + muted gold",
-  "motion": "CSS transform and opacity only",
-  "spacing": "4pt semantic scale"
-}
