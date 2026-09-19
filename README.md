@@ -1,6 +1,6 @@
-# Espaço Crie & Ative — Elis Regina (Terapeuta Holística)
+# Elis Regina Oliveira — Terapias Integrativas
 
-Website oficial do **Espaço Crie & Ative**, conduzido pela terapeuta holística **Elis Regina** (CRTH-BR 13579 / ABRATH).
+Website oficial de **Elis Regina Oliveira**, terapeuta com atuação em **Terapias Integrativas** (CRTH-BR 13579 / ABRATH), em Franca/SP.
 
 **No ar hoje:** https://espacocrieative.ai.studio
 
