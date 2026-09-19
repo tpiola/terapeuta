@@ -2,7 +2,9 @@
 
 Website oficial de **Elis Regina Oliveira**, terapeuta com atuação em **Terapias Integrativas** (CRTH-BR 13579 / ABRATH), em Franca/SP.
 
-**No ar hoje:** https://espacocrieative.ai.studio
+**No ar hoje:** https://terapeuta-next.vercel.app
+
+**Cópia antiga:** https://espacocrieative.ai.studio (nome anterior; só muda republicando no Google AI Studio)
 
 ## 🌿 Sobre o projeto
 
@@ -15,11 +17,13 @@ Website oficial de **Elis Regina Oliveira**, terapeuta com atuação em **Terapi
 
 | Endereço | Status |
 |---|---|
-| `espacocrieative.ai.studio` | **no ar** (Google AI Studio / Cloud Run) — é o que está publicado |
+| `https://terapeuta-next.vercel.app` | **no ar** — publicado automaticamente por este repositório (Vercel) |
 | `espacocrieative.com.br` | **NÃO registrado** (RDAP 404) — era o domínio planejado |
 | `terapeuta-ten.vercel.app` | **404** (DEPLOYMENT_NOT_FOUND) — deploy antigo removido |
 
-`canonical`, `og:url`, `og:image`, `robots.txt`, `sitemap.xml` e o JSON-LD apontam para **`espacocrieative.ai.studio`** porque é o único endereço que existe. Quando `espacocrieative.com.br` for registrado e apontar para cá, trocar as URLs nesses pontos (há comentário no `index.html` marcando onde).
+`canonical`, `og:url`, `og:image`, `robots.txt`, `sitemap.xml` e o JSON-LD apontam para
+**`https://terapeuta-next.vercel.app`** — o endereço que este repositório publica. Quando houver
+domínio próprio, trocar nesses pontos (o `index.html` tem um comentário marcando onde).
 
 ## 📱 Regras de celular (a maioria dos acessos é mobile)
 

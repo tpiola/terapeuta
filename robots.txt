@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://espacocrieative.ai.studio/sitemap.xml
+Sitemap: https://terapeuta-next.vercel.app/sitemap.xml
