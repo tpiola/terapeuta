@@ -1,0 +1,12 @@
+version: 2
+updates:
+  # O site não tem dependências de código. As ações do workflow são o que
+  # precisa de atualização de segurança.
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "monthly"
+    commit-message:
+      prefix: "chore"
+    labels:
+      - "infra"

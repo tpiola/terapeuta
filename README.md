@@ -59,4 +59,9 @@ robots.txt      indexação + sitemap
 sitemap.xml     mapa de URLs
 vercel.json     cabeçalhos de segurança e cache
 arquivo/        versões antigas, mantidas só para consulta
+.github/        validação automática, modelos de issue/PR, dependabot, CODEOWNERS
+LICENSE         direitos reservados (conteúdo e marca são da titular)
+CONTRIBUTING.md regras para alterar este site (medir no celular antes)
+SECURITY.md     como reportar falha de segurança
+CODE_OF_CONDUCT.md
 ```

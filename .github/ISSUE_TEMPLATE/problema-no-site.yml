@@ -1,0 +1,44 @@
+name: Problema no site
+description: Algo quebrado, errado ou faltando no site
+title: "[problema] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Obrigado por avisar. Quanto mais específico, mais rápido a correção.
+  - type: dropdown
+    id: onde
+    attributes:
+      label: Onde acontece?
+      options:
+        - Celular (Android)
+        - Celular (iPhone)
+        - Computador
+        - Não sei
+    validations:
+      required: true
+  - type: textarea
+    id: o-que
+    attributes:
+      label: O que está errado?
+      placeholder: "Ex.: o botão de agendar não abre o WhatsApp"
+    validations:
+      required: true
+  - type: textarea
+    id: passos
+    attributes:
+      label: Como reproduzir
+      placeholder: |
+        1. abrir o site
+        2. rolar até Terapias
+        3. tocar em Agendar
+    validations:
+      required: false
+  - type: input
+    id: aparelho
+    attributes:
+      label: Aparelho e navegador
+      placeholder: "iPhone 13, Safari"
+    validations:
+      required: false
