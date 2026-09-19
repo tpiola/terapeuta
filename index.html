@@ -12,7 +12,10 @@
   <title>Espaço Crie & Ative | Elis Regina - Terapeuta Holística em Franca/SP</title>
 
   <meta name="description" content="Encontre alívio para ansiedade, estresse e dores com Elis Regina, Terapeuta Holística em Franca/SP (CRTH-BR 13579). Cone Hindu, Cromoterapia, Radiestesia, Apometria e Reiki.">
-  <link rel="canonical" href="https://espacocrieative.com.br/">
+  <!-- Endereço atual do site. Quando espacocrieative.com.br estiver registrado e
+       apontando para cá, troque as 3 URLs desta página (canonical, og:url, og:image),
+       o robots.txt e o sitemap.xml. -->
+  <link rel="canonical" href="https://espacocrieative.ai.studio/">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <meta name="theme-color" content="#423456">
 
@@ -20,7 +23,7 @@
   <link rel="icon" type="image/png" sizes="128x128" href="favicon.png?v=2">
   <link rel="icon" type="image/x-icon" href="favicon.ico?v=2">
   <link rel="shortcut icon" href="favicon.ico?v=2">
-  <link rel="apple-touch-icon" href="favicon.png?v=2">
+  <link rel="manifest" href="manifest.json"><link rel="apple-touch-icon" href="favicon.png?v=2">
 
   <!-- SEO Local Franca/SP -->
   <meta name="geo.region" content="BR-SP">
@@ -34,7 +37,7 @@
   <meta property="og:site_name" content="Espaço Crie & Ative - Elis Regina">
   <meta property="og:title" content="Espaço Crie & Ative | Elis Regina - Terapeuta Holística em Franca/SP">
   <meta property="og:description" content="Cuidado integrativo para corpo, mente e alma. Sessões presenciais em Franca/SP e on-line pelo WhatsApp.">
-  <meta property="og:image" content="img/elis-regina-conduz.jpg">
+  <meta <meta <meta name="twitter:card" content="summary_large_image"><meta property="og:url" content="https://espacocrieative.ai.studio/"><meta property="og:image" content="https://espacocrieative.ai.studio/img/og-espaco-crie-ative.jpg">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -1220,42 +1223,203 @@
         animation: none !important;
       }
     }
-  </style>
+  
+  /* ═══════════════════════════════════════════════════════════════
+     AJUSTES DE CELULAR — legibilidade e área de toque
+     Medido em iPhone 390x844: textos de apoio em 11-13px e botões de
+     26-39px de altura (o dedo precisa de ~44px). Corrigido aqui.
+     ═══════════════════════════════════════════════════════════════ */
+  @media (max-width: 680px) {
+    /* legibilidade */
+    .btn, .btn-sm, .btn-label { font-size: 14px; }
+    .badge-subtle,
+    .hero-floating-badge small,
+    .expert-card-caption span,
+    .online-testimonial-card cite { font-size: 14px; }
+    .qr-box-pure p,
+    .lgpd-content p { font-size: 14.5px; }
+    .map-overlay-link,
+    .footer-map-card a.map-overlay-link { font-size: 14px; }
+    .brand-tag { font-size: 13px; letter-spacing: 0.1em; }
+
+    /* área de toque confortável (mín. 44px de altura) */
+    .btn, .btn-sm { min-height: 44px; }
+    .btn-sm { padding: 10px 18px; }
+    .main-nav a,
+    .footer-nav a {
+      display: inline-flex;
+      align-items: center;
+      min-height: 44px;
+    }
+    .main-nav a { padding-inline: 4px; }
+
+    /* ── cabeçalho no celular: 1 linha em vez de 2 ──
+       Com o layout anterior (flex-wrap + header-actions 100%) o cabeçalho fixo
+       ocupava 240px de 844px = 28% da tela, com "Atendimento Online" quebrando
+       em duas linhas e os ícones cortados na borda. O site é de uma página só,
+       então as âncoras do menu só consumiam espaço. */
+    .header-inner { flex-wrap: nowrap; gap: 12px; padding: 8px 0; }
+    .brand-logo-frame { width: 38px; height: 38px; }
+    .brand-name { font-size: 1.05rem; line-height: 1.15; }
+    .brand-tag { display: none; }
+    .header-actions {
+      width: auto;
+      flex: 0 1 auto;
+      justify-content: flex-end;
+      gap: 12px;
+      padding-top: 0;
+      overflow-x: visible;
+    }
+    .main-nav { display: none; }
+    .social-links { flex: none; gap: 6px; }
+    /* o CTA do cabeçalho não cabe ao lado do logo em tela pequena; o botão
+       flutuante do WhatsApp (sempre visível) cumpre esse papel */
+    .header-actions > .btn { display: none; }
+    .social-link { width: 34px; height: 34px; }
+
+    .map-overlay-link { min-height: 44px; padding: 12px 14px; }
+    /* crédito no rodapé: link dentre de texto, ganha respiro para o dedo */
+    footer a[href*="reidasvendas"] { display: inline-block; padding-block: 7px; }
+  }
+</style>
 
   <!-- Schema.org Structured Data para SEO Local e Google AI Studio -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": ["HealthAndBeautyBusiness", "LocalBusiness"],
-    "name": "Espaço Crie & Ative - Elis Regina Terapeuta Holística",
-    "image": "https://espacocrieative.com.br/img/elis-regina-hero.jpg",
-    "description": "Atendimento terapêutico integrativo em Franca/SP: Cone Hindu, Cromoterapia, Radiestesia, Radiônica, Apometria On-line e Reiki com a Terapeuta Elis Regina (CRTH-BR 13579/ABRATH).",
-    "telephone": "+5516991115518",
-    "url": "https://espacocrieative.com.br/",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "R. Lourival Viêira, 1",
-      "addressLocality": "Franca",
-      "addressRegion": "SP",
-      "postalCode": "14405-190",
-      "addressCountry": "BR"
+{
+  "@context": "https://schema.org",
+  "@type": [
+    "HealthAndBeautyBusiness",
+    "LocalBusiness"
+  ],
+  "name": "Espaço Crie & Ative - Elis Regina Terapeuta Holística",
+  "image": "https://espacocrieative.ai.studio/img/elis-regina-hero.jpg",
+  "description": "Atendimento terapêutico integrativo em Franca/SP: Cone Hindu, Cromoterapia, Radiestesia, Radiônica, Apometria On-line e Reiki com a Terapeuta Elis Regina (CRTH-BR 13579/ABRATH).",
+  "telephone": "+5516991115518",
+  "url": "https://espacocrieative.ai.studio/",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "R. Lourival Viêira, 1",
+    "addressLocality": "Franca",
+    "addressRegion": "SP",
+    "postalCode": "14405-190",
+    "addressCountry": "BR"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": -20.539,
+    "longitude": -47.401
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday"
+    ],
+    "opens": "08:00",
+    "closes": "19:00"
+  },
+  "sameAs": [
+    "https://www.instagram.com/espaco_crieeative/",
+    "https://www.facebook.com/elisreginaoliveira.terapeuta"
+  ],
+  "makesOffer": [
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Cone Hindu",
+        "description": "Desobstrução física e energética dos canais auditivos e vias respiratórias."
+      }
     },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": -20.5390,
-      "longitude": -47.4010
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Cones artesanais naturais",
+        "description": "Cones feitos à mão com cera de abelhas pura, algodão e alecrim."
+      }
     },
-    "openingHoursSpecification": {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-      "opens": "08:00",
-      "closes": "19:00"
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Cromoterapia e sala terapêutica",
+        "description": "Tratamento pelas frequências das cores em ambiente imersivo."
+      }
     },
-    "sameAs": [
-      "https://www.instagram.com/espaco_crieeative/",
-      "https://www.facebook.com/elisreginaoliveira.terapeuta"
-    ]
-  }
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Radiestesia com pêndulo",
+        "description": "Avaliação vibracional para identificar bloqueios energéticos."
+      }
+    },
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Radiônica e geometria sagrada",
+        "description": "Emissão de ondas de forma com placas radiônicas."
+      }
+    },
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Meridianos e reflexologia",
+        "description": "Reflexologia podal e desativação de pontos de tensão."
+      }
+    },
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Apometria on-line",
+        "description": "Atendimento à distância por chamada de vídeo."
+      }
+    },
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Reiki integrativo",
+        "description": "Reequilíbrio energético e relaxamento profundo."
+      }
+    }
+  ],
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Franca"
+    },
+    {
+      "@type": "State",
+      "name": "São Paulo"
+    },
+    {
+      "@type": "Country",
+      "name": "Brasil"
+    }
+  ],
+  "availableLanguage": [
+    "pt-BR"
+  ],
+  "knowsAbout": [
+    "Terapias integrativas",
+    "Cone Hindu",
+    "Cromoterapia",
+    "Radiestesia",
+    "Radiônica",
+    "Reflexologia",
+    "Apometria",
+    "Reiki"
+  ]
+}
   </script>
 </head>
 
@@ -1272,7 +1436,7 @@
     <div class="container header-inner">
       <a class="brand" href="#topo" aria-label="Espaço Crie & Ative - Início">
         <div class="brand-logo-frame" aria-hidden="true">
-          <img src="img/logo-simbolo.png" alt="Logo Espaço Crie & Ative" width="44" height="44">
+          <picture><source type="image/webp" srcset="img/logo-simbolo-128.webp 128w, img/logo-simbolo-256.webp 256w" sizes="44px"><img src="img/logo-simbolo.png" alt="Logo Espaço Crie & Ative" width="44" height="44" decoding="async"></picture>
         </div>
         <div class="brand-text">
           <span class="brand-name">Espaço Crie & Ative</span>
@@ -1331,7 +1495,7 @@
         <div class="hero-media-wrapper reveal reveal-delay-1">
           <!-- Foto em tamanho estratégico para máxima nitidez (nunca desfocada) -->
           <div class="hero-photo-card">
-            <img src="img/elis-regina-hero.jpg" alt="Elis Regina — Terapeuta Holística no Espaço Crie & Ative" width="270" height="338" fetchpriority="high">
+            <picture><source type="image/webp" srcset="img/elis-regina-hero.webp 900w" sizes="(max-width: 640px) 78vw, 280px"><img src="img/elis-regina-hero.jpg" alt="Elis Regina — Terapeuta Holística no Espaço Crie & Ative" width="278" height="328" fetchpriority="high" decoding="async"></picture>
             <div class="hero-floating-badge">
               Elis Regina
               <small>Terapeuta Holística (CRTH-BR 13579)</small>
@@ -1356,7 +1520,7 @@
           <!-- 1. Cone Hindu -->
           <article class="service-card reveal">
             <div class="service-card-media">
-              <img src="img/cone-hindu-aplicacao.jpg" alt="Aplicação segura de Cone Hindu" loading="lazy">
+              <picture><source type="image/webp" srcset="img/cone-hindu-aplicacao-600.webp 600w, img/cone-hindu-aplicacao-1080.webp 1080w" sizes="(max-width: 640px) 92vw, 360px"><img src="img/cone-hindu-aplicacao.jpg" alt="Aplicação segura de Cone Hindu" width="359" height="225" loading="lazy" decoding="async"></picture>
             </div>
             <div class="service-card-body">
               <h3 class="service-card-title">Cone Hindu</h3>
@@ -1374,7 +1538,7 @@
           <!-- 2. Cones Artesanais Naturais com Alecrim -->
           <article class="service-card reveal reveal-delay-1">
             <div class="service-card-media">
-              <img src="img/cone-hindu-artesanal.jpg" alt="Cones artesanais confeccionados com cera pura e alecrim" loading="lazy">
+              <picture><source type="image/webp" srcset="img/cone-hindu-artesanal-600.webp 600w, img/cone-hindu-artesanal-1080.webp 1080w" sizes="(max-width: 640px) 92vw, 360px"><img src="img/cone-hindu-artesanal.jpg" alt="Cones artesanais confeccionados com cera pura e alecrim" width="359" height="225" loading="lazy" decoding="async"></picture>
             </div>
             <div class="service-card-body">
               <h3 class="service-card-title">Cones Artesanais Naturais</h3>
@@ -1392,7 +1556,7 @@
           <!-- 3. Cromoterapia e Alinhamento -->
           <article class="service-card reveal reveal-delay-2">
             <div class="service-card-media">
-              <img src="img/espaco-terapeutico-cromoterapia.jpg" alt="Sala de atendimento do Espaço Crie & Ative com iluminação cromoterápica" loading="lazy">
+              <picture><source type="image/webp" srcset="img/espaco-terapeutico-cromoterapia-600.webp 600w, img/espaco-terapeutico-cromoterapia-1080.webp 1080w" sizes="(max-width: 640px) 92vw, 360px"><img src="img/espaco-terapeutico-cromoterapia.jpg" alt="Sala de atendimento do Espaço Crie & Ative com iluminação cromoterápica" width="359" height="225" loading="lazy" decoding="async"></picture>
             </div>
             <div class="service-card-body">
               <h3 class="service-card-title">Cromoterapia & Sala Terapêutica</h3>
@@ -1410,7 +1574,7 @@
           <!-- 4. Radiestesia -->
           <article class="service-card reveal">
             <div class="service-card-media">
-              <img src="img/radiestesia-pendulo.jpg" alt="Medição de frequência com pêndulo de madeira" loading="lazy">
+              <picture><source type="image/webp" srcset="img/radiestesia-pendulo-600.webp 600w, img/radiestesia-pendulo-1080.webp 1080w" sizes="(max-width: 640px) 92vw, 360px"><img src="img/radiestesia-pendulo.jpg" alt="Medição de frequência com pêndulo de madeira" width="359" height="225" loading="lazy" decoding="async"></picture>
             </div>
             <div class="service-card-body">
               <h3 class="service-card-title">Radiestesia com Pêndulo</h3>
@@ -1428,7 +1592,7 @@
           <!-- 5. Radiônica e Geometria Sagrada -->
           <article class="service-card reveal reveal-delay-1">
             <div class="service-card-media">
-              <img src="img/radiestesia-radionica-graficos.jpg" alt="Gráficos radiônicos de geometria sagrada" loading="lazy">
+              <picture><source type="image/webp" srcset="img/radiestesia-radionica-graficos-600.webp 600w, img/radiestesia-radionica-graficos-1080.webp 1080w" sizes="(max-width: 640px) 92vw, 360px"><img src="img/radiestesia-radionica-graficos.jpg" alt="Gráficos radiônicos de geometria sagrada" width="359" height="225" loading="lazy" decoding="async"></picture>
             </div>
             <div class="service-card-body">
               <h3 class="service-card-title">Radiônica & Geometria Sagrada</h3>
@@ -1446,7 +1610,7 @@
           <!-- 6. Estudos Anatômicos de Meridianos -->
           <article class="service-card reveal reveal-delay-2">
             <div class="service-card-media">
-              <img src="img/estudos-meridianos-pontos.jpg" alt="Mapa de meridianos e pontos bioenergéticos" loading="lazy">
+              <picture><source type="image/webp" srcset="img/estudos-meridianos-pontos-600.webp 600w, img/estudos-meridianos-pontos-824.webp 824w" sizes="(max-width: 640px) 92vw, 360px"><img src="img/estudos-meridianos-pontos.jpg" alt="Mapa de meridianos e pontos bioenergéticos" width="359" height="225" loading="lazy" decoding="async"></picture>
             </div>
             <div class="service-card-body">
               <h3 class="service-card-title">Estudos dos Meridianos & Reflexos</h3>
@@ -1485,7 +1649,7 @@
           <div>
             <!-- Celular em destaque e alta nitidez -->
             <div class="phone-mockup-wrap">
-              <img src="img/apometria-celular.jpg" alt="Atendimento On-line de Apometria comprovado por chamada e mensagens" loading="lazy">
+              <picture><source type="image/webp" srcset="img/apometria-celular-600.webp 600w, img/apometria-celular-1080.webp 1080w" sizes="(max-width: 640px) 80vw, 480px"><img src="img/apometria-celular.jpg" alt="Atendimento On-line de Apometria comprovado por chamada e mensagens" width="310" height="530" loading="lazy" decoding="async"></picture>
             </div>
           </div>
         </div>
@@ -1498,7 +1662,7 @@
         <div class="reveal">
           <!-- Foto REAL e AUTÊNTICA de Elis Regina em alta definição -->
           <div class="expert-photo-card">
-            <img src="img/elis-regina-conduz.jpg" alt="Elis Regina — Foto Oficial da Terapeuta Holística" loading="lazy">
+            <picture><source type="image/webp" srcset="img/elis-regina-conduz-80.webp 80w" sizes="30px"><img src="img/elis-regina-conduz.jpg" alt="Elis Regina — Foto Oficial da Terapeuta Holística" width="30" height="30" loading="lazy" decoding="async"></picture>
             <div class="expert-card-caption">
               <strong>Elis Regina</strong>
               <span>Terapeuta Holística & Integrativa</span>
@@ -1596,7 +1760,7 @@
       <div class="footer-header-bar">
         <a class="brand" href="#topo" aria-label="Voltar ao topo">
           <div class="brand-logo-frame" style="background: rgba(255,255,255,0.12); border-color: rgba(255,255,255,0.2);">
-            <img src="img/logo-simbolo.png" alt="Logo Espaço Crie & Ative" width="44" height="44">
+            <picture><source type="image/webp" srcset="img/logo-simbolo-128.webp 128w, img/logo-simbolo-256.webp 256w" sizes="44px"><img src="img/logo-simbolo.png" alt="Logo Espaço Crie & Ative" width="44" height="44" decoding="async"></picture>
           </div>
           <div class="brand-text">
             <span class="brand-name" style="color: #FFFFFF;">Espaço Crie & Ative</span>
@@ -1619,7 +1783,7 @@
         <!-- Coluna 1: QR Code Testado, Nítido e com Clique Direto -->
         <div>
           <div class="qr-box-pure">
-            <img src="img/qrcode-whatsapp.png" alt="QR Code WhatsApp Elis Regina" width="140" height="140">
+            <picture><source type="image/webp" srcset="img/qrcode-whatsapp.webp 410w" sizes="140px"><img src="img/qrcode-whatsapp.png" alt="QR Code WhatsApp Elis Regina" width="140" height="140" decoding="async"></picture>
             <p>Aponte a câmera do seu celular para abrir a conversa no WhatsApp.</p>
             <a class="btn fx-11 btn-whatsapp btn-sm" style="width: 100%;" href="https://wa.me/5516991115518" target="_blank" rel="noopener noreferrer">
               <span class="btn-label">Ou clique aqui para falar</span>

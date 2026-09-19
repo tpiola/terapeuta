@@ -1,4 +1,4 @@
-name: Deploy Static Website
+name: Validar site estático
 
 on:
   push:
@@ -8,19 +8,67 @@ on:
 
 permissions:
   contents: read
-  pages: write
-  id-token: write
 
 jobs:
   validate:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Code
+      - name: Checkout do código
         uses: actions/checkout@v4
 
-      - name: Verify HTML & Assets Integrity
+      - name: Arquivos obrigatórios presentes
         run: |
-          test -f index.html || (echo "index.html missing" && exit 1)
-          test -d img || (echo "img dir missing" && exit 1)
-          test -f img/logo-simbolo.png || (echo "logo missing" && exit 1)
-          echo "Site integrity check passed with 100% success!"
+          faltando=0
+          for f in index.html robots.txt sitemap.xml manifest.json vercel.json img; do
+            if [ ! -e "$f" ]; then echo "::error::Arquivo obrigatório ausente: $f"; faltando=1; fi
+          done
+          [ "$faltando" = "0" ] || exit 1
+          echo "Todos os arquivos obrigatórios presentes."
+
+      - name: O HTML está saudável (canonical, manifest, idioma, schema)
+        run: |
+          faltando=0
+          grep -q 'rel="canonical"' index.html       || { echo "::error::canonical ausente"; faltando=1; }
+          grep -q 'rel="manifest"' index.html        || { echo "::error::link do manifest ausente"; faltando=1; }
+          grep -q 'lang="pt-BR"' index.html          || { echo "::error::idioma pt-BR ausente"; faltando=1; }
+          grep -q 'application/ld+json' index.html   || { echo "::error::Schema.org ausente"; faltando=1; }
+          grep -q 'name="viewport"' index.html       || { echo "::error::viewport ausente"; faltando=1; }
+          [ "$faltando" = "0" ] || exit 1
+          echo "HTML saudável."
+
+      - name: Toda imagem referenciada existe
+        run: |
+          python3 - <<'PY'
+          import re, os, sys
+          html = open("index.html", encoding="utf-8").read()
+          refs = set(re.findall(r'\bsrc="([^"]+\.(?:jpg|jpeg|png|webp|avif))"', html))
+          # cada candidato do srcset é "arquivo 600w": pegar só o caminho
+          for v in re.findall(r'srcset="([^"]+)"', html):
+              refs |= {c.strip().split()[0] for c in v.split(",") if c.strip()}
+          faltando = [r for r in refs if not r.startswith("http") and not os.path.exists(r)]
+          for f in faltando:
+              print(f"::error::Imagem referenciada não existe: {f}")
+          print(f"imagens referenciadas: {len(refs)} | ausentes: {len(faltando)}")
+          sys.exit(1 if faltando else 0)
+          PY
+
+      - name: Nenhuma foto pesada (acima de 300KB)
+        run: |
+          grandes=$(find img -type f \( -name '*.jpg' -o -name '*.png' \) -size +300k)
+          if [ -n "$grandes" ]; then
+            echo "::warning::Originais acima de 300KB (o WebP é o que serve a página): $grandes"
+          fi
+          echo "Conferido."
+
+      - name: Endereço do site consistente
+        run: |
+          # canonical, robots e sitemap precisam apontar para o mesmo lugar
+          a=$(grep -o 'canonical" href="[^"]*' index.html | sed 's/.*href="//' | sed 's#/$##' | head -1)
+          b=$(grep -o 'Sitemap: [^ ]*' robots.txt | sed 's/Sitemap: //' | sed 's#/sitemap.xml##' | head -1)
+          c=$(grep -o '<loc>[^<]*' sitemap.xml | sed 's/<loc>//' | sed 's#/$##' | head -1)
+          echo "canonical: $a | robots: $b | sitemap: $c"
+          if [ "$a" != "$b" ] || [ "$a" != "$c" ]; then
+            echo "::error::Os endereços divergem entre canonical, robots.txt e sitemap.xml"
+            exit 1
+          fi
+          echo "Endereço consistente: $a"
