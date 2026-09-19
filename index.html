@@ -11,7 +11,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Elis Regina Oliveira | Terapias Integrativas em Franca/SP</title>
 
-  <meta name="description" content="Encontre alívio para ansiedade, estresse e dores com Elis Regina Oliveira, Terapias Integrativas em Franca/SP (CRTH-BR 13579). Cone Hindu, Cromoterapia, Radiestesia, Apometria e Reiki.">
+  <meta name="description" content="Terapias integrativas em Franca/SP com Elis Regina Oliveira (CRTH-BR 13579): Cone Hindu, Cromoterapia, Radiestesia, Radiônica, Reflexologia e Apometria on-line.">
   <!-- Endereço publicado por este repositório (deploy automático). Quando houver
        domínio próprio, trocar aqui (canonical, og:url, og:image), no robots.txt,
        no sitemap.xml e no JSON-LD. -->
@@ -20,10 +20,13 @@
   <meta name="theme-color" content="#423456">
 
   <!-- Favicon Oficial (Idêntico ao Logotipo Oficial) -->
-  <link rel="icon" type="image/png" sizes="128x128" href="favicon.png?v=2">
-  <link rel="icon" type="image/x-icon" href="favicon.ico?v=2">
-  <link rel="shortcut icon" href="favicon.ico?v=2">
-  <link rel="manifest" href="manifest.json"><link rel="apple-touch-icon" href="favicon.png?v=2">
+  <!-- Ícone: foto da Elis (favicon). Trocado de símbolo gráfico para a foto. -->
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="img/icon-192.png">
+  <link rel="manifest" href="manifest.json">
 
   <!-- SEO Local Franca/SP -->
   <meta name="geo.region" content="BR-SP">
@@ -39,11 +42,13 @@
   <meta property="og:description" content="Cuidado integrativo para corpo, mente e alma. Sessões presenciais em Franca/SP e on-line pelo WhatsApp.">
   <meta name="twitter:card" content="summary_large_image">
   <meta property="og:url" content="https://terapeuta-next.vercel.app/">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Elis Regina Oliveira — Terapias Integrativas em Franca/SP">
   <meta property="og:image" content="https://terapeuta-next.vercel.app/img/og-elis-regina-oliveira.jpg">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=JetBrains+Mono:wght@500;600;700&family=Karla:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="preload" href="fontes/Fraunces-600-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fontes/Karla-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="fontes/fontes.css">
 
   <style>
     :root {
@@ -1226,43 +1231,91 @@
       }
     }
   
-  /* ═══════════════════════════════════════════════════════════════
-     AJUSTES DE CELULAR — legibilidade e área de toque
-     Medido em iPhone 390x844: textos de apoio em 11-13px e botões de
-     26-39px de altura (o dedo precisa de ~44px). Corrigido aqui.
-     ═══════════════════════════════════════════════════════════════ */
-  @media (max-width: 680px) {
-    /* legibilidade */
+  /* ═══════════════════════════════════════════════════════════════════
+     EXPERIÊNCIA — legibilidade e área de toque (celular e tablet)
+     A auditoria mostrou textos de 11px e alvos de 26-39px também em
+     tablet. Aqui a correção vale para qualquer tela sensível ao toque,
+     não só para o celular estreito.
+     ═══════════════════════════════════════════════════════════════════ */
+  @media (max-width: 1024px), (pointer: coarse) {
+    /* nada de texto abaixo de 14px em conteúdo de leitura */
     .btn, .btn-sm, .btn-label { font-size: 14px; }
     .badge-subtle,
     .hero-floating-badge small,
     .expert-card-caption span,
-    .online-testimonial-card cite { font-size: 14px; }
+    .online-testimonial-card cite,
+    .brand-tag,
     .qr-box-pure p,
-    .lgpd-content p { font-size: 14.5px; }
+    .lgpd-content p,
+    .map-overlay-link { font-size: 14px; }
+
+    /* área de toque confortável */
+    .btn, .btn-sm { min-height: 44px; }
+    .main-nav a,
+    .footer-nav a { display: inline-flex; align-items: center; min-height: 44px; }
+    .map-overlay-link { min-height: 44px; padding: 12px 14px; }
+    .lgpd-banner button, .lgpd-banner a { min-height: 44px; }
+    footer a[href*="reidasvendas"],
+    .footer-telefone a { display: inline-flex; align-items: center; min-height: 44px; }
+    .social-link { width: 44px; height: 44px; }
+  }
+
+  .footer-telefone { display: block; margin-top: 6px; }
+  .footer-telefone a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
+
+  /* No computador o mouse não precisa de 44px, mas 11px é ilegível em
+     qualquer tela: sobe o piso do texto pequeno sem inchar os botões. */
+  @media (min-width: 1025px) and (pointer: fine) {
+    .btn, .btn-sm, .btn-label,
+    .hero-floating-badge small,
+    .brand-tag,
+    .badge-subtle,
+    .expert-card-caption span,
+    .qr-box-pure p,
+    .lgpd-content p { font-size: 14px; }
+    /* o seletor com o pai vence a regra genérica do overlay do mapa */
     .map-overlay-link,
     .footer-map-card a.map-overlay-link { font-size: 14px; }
-    .brand-tag { font-size: 13px; letter-spacing: 0.1em; }
+    /* mouse acerta alvos menores, mas 26px é apertado: dá respiro */
+    .footer-nav a { display: inline-flex; align-items: center; min-height: 34px; }
+    .lgpd-banner button, .lgpd-banner a { min-height: 40px; }
+    footer a[href*="reidasvendas"],
+    .footer-telefone a { display: inline-flex; align-items: center; min-height: 30px; }
+  }
 
-    /* área de toque confortável (mín. 44px de altura) */
-    .btn, .btn-sm { min-height: 44px; }
-    .btn-sm { padding: 10px 18px; }
-    .main-nav a,
-    .footer-nav a {
-      display: inline-flex;
-      align-items: center;
-      min-height: 44px;
-    }
-    .main-nav a { padding-inline: 4px; }
+  /* ═══════════════════════════════════════════════════════════════
+     ACESSIBILIDADE — contraste de texto (WCAG 2.1 AA = 4,5:1)
+     O coral da marca (#C26848) dava 3,63 sobre o creme do site e 4,23
+     sobre o escuro do rodapé. Como não existe um tom que sirva nos dois
+     fundos, cada contexto usa a sua variação:
+       · fundos claros  → #B05636  (contraste 4.61)
+       · fundos escuros → #C86E4E  (contraste 4.57)
+     ═══════════════════════════════════════════════════════════════ */
+  .brand-tag,
+  .badge-subtle,
+  .expert-card-caption span {
+    color: #B05636;
+  }
 
-    /* ── cabeçalho no celular: 1 linha em vez de 2 ──
-       Com o layout anterior (flex-wrap + header-actions 100%) o cabeçalho fixo
-       ocupava 240px de 844px = 28% da tela, com "Atendimento Online" quebrando
-       em duas linhas e os ícones cortados na borda. O site é de uma página só,
-       então as âncoras do menu só consumiam espaço. */
-    .header-inner { flex-wrap: nowrap; gap: 12px; padding: 8px 0; }
-    .brand-logo-frame { width: 38px; height: 38px; }
-    .brand-name { font-size: 1.05rem; line-height: 1.15; }
+  footer .brand-tag,
+  footer .badge-subtle,
+  .rdv-footer-v3 .brand-tag {
+    color: #C86E4E;
+  }
+
+  /* ── cabeçalho no celular: 1 linha em vez de 2 ──
+     Com flex-wrap + header-actions 100% ele ocupava 240px de 844 (28% da
+     tela), com "Atendimento Online" quebrando e ícones cortados. O site é
+     de página única, então as âncoras do menu só consumiam espaço. */
+  @media (max-width: 680px) {
+    .header-inner { flex-wrap: nowrap; gap: 8px; padding: 8px 0; }
+    /* o cabeçalho tem padding lateral do container: no celular ele encolhe
+       para os 3 ícones de 44px caberem sem estourar a tela */
+    .site-header .container { padding-inline: 12px; }
+    .brand { gap: 8px; min-width: 0; }
+    .brand-logo-frame { width: 38px; height: 38px; flex: none; }
+    .brand-name { font-size: 0.95rem; line-height: 1.15; }
+    .brand-text { min-width: 0; }
     .brand-tag { display: none; }
     .header-actions {
       width: auto;
@@ -1273,15 +1326,19 @@
       overflow-x: visible;
     }
     .main-nav { display: none; }
-    .social-links { flex: none; gap: 6px; }
-    /* o CTA do cabeçalho não cabe ao lado do logo em tela pequena; o botão
-       flutuante do WhatsApp (sempre visível) cumpre esse papel */
     .header-actions > .btn { display: none; }
-    .social-link { width: 34px; height: 34px; }
+    .social-links { flex: none; gap: 3px; }
+    .social-link { width: 44px; height: 44px; }
+    /* o logo também é link: precisa de 44px de altura para o dedo */
+    .brand { min-height: 44px; }
+  }
 
-    .map-overlay-link { min-height: 44px; padding: 12px 14px; }
-    /* crédito no rodapé: link dentre de texto, ganha respiro para o dedo */
-    footer a[href*="reidasvendas"] { display: inline-block; padding-block: 7px; }
+  /* telas estreitas (iPhone SE e afins, 360px): encolhe só o necessário
+     para os três ícones de 44px caberem sem estourar */
+  @media (max-width: 400px) {
+    .site-header .container { padding-inline: 10px; }
+    .brand-name { font-size: 0.88rem; }
+    .social-links { gap: 1px; }
   }
 </style>
 
@@ -1300,10 +1357,10 @@
   "url": "https://terapeuta-next.vercel.app/",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "R. Lourival Viêira, 1",
+    "streetAddress": "Rua Lourival Vieira, 1",
     "addressLocality": "Franca",
     "addressRegion": "SP",
-    "postalCode": "14405-190",
+    "postalCode": "14405-590",
     "addressCountry": "BR"
   },
   "geo": {
@@ -1813,14 +1870,14 @@
         <div>
           <h3>Localização em Franca</h3>
           <div class="footer-map-card">
-            <iframe
-              src="https://www.google.com/maps?q=Espa%C3%A7o%20Creative%20R.%20Lourival%20Vi%C3%AAira%2C%201%20-%20Parque%20Moema%2C%20Franca%20-%20SP%2C%2014405-190&output=embed"
+            <iframe referrerpolicy="no-referrer-when-downgrade"
+              src="https://www.google.com/maps?q=Espa%C3%A7o%20Creative%20Rua%20Lourival%20Vieira%2C%201%20-%20Parque%20Moema%2C%20Franca%20-%20SP%2C%2014405-590&output=embed"
               title="Mapa do consultório no Google Maps"
               loading="lazy"
             ></iframe>
             <a
               class="map-overlay-link"
-              href="https://www.google.com/maps?q=Espa%C3%A7o%20Creative%20R.%20Lourival%20Vi%C3%AAira%2C%201%20-%20Parque%20Moema%2C%20Franca%20-%20SP%2C%2014405-190"
+              href="https://www.google.com/maps?q=Espa%C3%A7o%20Creative%20Rua%20Lourival%20Vieira%2C%201%20-%20Parque%20Moema%2C%20Franca%20-%20SP%2C%2014405-590"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -1832,6 +1889,7 @@
 
       <div class="footer-bottom">
         <span>© <span id="year"></span> Elis Regina Oliveira — Terapias Integrativas.</span>
+        <span class="footer-telefone">Atendimento: <a href="tel:+5516991115518" aria-label="Ligar para Elis Regina Oliveira">(16) 99111-5518</a> · <a href="https://wa.me/5516991115518" target="_blank" rel="noopener noreferrer">WhatsApp</a></span>
         <span>Feito por <a href="http://reidasvendas.com.br" target="_blank" rel="noopener noreferrer" style="color: #FFFFFF; text-decoration: underline; font-weight: 600;">reidasvendas.com.br</a></span>
       </div>
     </div>
