@@ -851,12 +851,6 @@
       color: #C86E4E;
     }
 
-    .footer-grid {
-      display: grid;
-      gap: 36px;
-      align-items: start;
-    }
-
     .footer h3 {
       color: #FFFFFF;
       font-size: 1.15rem;
@@ -864,31 +858,6 @@
     }
 
     /* Card Estratégico do QR Code com Botão Direto de Teste/Clique */
-    .qr-box-pure {
-      background: #FFFFFF;
-      border-radius: 20px;
-      padding: 16px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      gap: 12px;
-      max-width: 280px;
-      box-shadow: 0 12px 30px rgba(0,0,0,0.35);
-    }
-
-    .qr-box-pure img {
-      width: 140px;
-      height: 140px;
-      border-radius: 8px;
-    }
-
-    .qr-box-pure p {
-      margin: 0;
-      font-size: 0.85rem;
-      color: var(--text-muted);
-      line-height: 1.35;
-    }
 
     .footer-map-card {
       position: relative;
@@ -1130,8 +1099,6 @@
       .hero-grid { grid-template-columns: 1.25fr 0.75fr; }
       .about-grid { grid-template-columns: 0.9fr 1.1fr; }
       .online-grid { grid-template-columns: 1fr 1fr; }
-      .footer-grid { grid-template-columns: 1.1fr 1fr 1fr; }
-      .footer-grid { grid-template-columns: 1fr 1.2fr 1fr; gap: 36px; }
             .map-overlay-link:hover .map-overlay-cta { text-decoration: underline; }
     }
 
@@ -1159,7 +1126,7 @@
   @media (max-width: 1024px), (pointer: coarse) {
     /* nada de texto abaixo de 14px em conteúdo de leitura */
     .btn, .btn-sm, .btn-label { font-size: 14px; }
-    .badge-subtle, .hero-floating-badge small, .expert-card-caption span, .qr-box-pure p, .lgpd-content p, .map-overlay-link { font-size: 14px; }
+    .badge-subtle, .hero-floating-badge small, .expert-card-caption span, .lgpd-content p, .map-overlay-link { font-size: 14px; }
 
     /* área de toque confortável */
     .btn, .btn-sm { min-height: 44px; }
@@ -1182,7 +1149,6 @@
     .btn, .btn-sm, .btn-label,
     .hero-floating-badge small, .badge-subtle,
     .expert-card-caption span,
-    .qr-box-pure p,
     .lgpd-content p { font-size: 14px; }
     /* o seletor com o pai vence a regra genérica do overlay do mapa */
     .map-overlay-link,
@@ -1260,7 +1226,7 @@
   }
 
     /* ── RODAPÉ: colunas equilibradas, endereço em texto e rota em 1 toque ── */
-    .footer-grid { display: grid; gap: 30px; align-items: start; }
+
     .footer-col h3 { font-size: 17px; margin: 0 0 14px; color: #FFFFFF; letter-spacing: 0.2px; }
     .footer-col-sub { margin: 26px 0 8px; font-size: 16px; }
     .footer-col--map { display: flex; flex-direction: column; gap: 12px; }
@@ -1273,17 +1239,9 @@
     .footer-route-link { display: inline-flex; align-items: center; gap: 6px; min-height: 44px; color: #C86E4E !important; font-weight: 800; font-size: 14px; text-decoration: underline; text-underline-offset: 4px; }
     .footer-links-list { display: flex; flex-direction: column; gap: 2px; }
     .footer-links-list a { display: inline-flex; align-items: center; min-height: 44px; color: rgba(255, 255, 255, 0.86); font-weight: 600; font-size: 15px; }
-    .qr-box-pure { max-width: 260px; }
-    .qr-box-pure picture img, .qr-box-pure img { width: 120px; height: 120px; }
 
     /* ── colunas do rodapé: 1 no celular, 3 no desktop (regra no fim para vencer) ── */
-    .footer-grid { grid-template-columns: 1fr; }
-    .footer-links-list { flex-direction: row; flex-wrap: wrap; gap: 0 18px; }
-    .footer-links-list a { min-height: 44px; }
     @media (min-width: 900px) {
-      .footer-grid { grid-template-columns: 1fr 1.25fr 1fr; gap: 36px; }
-      .footer-links-list { flex-direction: column; gap: 2px; }
-      .footer-links-list a { min-height: 44px; }
       .map-overlay-link:hover .map-overlay-cta { text-decoration: underline; }
     }
 
@@ -1332,6 +1290,31 @@
     @media (prefers-reduced-motion: reduce) { .petalas { display: none; } }
     /* aba em segundo plano: para de animar (bateria) */
     .petalas.pausado .petala { animation-play-state: paused; }
+    /* ── Bloco de contato: QR em proporção com o botão, integrado ao fundo escuro ── */
+    .footer-col--contato { display: flex; flex-direction: column; }
+    .qr-box { display: flex; flex-direction: column; align-items: center; gap: 14px;
+              background: rgba(255, 255, 255, 0.06); border: 1px solid rgba(255, 255, 255, 0.15);
+              border-radius: 18px; padding: 18px 16px; max-width: 200px; }
+    .qr-shell { display: block; background: #FFFFFF; border-radius: 12px; padding: 9px; line-height: 0; }
+    .qr-shell img { width: 140px; height: 140px; display: block; border-radius: 5px; }
+    .qr-btn { width: 100%; justify-content: center; }
+
+    /* ── Rodapé: colunas proporcionais ao conteúdo de cada uma ── */
+    .footer-grid { display: grid; align-items: start; gap: 30px; grid-template-columns: 1fr; }
+    .footer-links-list { display: flex; flex-direction: row; flex-wrap: wrap; gap: 0 18px; }
+    .footer-links-list a { display: inline-flex; align-items: center; min-height: 44px; color: rgba(255,255,255,.86); font-weight: 600; font-size: 15px; }
+    @media (min-width: 900px) {
+      .footer-grid { grid-template-columns: 0.92fr 1.14fr 1fr; gap: 30px; }
+      .footer-links-list { flex-direction: column; gap: 2px; }
+    }
+
+    /* ── Telas baixas (ex.: 360x640): a capa inteira precisa caber na primeira tela ── */
+    @media (max-height: 700px) and (max-width: 899px) {
+      .hero { padding-top: 18px; padding-bottom: 20px; }
+      .hero-grid { gap: 16px; }
+      .lead { font-size: 1rem; line-height: 1.6; }
+      .hero h1, .hero h1 span { margin-bottom: 8px; }
+    }
 </style>
 
   <!-- Schema.org Structured Data para SEO Local e Google AI Studio -->
@@ -1479,7 +1462,7 @@
       <div class="header-actions">
         <nav class="main-nav" aria-label="Navegação principal">
           <a href="#terapias">Terapias</a>
-          <a href="#online">Atendimento Online</a>
+          <a href="#online">Atendimento on-line</a>
           <a href="#sobre">Sobre Elis</a>
         </nav>
 
@@ -1511,7 +1494,7 @@
           <h1>Você não precisa carregar todo esse peso sozinho.</h1>
 
           <p class="lead">
-            Tem dor que não passa no comprimido: a ansiedade que aperta o peito, o sono que não vem, o cansaço que dormir não resolve. Com <strong>Elis Regina Oliveira</strong>, você é ouvida com calma e cuidada com terapias integrativas reconhecidas — no consultório, em Franca, ou por vídeo, de onde você estiver.
+            A ansiedade que aperta o peito, o sono que não vem, o cansaço que dormir não resolve. Com <strong>Elis Regina Oliveira</strong>, você é ouvida com calma e cuidada com terapias integrativas reconhecidas — no consultório, em Franca, ou por vídeo, de onde você estiver.
           </p>
 
           <div style="display: flex; gap: 14px; flex-wrap: wrap; margin-top: 26px;">
@@ -1796,7 +1779,7 @@
 
         <nav class="footer-nav" aria-label="Navegação do rodapé">
           <a href="#terapias">Terapias</a>
-          <a href="#online">Atendimento Online</a>
+          <a href="#online">Atendimento on-line</a>
           <a href="#sobre">Sobre Elis</a>
         </nav>
 
@@ -1807,17 +1790,15 @@
 
       <div class="footer-grid">
         <!-- 1. Conversa direta -->
-        <div class="footer-col">
+        <div class="footer-col footer-col--contato">
           <h3>Fale agora</h3>
-          <div class="qr-box-pure">
-            <picture><source type="image/webp" srcset="img/qrcode-whatsapp.webp 410w" sizes="120px"><img src="img/qrcode-whatsapp.png" alt="QR Code do WhatsApp de Elis Regina Oliveira" width="120" height="120" loading="lazy" decoding="async"></picture>
-            <p>Aponte a câmera do celular para abrir a conversa no WhatsApp.</p>
-            <a class="btn fx-11 btn-whatsapp btn-sm" style="width: 100%;" href="https://wa.me/5516991115518" target="_blank" rel="noopener noreferrer">
-              <span class="btn-label">Ou clique aqui para falar</span>
+          <div class="qr-box">
+            <span class="qr-shell"><picture><source type="image/webp" srcset="img/qrcode-whatsapp.webp 410w" sizes="156px"><img src="img/qrcode-whatsapp.png" alt="QR Code do WhatsApp de Elis Regina Oliveira — aponte a câmera para abrir a conversa" width="140" height="140" loading="lazy" decoding="async"></picture></span>
+            <a class="btn fx-11 btn-whatsapp btn-sm qr-btn" href="https://wa.me/5516991115518" target="_blank" rel="noopener noreferrer">
+              <span class="btn-label">Abrir o WhatsApp</span>
             </a>
           </div>
         </div>
-        <!-- 2. Onde fica: mapa no endereço certo + rota em 1 toque -->
         <div class="footer-col footer-col--map">
           <h3>Onde fica o consultório</h3>
           <div class="footer-map-card">
