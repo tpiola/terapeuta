@@ -30,9 +30,9 @@
 
   <!-- SEO Local Franca/SP -->
   <meta name="geo.region" content="BR-SP">
-  <meta name="geo.placename" content="Franca, Parque Moema">
-  <meta name="geo.position" content="-20.5390;-47.4010">
-  <meta name="ICBM" content="-20.5390, -47.4010">
+  <meta name="geo.placename" content="Franca, SP">
+  <meta name="geo.position" content="-20.50830;-47.40396">
+  <meta name="ICBM" content="-20.50830, -47.40396">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
@@ -372,44 +372,20 @@
       flex: none;
     }
 
-    .brand-logo-frame {
-      width: 44px;
-      height: 44px;
-      border-radius: 50%;
-      background: #FFFFFF;
-      border: 1px solid var(--border-color);
-      display: grid;
-      place-items: center;
-      overflow: hidden;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-      flex: none;
-    }
 
-    .brand-logo-frame img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-    }
 
-    .brand-text {
-      display: grid;
-      line-height: 1.15;
-    }
 
-    .brand-name {
-      font-family: var(--font-heading);
-      font-size: 1.3rem;
-      font-weight: 700;
-      color: var(--text-dark);
-    }
 
-    .brand-tag {
-      font-size: 0.72rem;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--brand-coral);
-      font-weight: 800;
-    }
+
+
+
+
+
+
+
+
+
+
 
     .header-actions {
       display: flex;
@@ -565,40 +541,17 @@
       object-position: center 20%;
     }
 
-    .footer-social-links {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      margin-top: 14px;
-    }
 
-    .social-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 12px;
-      background: rgba(255, 255, 255, 0.08);
-      border: 1px solid rgba(255, 255, 255, 0.16);
-      padding: 8px 16px;
-      border-radius: var(--radius-full);
-      color: #FFFFFF !important;
-      font-weight: 700;
-      font-size: 0.92rem;
-      transition: all 0.2s ease;
-      width: fit-content;
-    }
 
-    .social-btn:hover {
-      background: var(--brand-coral);
-      border-color: var(--brand-coral);
-      transform: translateX(4px);
-    }
 
-    .social-btn svg {
-      width: 18px;
-      height: 18px;
-      fill: currentColor;
-      flex: none;
-    }
+
+
+
+
+
+
+
+
 
     .hero-floating-badge {
       position: absolute;
@@ -693,26 +646,11 @@
       justify-content: flex-end;
     }
 
-    .btn-card-agendar {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      font-weight: 800;
-      font-size: 0.95rem;
-      color: var(--brand-coral);
-      padding: 8px 20px;
-      border-radius: var(--radius-full);
-      background: var(--brand-coral-soft);
-      border: 1px solid rgba(194, 104, 72, 0.25);
-      transition: all 0.2s ease;
-    }
 
-    .btn-card-agendar:hover {
-      background: var(--brand-coral);
-      color: #FFFFFF !important;
-      border-color: var(--brand-coral);
-      transform: translateX(3px);
-    }
+
+
+
+
 
     /* SEÇÃO ATENDIMENTO ON-LINE (Com celular em destaque e leitura perfeita) */
     .online-grid {
@@ -739,30 +677,14 @@
       object-fit: cover;
     }
 
-    .online-testimonial-card {
-      background: #FFFFFF;
-      border: 1px solid var(--border-color);
-      border-radius: 18px;
-      padding: 20px;
-      margin-top: 20px;
-      box-shadow: var(--shadow-subtle);
-    }
 
-    .online-testimonial-card blockquote {
-      margin: 0;
-      font-style: italic;
-      color: var(--text-muted);
-      line-height: 1.6;
-    }
 
-    .online-testimonial-card cite {
-      display: block;
-      margin-top: 10px;
-      font-style: normal;
-      font-weight: 800;
-      font-size: 0.88rem;
-      color: var(--brand-coral);
-    }
+
+
+
+
+
+
 
     /* SEÇÃO SOBRE ELIS (FOTO REAL E AUTÊNTICA DA EXPERT) */
     .about-grid {
@@ -1106,21 +1028,16 @@
       transform: translateY(0);
     }
 
-    .reveal-delay-1, .reveal-stagger-1 { transition-delay: 0.1s; }
-    .reveal-delay-2, .reveal-stagger-2 { transition-delay: 0.2s; }
-    .reveal-delay-3, .reveal-stagger-3 { transition-delay: 0.3s; }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
 
-    .reveal-scale {
-      opacity: 0;
-      transform: scale(0.96) translateY(24px);
-      transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1), transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
-      will-change: opacity, transform;
-    }
 
-    .reveal-scale.active {
-      opacity: 1;
-      transform: scale(1) translateY(0);
-    }
+
+
+
+
+
+
 
     /* POP-UP LGPD (CONFORMIDADE LEI Nº 13.709/2018) */
     .lgpd-banner {
@@ -1242,14 +1159,7 @@
   @media (max-width: 1024px), (pointer: coarse) {
     /* nada de texto abaixo de 14px em conteúdo de leitura */
     .btn, .btn-sm, .btn-label { font-size: 14px; }
-    .badge-subtle,
-    .hero-floating-badge small,
-    .expert-card-caption span,
-    .online-testimonial-card cite,
-    .brand-tag,
-    .qr-box-pure p,
-    .lgpd-content p,
-    .map-overlay-link { font-size: 14px; }
+    .badge-subtle, .hero-floating-badge small, .expert-card-caption span, .qr-box-pure p, .lgpd-content p, .map-overlay-link { font-size: 14px; }
 
     /* área de toque confortável */
     .btn, .btn-sm { min-height: 44px; }
@@ -1287,22 +1197,14 @@
   }
 
   /* ═══════════════════════════════════════════════════════════════
-     ACESSIBILIDADE — contraste de texto (WCAG 2.1 AA = 4,5:1)
-     O coral da marca (#C26848) dava 3,63 sobre o creme do site e 4,23
+     ACESSIBILIDADE — contraste de texto (WCAG 2.1 AA = 4, 5:1)
+     O coral da marca (#C26848) dava 3, 63 sobre o creme do site e 4, 23
      sobre o escuro do rodapé. Como não existe um tom que sirva nos dois
-     fundos, cada contexto usa a sua variação:
-       · fundos claros  → #AC5232  (contraste 4.61)
-       · fundos escuros → #C86E4E  (contraste 4.57)
-     ═══════════════════════════════════════════════════════════════ */
-  .brand-tag,
-  .badge-subtle,
-  .expert-card-caption span {
+     fundos, .badge-subtle, .expert-card-caption span {
     color: #AC5232;
   }
 
-  footer .brand-tag,
-  footer .badge-subtle,
-  .rdv-footer-v3 .brand-tag {
+  footer .badge-subtle {
     color: #C86E4E;
   }
 
@@ -1316,10 +1218,14 @@
        para os 3 ícones de 44px caberem sem estourar a tela */
     .site-header .container { padding-inline: 12px; }
     .brand { min-width: 0; }
-    .brand-logo-frame { display: none; }
-    .brand-name { font-size: 0.95rem; line-height: 1.15; }
-    .brand-text { min-width: 0; }
-    .brand-tag { display: none; }
+
+
+
+
+
+
+
+
     .header-actions {
       width: auto;
       flex: 0 1 auto;
@@ -1340,7 +1246,8 @@
      para os três ícones de 44px caberem sem estourar */
   @media (max-width: 400px) {
     .site-header .container { padding-inline: 10px; }
-    .brand-name { font-size: 0.88rem; }
+
+
     .social-links { gap: 1px; }
   }
 
@@ -1406,21 +1313,7 @@
   },
   "geo": {
     "@type": "GeoCoordinates",
-    "latitude": -20.539,
-    "longitude": -47.401
-  },
-  "openingHoursSpecification": {
-    "@type": "OpeningHoursSpecification",
-    "dayOfWeek": [
-      "Monday",
-      "Tuesday",
-      "Wednesday",
-      "Thursday",
-      "Friday",
-      "Saturday"
-    ],
-    "opens": "08:00",
-    "closes": "19:00"
+    "latitude": -20.50830, "longitude": -47.40396
   },
   "sameAs": [
     "https://www.instagram.com/espaco_crieeative/",
