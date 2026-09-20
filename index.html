@@ -28,6 +28,14 @@
   <link rel="icon" type="image/png" sizes="192x192" href="img/icone-192.png">
   <link rel="manifest" href="manifest.json">
 
+  <!--
+    LOGOTIPO — ATENÇÃO: o wordmark é "Elis / TERAPÊUTA", com acento circunflexo
+    no E. A grafia é intencional: foi pedida pelo dono do site, não é erro de
+    digitação nem revisão pendente. Não "corrija" para TERAPEUTA.
+    Arquivos: img/logo-elis-3.* (header) e img/logo-elis-claro-3.* (rodapé).
+    Ao regerar, use SEMPRE um nome novo (-4, -5...): o /img/ é servido como
+    immutable por 1 ano e o mesmo nome não chega em quem já tem cache.
+  -->
   <!-- SEO Local Franca/SP -->
   <meta name="geo.region" content="BR-SP">
   <meta name="geo.placename" content="Franca, SP">
@@ -61,7 +69,7 @@
       --bg-card: #FFFFFF;
       --text-dark: #231C28;
       --text-muted: #5C5364;
-      --text-light: #7E7387;
+      --text-light: #786D81;   /* 4,88:1 sobre branco — o #7E7387 dava 4,47 e reprovava no WCAG AA */
 
       --border-color: #E7DFD4;
       --border-focus: #4E3E66;
@@ -1362,7 +1370,7 @@
         "https://terapeuta-next.vercel.app/img/elis-regina-hero.jpg",
         "https://terapeuta-next.vercel.app/img/elis-regina-expert.jpg"
       ],
-      "logo": "https://terapeuta-next.vercel.app/img/logo-elis-2.png",
+      "logo": "https://terapeuta-next.vercel.app/img/logo-elis-3.png",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Rua Lourival Vieira",
@@ -1572,7 +1580,7 @@
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="#topo" aria-label="Elis Regina Oliveira — Terapeuta, início da página">
-        <picture class="brand-logo"><source type="image/webp" srcset="img/logo-elis-2.webp"><img src="img/logo-elis-2.png" alt="Elis — Terapeuta" width="72" height="50" decoding="async" fetchpriority="high"></picture>
+        <picture class="brand-logo"><source type="image/webp" srcset="img/logo-elis-3.webp"><img src="img/logo-elis-3.png" alt="Elis — Terapeuta" width="72" height="50" decoding="async" fetchpriority="high"></picture>
       </a>
 
       <div class="header-actions">
@@ -1940,7 +1948,7 @@
       <!-- Cabeçalho do Site Replicado no Rodapé -->
       <div class="footer-header-bar">
         <a class="brand" href="#topo" aria-label="Elis Regina Oliveira — Terapeuta">
-            <picture class="brand-logo"><source type="image/webp" srcset="img/logo-elis-claro-2.webp"><img src="img/logo-elis-claro-2.png" alt="Elis — Terapeuta" width="86" height="60" loading="lazy" decoding="async"></picture>
+            <picture class="brand-logo"><source type="image/webp" srcset="img/logo-elis-claro-3.webp"><img src="img/logo-elis-claro-3.png" alt="Elis — Terapeuta" width="86" height="60" loading="lazy" decoding="async"></picture>
           </a>
 
         <nav class="footer-nav" aria-label="Navegação do rodapé">
