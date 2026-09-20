@@ -1286,6 +1286,52 @@
       .footer-links-list a { min-height: 44px; }
       .map-overlay-link:hover .map-overlay-cta { text-decoration: underline; }
     }
+
+    /* ── PÉTALAS CAINDO — ambiente discreta, só transform e opacity (GPU) ── */
+    .petalas { position: fixed; inset: 0; z-index: 3; pointer-events: none; overflow: hidden; }
+    .petala {
+      position: absolute; top: -8vh; display: block; opacity: 0;
+      width: 16px; height: 23px;
+      background: linear-gradient(140deg, rgba(255,255,255,.62), rgba(255,255,255,0) 56%), #E5A98F;
+      border-radius: 100% 0 100% 100%;            /* silhueta de pétala, sem imagem */
+      box-shadow: 0 2px 6px rgba(120, 80, 60, .14);
+      transform-origin: 50% 45%;
+      will-change: transform, opacity;
+      animation: cairPetalas linear infinite;
+    }
+    /* nervura clara em uma de cada três, para variar a leitura */
+    .petala:nth-child(3n+1):after {
+      content: ""; position: absolute; inset: 4px 46% 4px 46%;
+      background: rgba(255, 255, 255, .45); border-radius: 99px;
+    }
+    /* outras duas silhuetas, para nenhuma parecer carimbo */
+    .petala:nth-child(3n+2) { border-radius: 0 100% 100% 100%; }
+    .petala:nth-child(3n+3) { border-radius: 100% 100% 100% 0; }
+    @keyframes cairPetalas {
+      0%   { transform: translate3d(0, -10vh, 0) rotate(0deg); opacity: 0; }
+      9%   { opacity: var(--p-op, .42); }
+      46%  { transform: translate3d(var(--p-drift, 34px), 48vh, 0) rotate(160deg); }
+      86%  { opacity: var(--p-op, .42); }
+      100% { transform: translate3d(calc(var(--p-drift, 34px) * -0.5), 110vh, 0) rotate(350deg); opacity: 0; }
+    }
+    /* posição, tamanho, cor, ritmo e deriva próprios: nenhuma pétala sincronizada */
+    .petala:nth-child(1)  { left: 4%;  --p-op: .42; --p-drift:  44px; width: 15px; height: 22px; background: linear-gradient(140deg, rgba(255,255,255,.62), rgba(255,255,255,0) 56%), #E5A98F; animation-duration: 19s; animation-delay: -4s; }
+    .petala:nth-child(2)  { left: 14%; --p-op: .33; --p-drift: -40px; width: 12px; height: 17px; background: linear-gradient(140deg, rgba(255,255,255,.6), rgba(255,255,255,0) 56%), #E7CBD9; animation-duration: 26s; animation-delay: -13s; }
+    .petala:nth-child(3)  { left: 23%; --p-op: .45; --p-drift:  58px; width: 18px; height: 25px; background: linear-gradient(140deg, rgba(255,255,255,.62), rgba(255,255,255,0) 56%), #DEB9A6; animation-duration: 22s; animation-delay: -8s; }
+    .petala:nth-child(4)  { left: 33%; --p-op: .38; --p-drift: -54px; width: 13px; height: 19px; background: linear-gradient(140deg, rgba(255,255,255,.6), rgba(255,255,255,0) 56%), #D9C6E8; animation-duration: 30s; animation-delay: -21s; }
+    .petala:nth-child(5)  { left: 44%; --p-op: .43; --p-drift:  32px; width: 16px; height: 23px; background: linear-gradient(140deg, rgba(255,255,255,.6), rgba(255,255,255,0) 56%), #EFD2C2; animation-duration: 17s; animation-delay: -2s; }
+    .petala:nth-child(6)  { left: 54%; --p-op: .30; --p-drift: -46px; width: 11px; height: 16px; background: linear-gradient(140deg, rgba(255,255,255,.6), rgba(255,255,255,0) 56%), #E7CBD9; animation-duration: 28s; animation-delay: -17s; }
+    .petala:nth-child(7)  { left: 64%; --p-op: .44; --p-drift:  50px; width: 17px; height: 25px; background: linear-gradient(140deg, rgba(255,255,255,.62), rgba(255,255,255,0) 56%), #E5A98F; animation-duration: 21s; animation-delay: -6s; }
+    .petala:nth-child(8)  { left: 73%; --p-op: .34; --p-drift: -36px; width: 12px; height: 17px; background: linear-gradient(140deg, rgba(255,255,255,.6), rgba(255,255,255,0) 56%), #D9C6E8; animation-duration: 25s; animation-delay: -19s; }
+    .petala:nth-child(9)  { left: 83%; --p-op: .41; --p-drift:  42px; width: 15px; height: 21px; background: linear-gradient(140deg, rgba(255,255,255,.62), rgba(255,255,255,0) 56%), #DEB9A6; animation-duration: 23s; animation-delay: -10s; }
+    .petala:nth-child(10) { left: 91%; --p-op: .36; --p-drift: -48px; width: 13px; height: 19px; background: linear-gradient(140deg, rgba(255,255,255,.6), rgba(255,255,255,0) 56%), #EFD2C2; animation-duration: 29s; animation-delay: -24s; }
+    .petala:nth-child(11) { left: 97%; --p-op: .42; --p-drift:  38px; width: 14px; height: 20px; background: linear-gradient(140deg, rgba(255,255,255,.6), rgba(255,255,255,0) 56%), #E7CBD9; animation-duration: 20s; animation-delay: -14s; }
+    /* no celular: menos pétalas (as 4 últimas saem), mantendo forma e variedade */
+    @media (max-width: 640px) { .petala:nth-child(n+8) { display: none; } }
+    /* quem pediu menos movimento no sistema não recebe pétala nenhuma */
+    @media (prefers-reduced-motion: reduce) { .petalas { display: none; } }
+    /* aba em segundo plano: para de animar (bateria) */
+    .petalas.pausado .petala { animation-play-state: paused; }
 </style>
 
   <!-- Schema.org Structured Data para SEO Local e Google AI Studio -->
@@ -1421,6 +1467,7 @@
     <div class="bg-aura bg-aura--2"></div>
     <div class="bg-aura bg-aura--3"></div>
   </div>
+  <div class="petalas" aria-hidden="true"><span class="petala"></span><span class="petala"></span><span class="petala"></span><span class="petala"></span><span class="petala"></span><span class="petala"></span><span class="petala"></span><span class="petala"></span><span class="petala"></span><span class="petala"></span><span class="petala"></span></div>
 
   <!-- CABEÇALHO DO SITE COM LOGO OFICIAL, REDES E 4 LINKS -->
   <header class="site-header">
@@ -1970,5 +2017,14 @@
       </div>
     </div>
   </aside>
-</body>
+<script>
+    (function () {
+      var c = document.querySelector(".petalas");
+      if (!c) return;
+      document.addEventListener("visibilitychange", function () {
+        c.classList.toggle("pausado", document.hidden);
+      });
+    })();
+    </script>
+    </body>
 </html>
