@@ -1312,8 +1312,8 @@
     /* o cabeçalho tem padding lateral do container: no celular ele encolhe
        para os 3 ícones de 44px caberem sem estourar a tela */
     .site-header .container { padding-inline: 12px; }
-    .brand { gap: 8px; min-width: 0; }
-    .brand-logo-frame { width: 38px; height: 38px; flex: none; }
+    .brand { min-width: 0; }
+    .brand-logo-frame { display: none; }
     .brand-name { font-size: 0.95rem; line-height: 1.15; }
     .brand-text { min-width: 0; }
     .brand-tag { display: none; }
@@ -1339,6 +1339,16 @@
     .site-header .container { padding-inline: 10px; }
     .brand-name { font-size: 0.88rem; }
     .social-links { gap: 1px; }
+  }
+
+  /* ── Logo (wordmark "Elis / TERAPEUTA") ──
+     Desenhado com as próprias fontes do site (Fraunces itálico + Karla), para
+     ficar harmônico com o resto da página. Substitui o símbolo quadrado e o
+     nome digitado ao lado — o logo já diz o nome. */
+  .brand-logo { display: block; height: 50px; width: auto; }
+  .brand-logo img { display: block; height: 100%; width: auto; }
+  @media (max-width: 680px) {
+    .brand-logo { height: 46px; }
   }
 </style>
 
@@ -1493,14 +1503,8 @@
   <!-- CABEÇALHO DO SITE COM LOGO OFICIAL, REDES E 4 LINKS -->
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="#topo" aria-label="Elis Regina Oliveira - Início">
-        <div class="brand-logo-frame" aria-hidden="true">
-          <picture><source type="image/webp" srcset="img/logo-simbolo-128.webp 128w, img/logo-simbolo-256.webp 256w" sizes="44px"><img src="img/logo-simbolo.png" alt="Elis Regina Oliveira" width="44" height="44" decoding="async"></picture>
-        </div>
-        <div class="brand-text">
-          <span class="brand-name">Elis Regina Oliveira</span>
-          <span class="brand-tag">Terapias Integrativas</span>
-        </div>
+      <a class="brand" href="#topo" aria-label="Elis Regina Oliveira — Terapeuta, início da página">
+        <picture class="brand-logo"><source type="image/webp" srcset="img/logo-elis.webp"><img src="img/logo-elis.png" alt="Elis — Terapeuta" width="68" height="50" decoding="async" fetchpriority="high"></picture>
       </a>
 
       <div class="header-actions">
@@ -1721,7 +1725,7 @@
         <div class="reveal">
           <!-- Foto REAL e AUTÊNTICA de Elis Regina em alta definição -->
           <div class="expert-photo-card">
-            <picture><source type="image/webp" srcset="img/elis-regina-conduz-80.webp 80w" sizes="30px"><img src="img/elis-regina-conduz.jpg" alt="Elis Regina Oliveira — Terapias Integrativas" width="30" height="30" loading="lazy" decoding="async"></picture>
+            <picture><source type="image/webp" srcset="img/elis-regina-conduz-807.webp 807w" sizes="(max-width: 640px) 88vw, 430px"><img src="img/elis-regina-conduz.jpg" alt="Elis Regina Oliveira — Terapias Integrativas" width="396" height="496" loading="lazy" decoding="async"></picture>
             <div class="expert-card-caption">
               <strong>Elis Regina</strong>
               <span>Terapias Integrativas</span>
@@ -1817,15 +1821,9 @@
     <div class="container">
       <!-- Cabeçalho do Site Replicado no Rodapé -->
       <div class="footer-header-bar">
-        <a class="brand" href="#topo" aria-label="Voltar ao topo">
-          <div class="brand-logo-frame" style="background: rgba(255,255,255,0.12); border-color: rgba(255,255,255,0.2);">
-            <picture><source type="image/webp" srcset="img/logo-simbolo-128.webp 128w, img/logo-simbolo-256.webp 256w" sizes="44px"><img src="img/logo-simbolo.png" alt="Elis Regina Oliveira" width="44" height="44" decoding="async"></picture>
-          </div>
-          <div class="brand-text">
-            <span class="brand-name" style="color: #FFFFFF;">Elis Regina Oliveira</span>
-            <span class="brand-tag">Terapias Integrativas</span>
-          </div>
-        </a>
+        <a class="brand" href="#topo" aria-label="Elis Regina Oliveira — Terapeuta">
+            <picture class="brand-logo"><source type="image/webp" srcset="img/logo-elis-claro.webp"><img src="img/logo-elis-claro.png" alt="Elis — Terapeuta" width="82" height="60" loading="lazy" decoding="async"></picture>
+          </a>
 
         <nav class="footer-nav" aria-label="Navegação do rodapé">
           <a href="#terapias">Terapias</a>
