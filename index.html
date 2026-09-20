@@ -1214,6 +1214,8 @@
       .about-grid { grid-template-columns: 0.9fr 1.1fr; }
       .online-grid { grid-template-columns: 1fr 1fr; }
       .footer-grid { grid-template-columns: 1.1fr 1fr 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1.2fr 1fr; gap: 36px; }
+            .map-overlay-link:hover .map-overlay-cta { text-decoration: underline; }
     }
 
     @media (max-width: 899px) {
@@ -1351,6 +1353,34 @@
   @media (max-width: 680px) {
     .brand-logo { height: 46px; }
   }
+
+    /* ── RODAPÉ: colunas equilibradas, endereço em texto e rota em 1 toque ── */
+    .footer-grid { display: grid; gap: 30px; align-items: start; }
+    .footer-col h3 { font-size: 17px; margin: 0 0 14px; color: #FFFFFF; letter-spacing: 0.2px; }
+    .footer-col-sub { margin: 26px 0 8px; font-size: 16px; }
+    .footer-col--map { display: flex; flex-direction: column; gap: 12px; }
+    
+    .map-overlay-cta { display: inline-flex; align-items: center; gap: 8px; }
+    .map-overlay-cta svg { width: 15px; height: 15px; fill: currentColor; flex: 0 0 auto; }
+    .footer-address { font-style: normal; display: flex; flex-direction: column; gap: 4px; color: rgba(247, 243, 238, 0.86); font-size: 15px; line-height: 1.45; }
+    .footer-address-line { display: block; }
+    .footer-address-cep { font-size: 14px; color: rgba(247, 243, 238, 0.72); }
+    .footer-route-link { display: inline-flex; align-items: center; gap: 6px; min-height: 44px; color: var(--brand-coral) !important; font-weight: 800; font-size: 14px; text-decoration: underline; text-underline-offset: 4px; }
+    .footer-links-list { display: flex; flex-direction: column; gap: 2px; }
+    .footer-links-list a { display: inline-flex; align-items: center; min-height: 44px; color: rgba(255, 255, 255, 0.86); font-weight: 600; font-size: 15px; }
+    .qr-box-pure { max-width: 260px; }
+    .qr-box-pure picture img, .qr-box-pure img { width: 120px; height: 120px; }
+
+    /* ── colunas do rodapé: 1 no celular, 3 no desktop (regra no fim para vencer) ── */
+    .footer-grid { grid-template-columns: 1fr; }
+    .footer-links-list { flex-direction: row; flex-wrap: wrap; gap: 0 18px; }
+    .footer-links-list a { min-height: 44px; }
+    @media (min-width: 900px) {
+      .footer-grid { grid-template-columns: 1fr 1.25fr 1fr; gap: 36px; }
+      .footer-links-list { flex-direction: column; gap: 2px; }
+      .footer-links-list a { min-height: 44px; }
+      .map-overlay-link:hover .map-overlay-cta { text-decoration: underline; }
+    }
 </style>
 
   <!-- Schema.org Structured Data para SEO Local e Google AI Studio -->
@@ -1368,7 +1398,7 @@
   "url": "https://terapeuta-next.vercel.app/",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "Rua Lourival Vieira, 1",
+    "streetAddress": "Rua Lourival Vieira",
     "addressLocality": "Franca",
     "addressRegion": "SP",
     "postalCode": "14405-590",
@@ -1838,54 +1868,59 @@
       </div>
 
       <div class="footer-grid">
-        <!-- Coluna 1: QR Code Testado, Nítido e com Clique Direto -->
-        <div>
+        <!-- 1. Conversa direta -->
+        <div class="footer-col">
+          <h3>Fale agora</h3>
           <div class="qr-box-pure">
-            <picture><source type="image/webp" srcset="img/qrcode-whatsapp.webp 410w" sizes="140px"><img src="img/qrcode-whatsapp.png" alt="QR Code WhatsApp Elis Regina" width="140" height="140" decoding="async"></picture>
-            <p>Aponte a câmera do seu celular para abrir a conversa no WhatsApp.</p>
+            <picture><source type="image/webp" srcset="img/qrcode-whatsapp.webp 410w" sizes="120px"><img src="img/qrcode-whatsapp.png" alt="QR Code do WhatsApp de Elis Regina Oliveira" width="120" height="120" loading="lazy" decoding="async"></picture>
+            <p>Aponte a câmera do celular para abrir a conversa no WhatsApp.</p>
             <a class="btn fx-11 btn-whatsapp btn-sm" style="width: 100%;" href="https://wa.me/5516991115518" target="_blank" rel="noopener noreferrer">
               <span class="btn-label">Ou clique aqui para falar</span>
             </a>
           </div>
         </div>
-
-        <!-- Coluna 2: Redes Sociais Oficiais -->
-        <div>
-          <h3>Redes Sociais</h3>
-          <div class="social-links" style="margin-top: 14px;">
-            <a class="social-link wa" href="https://wa.me/5516991115518" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
-              <svg viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm0 18.03c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.26 8.26 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24 4.54 0 8.24 3.7 8.24 8.24s-3.7 8.24-8.24 8.24zm4.52-6.16c-.25-.13-1.47-.72-1.69-.8-.23-.08-.39-.12-.56.13-.16.25-.64.8-.78.96-.14.16-.29.18-.54.06-.25-.13-1.05-.39-2-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.51.11-.11.25-.29.37-.43.13-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.13-.56-1.35-.77-1.85-.2-.49-.4-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.06-.1-.23-.16-.48-.29z"/></svg>
-            </a>
-            <a class="social-link ig" href="https://www.instagram.com/espaco_crieeative/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-              <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-            </a>
-            <a class="social-link fb" href="https://www.facebook.com/elisreginaoliveira.terapeuta" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-              <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-            </a>
-          </div>
-        </div>
-
-        <!-- Coluna 3: Mapa Menor Integrado sem texto de endereço -->
-        <div>
-          <h3>Localização em Franca</h3>
+        <!-- 2. Onde fica: mapa no endereço certo + rota em 1 toque -->
+        <div class="footer-col footer-col--map">
+          <h3>Onde fica o consultório</h3>
           <div class="footer-map-card">
-            <iframe referrerpolicy="no-referrer-when-downgrade"
-              src="https://www.google.com/maps?q=Espa%C3%A7o%20Creative%20Rua%20Lourival%20Vieira%2C%201%20-%20Parque%20Moema%2C%20Franca%20-%20SP%2C%2014405-590&output=embed"
-              title="Mapa do consultório no Google Maps"
-              loading="lazy"
-            ></iframe>
-            <a
-              class="map-overlay-link"
-              href="https://www.google.com/maps?q=Espa%C3%A7o%20Creative%20Rua%20Lourival%20Vieira%2C%201%20-%20Parque%20Moema%2C%20Franca%20-%20SP%2C%2014405-590"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <span>Abrir rota no Google Maps &rarr;</span>
+            <picture>
+              <source type="image/webp" srcset="img/mapa-consultorio.webp">
+              <img src="img/mapa-consultorio.png" alt="Mapa: o consultório fica na Rua Lourival Vieira, Residencial São Vicente, Franca/SP" width="880" height="484" loading="lazy" decoding="async">
+            </picture>
+            <a class="map-overlay-link" href="https://www.google.com/maps/dir/?api=1&destination=Rua%20Lourival%20Vieira%2C%2014405-590%2C%20Franca%20-%20SP" target="_blank" rel="noopener noreferrer" aria-label="Traçar rota até o consultório no Google Maps (abre em nova aba)">
+              <span class="map-overlay-cta"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 4.5 20.3l.7.7L12 17.5l6.8 3.5.7-.7z"/></svg>Traçar rota no Google Maps</span>
             </a>
           </div>
+          <address class="footer-address">
+            <span class="footer-address-line">Rua Lourival Vieira</span>
+            <span class="footer-address-line">Residencial São Vicente · Franca/SP</span>
+            <span class="footer-address-line footer-address-cep">CEP 14405-590</span>
+          </address>
+          <a class="footer-route-link" href="https://www.google.com/maps/dir/?api=1&destination=Rua%20Lourival%20Vieira%2C%2014405-590%2C%20Franca%20-%20SP" target="_blank" rel="noopener noreferrer" aria-label="Abrir a rota no Google Maps em nova aba">Como chegar <span aria-hidden="true">→</span></a>
+        </div>
+        <!-- 3. Redes e caminhos -->
+        <div class="footer-col">
+          <h3>Acompanhe</h3>
+          <div class="social-links">
+            <a class="social-link wa" href="https://wa.me/5516991115518" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm0 18.03c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.26 8.26 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24 4.54 0 8.24 3.7 8.24 8.24s-3.7 8.24-8.24 8.24zm4.52-6.16c-.25-.13-1.47-.72-1.69-.8-.23-.08-.39-.12-.56.13-.16.25-.64.8-.78.96-.14.16-.29.18-.54.06-.25-.13-1.05-.39-2-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.51.11-.11.25-.29.37-.43.13-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.13-.56-1.35-.77-1.85-.2-.49-.4-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.06-.1-.23-.16-.48-.29z"/></svg>
+          </a>
+          <a class="social-link ig" href="https://www.instagram.com/espaco_crieeative/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+          <a class="social-link fb" href="https://www.facebook.com/elisreginaoliveira.terapeuta" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+          </div>
+          <h3 class="footer-col-sub">Neste site</h3>
+          <nav class="footer-links-list" aria-label="Atalhos do site">
+            <a href="#terapias">Terapias</a>
+            <a href="#online">Atendimento on-line</a>
+            <a href="#sobre">Sobre Elis</a>
+            <a href="#contato">Agendar sessão</a>
+          </nav>
         </div>
       </div>
-
       <div class="footer-bottom">
         <span>© <span id="year"></span> Elis Regina Oliveira — Terapias Integrativas.</span>
         <span class="footer-telefone">Atendimento: <a href="tel:+5516991115518" aria-label="Ligar para Elis Regina Oliveira">(16) 99111-5518</a> · <a href="https://wa.me/5516991115518" target="_blank" rel="noopener noreferrer">WhatsApp</a></span>
