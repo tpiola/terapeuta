@@ -1,0 +1,11 @@
+# Não publica no site o que é material de trabalho, não conteúdo:
+# o arquivo do site antigo (copy superada, com fotos não usadas) ficava
+# acessível em /arquivo/... na produção. O histórico do git preserva tudo.
+arquivo/
+qa-visual/
+*.sh
+*.log
+.github/
+CODE_OF_CONDUCT.md
+CONTRIBUTING.md
+SECURITY.md
